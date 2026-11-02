@@ -1,0 +1,7 @@
+.review-consents{display:grid;gap:12px;margin:8px 0}
+.review-consents label{display:grid!important;grid-template-columns:18px minmax(0,1fr)!important;align-items:start;gap:10px!important;font-size:11px!important;line-height:1.7!important;cursor:pointer}
+.review-consents input[type=checkbox]{display:block!important;width:16px!important;height:16px!important;min-height:0!important;min-width:0!important;padding:0!important;margin:2px 0 0!important;accent-color:var(--orange)}
+.review-consents a{text-decoration:underline;text-underline-offset:3px}
+[data-material-form][hidden],[data-material-result][hidden],.partner-form[hidden]{display:none!important}
+.review-demo-note{font-size:11px!important;line-height:1.7!important;color:var(--muted)}
+@media(max-width:767px){.review-consents label{font-size:12px!important}.review-consents{gap:14px}}

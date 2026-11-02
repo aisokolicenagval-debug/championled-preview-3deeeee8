@@ -1,0 +1,9 @@
+.about-copy .reviewbar{display:none}
+.about-copy .canvas>header{top:0}
+.about-copy .brand-media--origin{height:100%;min-height:360px;align-self:stretch}
+.about-copy .brand-story-copy p:last-child{margin-bottom:0}
+.about-copy .brand-roles article{min-width:0}
+.about-copy .brand-roles h3{max-width:520px}
+.about-copy .brand-final>div:first-child{min-width:0}
+.about-copy .brand-final-actions{gap:17px}
+@media(max-width:767px){.about-copy .brand-media--origin{height:240px;min-height:240px}.about-copy .brand-final-actions{gap:18px}}

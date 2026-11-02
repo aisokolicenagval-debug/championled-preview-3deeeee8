@@ -1,0 +1,122 @@
+const SALE_PRODUCTS = [
+  {
+    "id": "sale-boks",
+    "name": "Накладной светодиодный светильник БОКС 10Вт 3000К белый",
+    "short": "БОКС",
+    "sku": "05-04-001",
+    "price": 4990,
+    "oldPrice": null,
+    "type": "Накладной светильник",
+    "series": "Распродажа · интерьерные светильники",
+    "category": "Распродажа",
+    "status": "catalog",
+    "sale": true,
+    "power": "10Вт",
+    "specs": "10 Вт · 3000 К · белый · 220 В",
+    "images": [
+      "assets/home1440/sale-0.webp",
+      "assets/home1440/sale-0.webp"
+    ],
+    "sourceUrl": "https://championled.ru/products/nakladnoiy-svetodiodnyiy-svetilnik-boks-10-vt-3000-k-belyiy-100226",
+    "sourceImage": "https://avatars.mds.yandex.net/get-yastore/19396857/q2p757bcg7dfmt72zsz78qkrft2s7l58/orig",
+    "checkedAt": "2026-11-01",
+    "priceKind": "current-site-price-not-approved-sale-price",
+    "saleCategory": "surface"
+  },
+  {
+    "id": "sale-marta",
+    "name": "Встраиваемый светильник МАРТА 8Вт 4000К белый",
+    "short": "МАРТА",
+    "sku": "05-10-019",
+    "price": 4900,
+    "oldPrice": null,
+    "type": "Встраиваемый светильник",
+    "series": "Распродажа · интерьерные светильники",
+    "category": "Распродажа",
+    "status": "catalog",
+    "sale": true,
+    "power": "8Вт",
+    "specs": "8 Вт · 4000 К · белый · 220 В",
+    "images": [
+      "assets/home1440/sale-1.webp",
+      "assets/home1440/sale-1.webp"
+    ],
+    "sourceUrl": "https://championled.ru/products/vstraivaemyiy-svetilnik-marta-100154",
+    "sourceImage": "https://avatars.mds.yandex.net/get-yastore/18919159/dpppdckqgl56249hv6t87h5cp8gmczqd/orig",
+    "checkedAt": "2026-11-01",
+    "priceKind": "current-site-price-not-approved-sale-price",
+    "saleCategory": "recessed"
+  },
+  {
+    "id": "sale-jackson",
+    "name": "Подвесной светильник ДЖАКСОН БОЛЛ 8Вт 3000К",
+    "short": "ДЖАКСОН БОЛЛ",
+    "sku": "05-05-001",
+    "price": 6990,
+    "oldPrice": null,
+    "type": "Подвесной светильник",
+    "series": "Распродажа · интерьерные светильники",
+    "category": "Распродажа",
+    "status": "catalog",
+    "sale": true,
+    "power": "8Вт",
+    "specs": "8 Вт · 3000 К · белый · 220 В",
+    "images": [
+      "assets/home1440/sale-2.webp",
+      "assets/home1440/sale-2.webp"
+    ],
+    "sourceUrl": "https://championled.ru/products/podvesnoiy-svetodiodnyiy-svetilnik-djakson-boll-8-vt-3000-k-100234",
+    "sourceImage": "https://avatars.mds.yandex.net/get-yastore/18780052/mwdwrzp7bbplsd9g8k4frg599nktt7db/orig",
+    "checkedAt": "2026-11-01",
+    "priceKind": "current-site-price-not-approved-sale-price",
+    "saleCategory": "pendant"
+  },
+  {
+    "id": "sale-ringus",
+    "name": "Подвесной светодиодный светильник РИНГУС 36Вт 3000К белый",
+    "short": "РИНГУС",
+    "sku": "05-05-003",
+    "price": 8990,
+    "oldPrice": null,
+    "type": "Подвесной светильник",
+    "series": "Распродажа · интерьерные светильники",
+    "category": "Распродажа",
+    "status": "catalog",
+    "sale": true,
+    "power": "36Вт",
+    "specs": "36 Вт · 3000 К · белый · 220 В",
+    "images": [
+      "assets/home1440/sale-3.webp",
+      "assets/home1440/sale-3.webp"
+    ],
+    "sourceUrl": "https://championled.ru/products/podvesnoiy-svetodiodnyiy-svetilnik-ringus-36-vt-3000-k-belyiy-100233",
+    "sourceImage": "https://avatars.mds.yandex.net/get-yastore/21136051/wv6djctp7gkz2vkxhnnzhpf96tfbqrst/orig",
+    "checkedAt": "2026-11-01",
+    "priceKind": "current-site-price-not-approved-sale-price",
+    "saleCategory": "pendant"
+  },
+  {
+    "id": "sale-boll",
+    "name": "Накладной светодиодный светильник БОЛЛ 10Вт 3000К IP44",
+    "short": "БОЛЛ",
+    "sku": "05-04-003",
+    "price": 4990,
+    "oldPrice": null,
+    "type": "Накладной светильник",
+    "series": "Распродажа · интерьерные светильники",
+    "category": "Распродажа",
+    "status": "catalog",
+    "sale": true,
+    "power": "10Вт",
+    "specs": "10 Вт · 3000 К · белый · 220 В · IP44",
+    "images": [
+      "assets/home1440/sale-boll-1.webp",
+      "assets/home1440/sale-boll-2.webp"
+    ],
+    "sourceUrl": "https://championled.ru/products/nakladnoiy-svetodiodnyiy-svetilnik-boll-10-vt-3000-k-100225",
+    "sourceImage": "https://avatars.mds.yandex.net/get-yastore/21136051/jq6sw7mtw77mn9fn4r6vl84qt64psfqw/x960",
+    "checkedAt": "2026-11-01",
+    "priceKind": "current-site-price-not-approved-sale-price",
+    "saleCategory": "surface"
+  }
+];

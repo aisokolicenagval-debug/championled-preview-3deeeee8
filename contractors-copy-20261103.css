@@ -1,0 +1,33 @@
+.contractors-copy .reviewbar{display:none}
+.contractors-copy .canvas>header{top:0}
+.contractors-copy .contractor-document-panel .partner-catalog-visual{background:#e6edf1}
+.contractors-copy .contractor-document-panel .partner-catalog-visual>img{object-fit:contain}
+.contractor-document-actions{display:flex;flex-wrap:wrap;gap:12px}
+.contractor-document-actions .btn{font-size:12px;padding:11px 17px;min-height:42px;justify-content:center}
+.contractor-secondary{border:1px solid var(--ink);background:white;color:var(--ink)}
+.contractor-secondary:hover{background:var(--light)}
+.contractor-access-dialog{width:850px;max-width:calc(100vw - 36px);max-height:90dvh;overflow:auto;padding:34px}
+.contractor-access-dialog>h2{font:400 26px/1.45 Science,Geist,sans-serif;text-transform:uppercase;margin:0 25px 15px 0}
+.contractor-access-dialog>.eyebrow{margin:0 0 12px}
+.contractor-access-intro{font-size:14px;line-height:1.8;color:var(--muted);margin:0 0 24px}
+.contractor-access-form{display:grid;gap:17px;margin:0}
+.contractor-access-form[hidden],.contractor-access-result[hidden]{display:none!important}
+.contractor-access-form .form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.contractor-access-form label{display:grid;gap:8px;min-width:0;font-size:13px;line-height:1.7}
+.contractor-access-form input,.contractor-access-form textarea{display:block;width:100%;min-width:0;border:1px solid #cfd6dd;border-radius:4px;padding:11px 13px;background:white;color:var(--ink);font:400 14px/1.5 Geist,Arial,sans-serif}
+.contractor-access-form input{height:44px}
+.contractor-access-form textarea{min-height:110px;resize:vertical}
+.contractor-access-form .demo-form-note{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+.contractor-form-actions{display:flex;flex-wrap:wrap;gap:13px}
+.contractor-form-actions .btn{min-height:44px;font-size:13px;padding:12px 19px;justify-content:center}
+.contractor-access-result h3{font:400 23px/1.5 Science,Geist,sans-serif;text-transform:uppercase;margin:0 0 16px}
+.contractor-access-result>p{font-size:14px;line-height:1.8;color:var(--muted);margin:0 0 21px}
+.contractor-open-documents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 22px}
+.contractor-open-documents a{display:flex;align-items:center;gap:12px;padding:16px;border:1px solid var(--line);border-radius:4px;background:var(--light);font-size:13px;line-height:1.6}
+.contractor-open-documents a>span:last-child{display:grid;gap:5px;min-width:0}
+.contractor-open-documents small{font-size:11px;color:var(--muted)}
+.contractor-open-documents a:hover{border-color:var(--orange)}
+.contractors-copy .contractor-seo{padding-top:34px;border-top:1px solid var(--line);margin-top:42px}
+.contractor-seo h2{font:400 23px/1.5 Science,Geist,sans-serif;text-transform:uppercase;max-width:900px;margin:0 0 20px}
+.contractor-seo p{font-size:13px;line-height:1.9;color:var(--muted);max-width:1060px;margin:0 0 15px}
+@media(max-width:767px){.contractor-document-actions,.contractor-form-actions{display:grid;grid-template-columns:1fr}.contractor-document-actions .btn,.contractor-form-actions .btn{width:100%;min-height:46px;font-size:13px}.contractor-access-dialog{width:calc(100vw - 20px);max-width:calc(100vw - 20px);padding:26px 20px}.contractor-access-dialog>h2{font-size:23px}.contractor-access-form .form-row{grid-template-columns:1fr;gap:16px}.contractor-access-form input,.contractor-access-form textarea{font-size:16px}.contractor-access-form label{font-size:14px}.contractor-open-documents{grid-template-columns:1fr}.contractor-open-documents a{font-size:14px}.contractor-seo h2{font-size:23px}.contractor-seo p{font-size:14px}.contractors-copy .contractor-seo{margin-top:30px;padding-top:28px}}
