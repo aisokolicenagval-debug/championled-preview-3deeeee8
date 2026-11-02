@@ -29,6 +29,7 @@ document.addEventListener('click',e=>{
  if(!host){host=document.getElementById('dialog-content');const dialog=document.getElementById('dialog');if(!host||!dialog)return;if(!dialog.open)dialog.showModal();}
  previous.set(host,host.innerHTML);
  host.innerHTML='<h3 tabindex="-1">'+E(doc[0])+' · '+E(doc[1])+'</h3><p>В прототипе показан сценарий получения материала. Файл будет подключён при наполнении сайта.</p><button type="button" class="text-link" data-prototype-document-back>К списку материалов ↗</button>';
+ if(host.id==='dialog-content')host.querySelector('h3').id='dialog-title';
  host.querySelector('h3').focus({preventScroll:true});
 },true);
 })();
