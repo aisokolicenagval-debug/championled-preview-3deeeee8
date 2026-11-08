@@ -1061,6 +1061,12 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
 
 /* Homepage mobile review. Desktop presentation is intentionally outside these rules. */
 .home-mobile-photo{display:none}
+/* The official logo is used unchanged; its supporting line sits below it. */
+body.home-restyled #canvas #about .home-marking-note{margin:24px 0}
+body.home-restyled #canvas #about .product-marking-link{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;max-width:100%;padding:0;background:transparent;border-radius:0;color:#1d2731;text-decoration:none}
+body.home-restyled #canvas #about .product-marking-link>img{display:block;width:205px;max-width:100%;height:48px;object-fit:contain;flex:none}
+body.home-restyled #canvas #about .product-marking-link>.product-marking-description{display:block;font:400 13px/19px Geist,Arial,sans-serif;color:#697178}
+body.home-restyled #canvas #about .product-marking-link:hover{background:transparent;color:#b95c28}
 @media(max-width:1100px){
  body.home-restyled #canvas #series .series-grid{gap:24px 16px}
  body.home-restyled #canvas #series .series-banner{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
@@ -1086,11 +1092,13 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  body.home-restyled #canvas #home-hero-title{font:400 clamp(23px,6.5vw,28px)/1.25 Science,Arial,sans-serif;letter-spacing:0;word-break:normal;overflow-wrap:normal}
  body.home-restyled #canvas .hero .hero-subtitle{font:500 15px/23px Geist,Arial,sans-serif;max-width:none;margin:20px 0 0;color:#fff}
  body.home-restyled #canvas .hero .hero-description{font:400 14px/21px Geist,Arial,sans-serif;max-width:none;margin:12px 0 24px;color:#e1e6e9}
- body.home-restyled #canvas .hero .buttons{display:flex;flex-direction:column;gap:12px;margin:0}
+ body.home-restyled #canvas .hero .buttons{display:flex;flex-direction:column;align-items:stretch;width:100%;max-width:none;gap:12px;margin:0}
  body.home-restyled #canvas .hero .buttons>:is(.btn,.hero-series-link){display:flex;width:100%;min-height:44px;padding:11px 16px;border-radius:4px;justify-content:center;font:400 14px/20px Geist,Arial,sans-serif}
  body.home-restyled #canvas .hero .hero-signature{margin:24px 0 16px}
- body.home-restyled #canvas .home-hero-badges{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
- body.home-restyled #canvas .home-hero-badges li{justify-content:center;min-height:34px;padding:6px 8px;font:400 12px/18px Geist,Arial,sans-serif}
+ body.home-restyled #canvas .home-hero-badges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;width:100%;max-width:none;margin:0}
+ body.home-restyled #canvas .home-hero-badges li{display:flex;align-items:center;justify-content:center;gap:2px;min-width:0;min-height:34px;height:34px;padding:4px 1px;font:400 10px/12px Geist,Arial,sans-serif}
+ body.home-restyled #canvas .home-hero-badges li svg{width:10px;height:10px;flex:0 0 10px}
+ body.home-restyled #canvas .home-hero-badges li span{font:inherit;white-space:normal;text-align:left}
  body.home-restyled #canvas :is(.section-heading,.sale-heading,.purchase-heading){display:block;max-width:none;text-align:center;margin:0 0 24px}
  body.home-restyled #canvas main :is(h1,h2,h3){word-break:normal;overflow-wrap:normal;hyphens:none}
  body.home-restyled #canvas main h2{font:400 25px/31px Science,Arial,sans-serif;letter-spacing:0;margin:0;text-wrap:balance}
@@ -1120,6 +1128,8 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  body.home-restyled #canvas .sale-bottom{display:block;margin-top:24px}
  body.home-restyled #canvas :is(.sale-bottom .btn,.case-all-link,.journal-footer .btn,.home-seo-copy>.btn,.purchase-catalog .btn){width:100%}
  body.home-restyled #canvas #realized-projects .projects-intro{margin:16px 0 28px;font:400 15px/23px Geist,Arial,sans-serif}
+ body.home-restyled #canvas #realized-projects .projects-logo-base{width:240px;gap:8px}
+ body.home-restyled #canvas #realized-projects .projects-logo-label{font-size:10px;line-height:15px}
  /* Project referral follows the existing LEDMONSTER branding, with left-aligned copy. */
  body.home-restyled #canvas #project.audience-project{display:grid;grid-template-columns:1fr;padding:0;gap:0;margin-top:40px;overflow:hidden;border:1px solid #d7dadd;border-radius:10px;background:#1d2731;color:#fff;text-align:left}
  body.home-restyled #canvas #project .home-project-media{position:relative;width:100%;height:auto;min-height:0;aspect-ratio:16/9}
@@ -1138,6 +1148,7 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  body.home-restyled #canvas .cooperation-section>.partners-grid{display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% - 24px);grid-template-columns:none;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#eb8348 #f3f3f3;padding:0 0 12px;align-items:stretch}
  body.home-restyled #canvas .cooperation-section .cooperation-card{scroll-snap-align:start;scroll-snap-stop:always;min-width:0}
  body.home-restyled #canvas .cooperation-card .cooperation-photo{aspect-ratio:16/9}
+ body.home-restyled #canvas .cooperation-photo-designers img{position:absolute;top:0;right:0;left:auto;width:166.666667%;max-width:none;height:auto;object-fit:initial;transform:none;transform-origin:initial}
  body.home-restyled #canvas .cooperation-section .cooperation-card .audience-card-copy{padding:18px}
  body.home-restyled #canvas .cooperation-card .partner-number{font:600 10px/16px Geist,Arial,sans-serif;letter-spacing:0;min-height:32px}
  body.home-restyled #canvas .cooperation-section .cooperation-card .audience-card-copy h3{font:600 16px/22px Geist,Arial,sans-serif;text-transform:uppercase;min-height:44px;margin:10px 0 12px}
@@ -1145,7 +1156,7 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  body.home-restyled #canvas .cooperation-benefits{padding-top:14px;margin-bottom:20px}
  body.home-restyled #canvas .cooperation-card .cooperation-benefits li{font:400 12px/18px Geist,Arial,sans-serif}
  body.home-restyled #canvas .cooperation-card .cooperation-apply{font:500 12px/18px Geist,Arial,sans-serif;min-height:44px;white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
- body.home-restyled #canvas .buyer-question{display:block;margin-top:32px;padding:0;text-align:left}
+ body.home-restyled #canvas .buyer-question{display:block;margin-top:32px;padding:0;border:0;border-radius:0;background:transparent;text-align:left}
  body.home-restyled #canvas .buyer-question h3{font:600 18px/24px Geist,Arial,sans-serif;margin:10px 0 14px}
  body.home-restyled #canvas .buyer-question>p{font:400 14px/21px Geist,Arial,sans-serif;margin:0 0 24px}
  body.home-restyled #canvas .buyer-preview-grid{grid-template-columns:1fr;gap:20px}
@@ -1179,17 +1190,20 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  body.home-restyled #canvas .purchase-service strong{font:500 14px/20px Geist,Arial,sans-serif}
  body.home-restyled #canvas .purchase-service small{margin-top:4px;font:400 12px/18px Geist,Arial,sans-serif}
  /* Blog cards keep their metadata aligned; the section action follows the cards. */
- body.home-restyled #canvas .journal-home-refined .editorial-card-grid{display:grid;grid-template-columns:1fr;gap:24px}
+ body.home-restyled #canvas .journal-home-refined .editorial-card-grid{display:grid;grid-auto-flow:column;grid-auto-columns:calc(100% - 24px);grid-template-columns:none;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#eb8348 #f3f3f3;padding-bottom:12px;align-items:stretch}
  body.home-restyled #canvas .journal-home-refined .editorial-card{padding:0;border:1px solid #d7dadd;border-radius:10px;overflow:hidden;background:#fff}
+ body.home-restyled #canvas .journal-home-refined .editorial-card{display:flex;flex-direction:column;scroll-snap-align:start;scroll-snap-stop:always;min-width:0}
  body.home-restyled #canvas .journal-home-refined .editorial-card-cover{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:0;overflow:hidden}
  body.home-restyled #canvas .journal-home-refined .editorial-card-cover img{width:100%;height:100%;object-fit:cover;display:block}
- body.home-restyled #canvas .journal-home-refined .editorial-card-body{padding:18px}
- body.home-restyled #canvas .editorial-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin:0 0 12px}
+ body.home-restyled #canvas .journal-home-refined .editorial-card-body{padding:18px;display:flex;flex-direction:column;flex:1}
+ body.home-restyled #canvas .editorial-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin:0 0 12px;min-height:34px}
  body.home-restyled #canvas .editorial-meta .editorial-rubric{font:400 11px/17px Geist,Arial,sans-serif;letter-spacing:0;color:#b95c28}
  body.home-restyled #canvas .editorial-meta time{font:400 11px/17px Geist,Arial,sans-serif;white-space:nowrap;flex:none;color:#697178}
  body.home-restyled #canvas .journal-home-refined .editorial-card h3{font:600 16px/22px Geist,Arial,sans-serif;margin:0 0 12px;text-transform:none}
+ body.home-restyled #canvas .journal-home-refined .editorial-card h3{min-height:44px}
  body.home-restyled #canvas .journal-home-refined .editorial-card p{font:400 13px/19px Geist,Arial,sans-serif;margin:0 0 16px;color:#697178}
  body.home-restyled #canvas .journal-home-refined .editorial-read{display:inline-flex;align-items:center;min-height:44px;border:0;padding:0;font:400 13px/19px Geist,Arial,sans-serif;text-decoration:underline;text-underline-offset:4px}
+ body.home-restyled #canvas .journal-home-refined .editorial-read{margin-top:auto;align-self:flex-start}
  body.home-restyled #canvas .journal-footer{display:block;margin-top:24px}
  /* Full-width brand photograph, with the text returning to the shared reading gutter. */
  body.home-restyled #canvas .home-seo-refined{padding:28px 0;background:#fff}
@@ -1202,8 +1216,11 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  body.home-restyled #canvas .home-marking-note{margin-top:24px}
  body.home-restyled #canvas .home-seo-copy>.btn{margin-top:24px}
  body.site-consistent #canvas .footer-common-phone{color:#fff}
+ body.site-consistent #canvas .footer-contact-lines{display:grid;gap:8px}
+ body.site-consistent #canvas .footer-common-email{display:block;color:#fff;font:400 14px/21px Geist,Arial,sans-serif;margin:0}
 }
 @media(max-width:360px){
  body.home-restyled #canvas main h2,body.home-restyled #canvas #documents h2{font-size:24px;line-height:30px}
  body.home-restyled #canvas #home-hero-title{font-size:22px;line-height:28px}
+ body.home-restyled #canvas .home-hero-badges li{font-size:9px}
 }

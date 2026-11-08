@@ -25,6 +25,7 @@
  #canvas .site-footer .footer-contact-title>a{font:500 12px/18px Geist,Arial,sans-serif;text-transform:uppercase;color:#f2f4f7}
  #canvas .site-footer .footer-contact-lines{display:grid;gap:7px}
  #canvas .site-footer .footer-contact-lines .footer-common-phone{font:400 18px/24px Geist,Arial,sans-serif;color:#f2f4f7;white-space:nowrap;min-height:0}
+ #canvas .site-footer .footer-contact-lines .footer-common-email{display:block;font:400 14px/21px Geist,Arial,sans-serif;color:#f2f4f7;min-height:0;margin:0}
  #canvas .site-footer .footer-location{display:block;margin-top:18px}
  #canvas .site-footer .footer-location .footer-location-title{font:400 11px/17px Geist,Arial,sans-serif;color:#99a3ac;margin:0 0 5px}
  #canvas .site-footer .footer-location p,#canvas .site-footer .footer-location address{font:400 11px/17px Geist,Arial,sans-serif;color:#d7dde2;font-style:normal;margin:0}
