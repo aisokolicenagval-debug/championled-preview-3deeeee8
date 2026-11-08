@@ -1396,3 +1396,6 @@ body.home-restyled #canvas #about .product-marking-link:hover{background:transpa
 @media(max-width:767px){
  #pobeda-content #project>.wrap{width:calc(100% - 40px);max-width:none;margin:0 auto;padding:0}
 }
+@media(max-width:767px){
+ body.case-detail-finalized #canvas .case-simple-gallery.case-gallery-single :is(.case-gallery-controls,.case-gallery-thumbs){display:none}
+}
