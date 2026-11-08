@@ -1,0 +1,31 @@
+/* ChampionLED type roles. Desktop stage only; no JavaScript is required. */
+@media(min-width:1101px){
+ .home-restyled{
+  --font-display:Science,Arial,sans-serif;
+  --font-reading:Geist,Arial,sans-serif;
+  --type-h1:34px;--leading-h1:41px;
+  --type-h2:32px;--leading-h2:38px;
+  --type-h3:22px;--leading-h3:28px;
+  --type-card-title:16px;--leading-card-title:22px;
+  --type-intro:16px;--leading-intro:24px;
+  --type-body:14px;--leading-body:21px;
+  --type-caption:13px;--leading-caption:19px;
+  --type-small:12px;--leading-small:18px;
+  --type-kicker:11px;--leading-kicker:16px;
+ }
+ .home-restyled main{font-family:var(--font-reading);font-size:var(--type-body);line-height:var(--leading-body)}
+ .home-restyled .hero h1{font:400 var(--type-h1)/var(--leading-h1) var(--font-display)}
+ .home-restyled main h2,.home-restyled .technical h2,.home-restyled .sale-native .sale-heading h2,.home-restyled .about-grid h2{font:400 var(--type-h2)/var(--leading-h2) var(--font-display)}
+ .home-restyled main h3,.home-restyled .audience-home .audience-card-copy h3,.home-restyled .buyer-preview-card h3,.home-restyled .buyer-question h3,.home-restyled .editorial-card-body h3{font:400 var(--type-h3)/var(--leading-h3) var(--font-display)}
+ .home-restyled .category-section-light .category-content h3,.home-restyled .steps h3{font:600 var(--type-card-title)/var(--leading-card-title) var(--font-reading)}
+ .home-restyled .sale-native .sale-product-name h3{font:400 var(--type-body)/var(--leading-body) var(--font-reading);text-transform:none}
+ .home-restyled .hero .hero-description,.home-restyled #series .section-heading .series-intro,.home-restyled .category-section-light .section-heading .categories-intro,.home-restyled .sale-native .sale-heading p,.home-restyled .projects-intro,.home-restyled .journal-lead,.home-restyled main .section-heading>p:not(.eyebrow){font:400 var(--type-intro)/var(--leading-intro) var(--font-reading)}
+ .home-restyled .technical .tech-grid>div:first-child>p:not(.eyebrow),.home-restyled #project .home-project-copy>p:not(.eyebrow),.home-restyled .buyer-question>p,.home-restyled .faq-section>div>p:not(.eyebrow),.home-restyled .faq-list details p,.home-restyled .about-grid p{font:400 var(--type-body)/var(--leading-body) var(--font-reading)}
+ .home-restyled .benefits strong{font:600 var(--type-body)/18px var(--font-reading)}
+ .home-restyled .benefits p span,.home-restyled .series-banner-caption,.home-restyled .audience-home .audience-card-copy>p,.home-restyled .buyer-preview-card p,.home-restyled .editorial-card-body>p,.home-restyled .steps p,.home-restyled .visual-description strong{font:400 var(--type-caption)/var(--leading-caption) var(--font-reading)}
+ .home-restyled .category-section-light .category-content small,.home-restyled .case-installer-credit,.home-restyled .project-case-card>small,.home-restyled .composition>p,.home-restyled .sale-result,.home-restyled .home-hero-badges li,.home-restyled .visual-description>span{font:400 var(--type-small)/var(--leading-small) var(--font-reading)}
+ .home-restyled main .eyebrow,.home-restyled .category-section-light .section-heading .eyebrow,.home-restyled #project .eyebrow,.home-restyled .partner-number,.home-restyled .editorial-rubric,.home-restyled .composition-heading>span{font-family:var(--font-reading);font-size:var(--type-kicker);line-height:var(--leading-kicker);font-weight:600}
+ .home-restyled .faq-list summary{font:400 var(--type-card-title)/var(--leading-intro) var(--font-reading)}
+ .home-restyled main .btn,.home-restyled .hero .buttons .btn,.home-restyled .hero .buttons .hero-series-link,.home-restyled .categories-footer .category-catalog-link{font:400 var(--type-body)/20px var(--font-reading)}
+ .home-restyled main .text-link,.home-restyled .audience-home .audience-card-copy .partner-link,.home-restyled .editorial-read{font-family:var(--font-reading);font-size:var(--type-caption);line-height:var(--leading-caption)}
+}

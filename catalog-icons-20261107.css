@@ -1,0 +1,11 @@
+/* Framed orange icons apply only to product categories. Series keep their covers. */
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-icon-background{fill:#fff1e8}
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-icon-option[aria-pressed=true] .catalog-icon-background{fill:#fce3d2}
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-focus-detail-icon{display:grid;place-items:center;width:78px;height:78px;flex:0 0 78px;background:transparent;border-radius:0;color:var(--orange)}
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-focus-detail-icon>svg{display:block;width:78px;height:78px}
+:is(.catalog-category-icons,.catalog-icons-demo) .focus-catalog-list .focus-category-option.catalog-icon-option{display:flex;align-items:center;gap:12px;padding:5px 10px;min-height:46px}
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-option-icon{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;color:var(--orange)}
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-option-icon>svg{display:block;width:36px;height:36px}
+:is(.catalog-category-icons,.catalog-icons-demo) .catalog-icon-option>span:nth-child(2){flex:1;min-width:0}
+@media(min-width:768px) and (max-width:1100px){:is(.catalog-category-icons,.catalog-icons-demo) .catalog-focus-detail-icon{width:68px;height:68px;flex-basis:68px}:is(.catalog-category-icons,.catalog-icons-demo) .catalog-focus-detail-icon>svg{width:68px;height:68px}}
+@media(max-width:767px){:is(.catalog-category-icons,.catalog-icons-demo) .catalog-focus-detail-icon{width:60px;height:60px;flex-basis:60px}:is(.catalog-category-icons,.catalog-icons-demo) .catalog-focus-detail-icon>svg{width:60px;height:60px}:is(.catalog-category-icons,.catalog-icons-demo) .focus-catalog-list .focus-category-option.catalog-icon-option{gap:10px;padding:6px 8px}:is(.catalog-category-icons,.catalog-icons-demo) .catalog-option-icon{flex-basis:32px;width:32px;height:32px}:is(.catalog-category-icons,.catalog-icons-demo) .catalog-option-icon>svg{width:32px;height:32px}}

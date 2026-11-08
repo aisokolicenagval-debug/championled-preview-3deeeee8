@@ -1,0 +1,15 @@
+/* Shared approved homepage LEDMONSTER referral. */
+@media(min-width:1101px){
+ body.site-consistent #canvas .au-project-shared{display:grid;grid-template-columns:1.15fr 1fr;gap:0;padding:0;margin:0;background:#1d2731;color:#fff;border:0;border-radius:10px;overflow:hidden}
+ body.site-consistent #canvas .au-project-shared .home-project-media{position:relative;min-height:390px}
+ body.site-consistent #canvas .au-project-shared .home-project-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+ body.site-consistent #canvas .au-project-shared .home-project-copy{padding:34px;max-width:none;display:flex;flex-direction:column;align-items:start;justify-content:center}
+ body.site-consistent #canvas .au-project-shared .home-project-brand{display:grid;width:max-content;max-width:100%;gap:24px;margin-bottom:12px}
+ body.site-consistent #canvas .au-project-shared .home-project-brand>.eyebrow{margin:0;font:400 11px/16px Geist,Arial,sans-serif;color:#38e6e5;white-space:nowrap}
+ body.site-consistent #canvas .au-project-shared .home-project-logo-frame{display:block;position:relative;width:100%;aspect-ratio:908 / 88;overflow:hidden}
+ body.site-consistent #canvas .au-project-shared .home-project-logo-frame>.home-project-logo{position:absolute;display:block;width:110.132159%;max-width:none;height:150%;left:-3.524229%;top:-22.727273%;margin:0}
+ body.site-consistent #canvas .au-project-shared h2{margin:0 0 18px;color:#fff;font:400 var(--type-h3,22px)/var(--leading-h3,28px) Science,Arial,sans-serif;text-transform:uppercase}
+ body.site-consistent #canvas .au-project-shared .home-project-copy>p{margin:0 0 24px;max-width:440px;color:#e1e6e9;font:400 14px/21px Geist,Arial,sans-serif}
+ body.site-consistent #canvas #project .au-project-shared .btn{background:#38e6e5;color:#1d2731;border:0;min-height:42px}
+ body.site-consistent #canvas .contact-project-shared{margin:40px 0 0}
+}

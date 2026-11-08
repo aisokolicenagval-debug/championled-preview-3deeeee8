@@ -1,33 +1,13 @@
-
-const blogGroups=EDITORIAL_CONTENT.groups,blogArticles=EDITORIAL_CONTENT.articles;
-const blogParams=new URLSearchParams(location.search);
-let blogGroup=blogGroups.some(g=>g.key===blogParams.get('rubric'))?blogParams.get('rubric'):'all';
-let blogQuery=blogParams.get('q')||'';
-const blogFeaturedKeys=['composition','magnetic','specification'];
-function blogCard(a){const g=blogGroups.find(g=>g.key===a.group);return `<article class="editorial-card"><a class="editorial-card-cover ${a.imageMode}" href="blog-1440.html#article-${a.key}" data-article="${a.key}" aria-label="${E(a.title)}"><img src="${a.image}" alt="${E(a.alt)}" loading="lazy">${a.credit?`<span class="editorial-credit">${E(a.credit)}</span>`:''}</a><div class="editorial-card-body"><a class="editorial-rubric" href="?rubric=${a.group}" data-blog-filter="${a.group}">${E(g.title)}</a><h3><a href="blog-1440.html#article-${a.key}" data-article="${a.key}">${E(a.title)}</a></h3><p>${E(a.description)}</p><a class="editorial-read" href="blog-1440.html#article-${a.key}" data-article="${a.key}">О материале <span aria-hidden="true">↗</span></a></div></article>`}
-function renderBlog(){
- const q=blogQuery.trim().toLocaleLowerCase('ru-RU');
- const filtered=blogArticles.filter(a=>(blogGroup==='all'||a.group===blogGroup)&&(!q||(a.title+' '+a.description+' '+a.outline.join(' ')).toLocaleLowerCase('ru-RU').includes(q)));
- const featured=blogGroup==='all'&&!q;
- $('#blog-filters').innerHTML=[{key:'all',title:'Все материалы'},...blogGroups].map(g=>`<a href="${g.key==='all'?'blog-1440.html':'?rubric='+g.key}" data-blog-filter="${g.key}" aria-current="${g.key===blogGroup}">${E(g.title)}</a>`).join('');
- $('#blog-featured').hidden=!featured;
- if(featured){const main=blogArticles.find(a=>a.key===blogFeaturedKeys[0]);$('#blog-featured').innerHTML=`<article class="blog-feature-main"><div class="blog-feature-copy"><span class="editorial-rubric">РАЗБОР ПРОДУКТА</span><h2><a href="blog-1440.html#article-${main.key}" data-article="${main.key}">${E(main.title)}</a></h2><p>${E(main.description)}</p><a class="text-link" href="blog-1440.html#article-${main.key}" data-article="${main.key}">Что внутри материала <span>↗</span></a></div><a class="blog-feature-visual" href="blog-1440.html#article-${main.key}" data-article="${main.key}" aria-label="${E(main.title)}"><img src="${main.image}" alt="${E(main.alt)}"></a></article><div class="blog-feature-side">${blogFeaturedKeys.slice(1).map(key=>{const a=blogArticles.find(a=>a.key===key);return `<article class="blog-feature-small"><span class="editorial-rubric">${a.key==='magnetic'?'УСТРОЙСТВО СИСТЕМЫ':'ПЕРЕД ЗАКАЗОМ'}</span><h3><a href="blog-1440.html#article-${a.key}" data-article="${a.key}">${E(a.title)}</a></h3><a href="blog-1440.html#article-${a.key}" data-article="${a.key}">О материале <span>↗</span></a></article>`}).join('')}</div>`}
- const items=featured?filtered.filter(a=>!blogFeaturedKeys.includes(a.key)):filtered;
- $('#blog-card-grid').innerHTML=items.map(blogCard).join('');
- $('#blog-list-heading').textContent=q?'Результаты поиска':blogGroup==='all'?'Ещё в блоге':blogGroups.find(g=>g.key===blogGroup).title;
- $('#blog-list-note').textContent=q?'Поиск по заголовкам и содержанию':blogGroup==='all'?'Об освещении, светильниках и выборе продукции':blogGroups.find(g=>g.key===blogGroup).intro;
- $('#blog-results-status').textContent=q?`Найдено: ${filtered.length}${blogGroup==='all'?'':' · '+blogGroups.find(g=>g.key===blogGroup).title}`:featured?'Выберите тему или воспользуйтесь поиском':`${blogGroup==='updates'?'Новинки продукции и полезные обновления':'Материалов: '+filtered.length}`;
- $('#blog-clear').hidden=blogGroup==='all'&&!q;
- $('#blog-empty').hidden=filtered.length!==0;
- if(!filtered.length)$('#blog-empty').innerHTML=blogGroup==='updates'&&!q?'<h3>Анонсы готовятся</h3><p>Готовим материалы о новых сериях, светильниках и компонентах ChampionLED. В каждом анонсе будут назначение, характеристики и ссылка на продукцию.</p><button class="btn" id="announcement-example">Посмотреть структуру анонса ↗</button>':'<h3>Материалов не найдено</h3><p>Измените запрос или откройте все материалы блога.</p><button class="btn" data-blog-reset>Все материалы ↗</button>';
-}
-function updateBlogUrl(){const params=new URLSearchParams();if(blogGroup!=='all')params.set('rubric',blogGroup);if(blogQuery.trim())params.set('q',blogQuery.trim());history.replaceState(null,'','blog-1440.html'+(params.size?'?'+params.toString():''))}
-$('#blog-query').value=blogQuery;
-$('#blog-search-form').addEventListener('submit',e=>{e.preventDefault();blogQuery=$('#blog-query').value;renderBlog();updateBlogUrl()});
-function resetBlog(){blogGroup='all';blogQuery='';$('#blog-query').value='';renderBlog();updateBlogUrl()}
-$('#blog-clear').addEventListener('click',resetBlog);
-document.addEventListener('click',e=>{const b=e.target.closest('a,button');if(!b)return;if(b.dataset.blogFilter){e.preventDefault();blogGroup=b.dataset.blogFilter;renderBlog();updateBlogUrl();document.querySelector(`[data-blog-filter="${blogGroup}"]`)?.focus({preventScroll:true})}if(b.dataset.blogReset!==undefined)resetBlog();if(b.id==='announcement-example')open('Структура анонса новинки',`<span class="tag">Пример структуры · не объявление о выпуске</span><p>В карточке анонса: изображение продукции, название, рубрика «Новинки и обновления» и кратко — что появилось.</p><ol class="article-preview-outline"><li>Что представляем: новая серия, модель, компонент или исполнение.</li><li>Назначение и место в ассортименте ChampionLED.</li><li>Подтверждённые характеристики и варианты исполнения.</li><li>Состав изделия или системы, обязательные части и опции.</li><li>Переход к каталогу и документации конкретной продукции.</li></ol><p class="small">Фактический анонс добавляется после подтверждения готовности продукции. Название, дата выпуска, цены и наличие сейчас не выдумываются.</p>`)});
-$('#blog-notes').addEventListener('click',()=>open('Логика страницы блога',`<p>Блог помогает понимать применение света и стандартную продукцию ChampionLED. Основные читатели — профессиональные покупатели, партнёры, дизайнеры и их заказчики.</p><ol class="article-preview-outline"><li>Название, назначение раздела и отдельный переход к кейсам.</li><li>Четыре рубрики и поиск по материалам.</li><li>Редакционная подборка: один выделенный разбор и две связанные темы.</li><li>Сетка материалов: обложка, рубрика, заголовок, короткое описание.</li><li>Связь с каталогом и техническими материалами.</li></ol><p>Кейсы остаются самостоятельным разделом. Новинки объединяют анонсы серий, моделей, компонентов и исполнений.</p><p class="small">Локальный прототип 1440 px. Показаны предложенные темы и планы статей. Даты, авторы и время чтения появятся после подготовки фактических публикаций. Страница отдельной статьи — следующий этап.</p>`));
-renderBlog();
-
-let blogSearchTimer;$('#blog-query').addEventListener('input',()=>{clearTimeout(blogSearchTimer);blogSearchTimer=setTimeout(()=>{blogQuery=$('#blog-query').value;renderBlog();updateBlogUrl()},180)});
+/* Existing local search now filters static article cards. Rubrics use ordinary links. */
+(()=>{
+const root=document.querySelector('[data-static-blog]');if(!root)return;
+const form=document.getElementById('blog-search-form'),input=document.getElementById('blog-query');
+const cards=[...root.querySelectorAll('[data-blog-card]')],status=document.getElementById('blog-results-status'),empty=document.getElementById('blog-empty');
+if(!form||!cards.length)return;
+const defaultStatus=status.textContent;
+function search(){const q=input.value.trim().toLocaleLowerCase('ru-RU');let count=0;cards.forEach(c=>{c.hidden=!!q&&!c.textContent.toLocaleLowerCase('ru-RU').includes(q);if(!c.hidden)count++});status.textContent=q?'Найдено статей: '+count:defaultStatus;empty.hidden=count!==0;const url=new URL(location.href);if(q)url.searchParams.set('q',input.value.trim());else url.searchParams.delete('q');history.replaceState(null,'',url)}
+input.value=new URLSearchParams(location.search).get('q')||'';
+form.addEventListener('submit',e=>{e.preventDefault();search()});
+let timer;input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(search,180)});
+if(input.value)search();
+})();

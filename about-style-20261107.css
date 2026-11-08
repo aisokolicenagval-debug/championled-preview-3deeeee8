@@ -1,0 +1,255 @@
+/* About ChampionLED: approved homepage foundations, desktop 1440 only. */
+.about-restyled .brand-audience-photo{display:none}
+@media(min-width:1101px){
+ body.about-restyled{background:#fff}
+ .about-restyled .brand-main{--muted:#697178;color:#1d2731}
+ .about-restyled .brand-main>.container{width:1100px;max-width:calc(100% - 64px);margin:0 auto}
+ .about-restyled .brand-main section[id]{scroll-margin-top:145px}
+ .about-restyled .brand-crumbs{padding:16px 0 0;margin:0 0 16px;gap:12px;font:400 12px/18px Geist,Arial,sans-serif;color:#697178}
+ .about-restyled .brand-main .eyebrow{margin:0 0 14px;color:#eb8348;font:600 11px/16px Geist,Arial,sans-serif;letter-spacing:.1em}
+ .about-restyled .brand-main h1{font:400 34px/41px Science,Arial,sans-serif;letter-spacing:.015em}
+ body.about-restyled #canvas .brand-main h2{font:400 32px/38px Science,Arial,sans-serif;letter-spacing:.015em;margin:0 0 20px;text-transform:uppercase}
+ .about-restyled .brand-main p{color:#697178}
+ .about-restyled .brand-main .btn{display:inline-flex;align-items:center;justify-content:center;gap:0;min-height:42px;padding:10px 20px;border-radius:4px;font:400 14px/20px Geist,Arial,sans-serif;white-space:normal}
+ .about-restyled .brand-main .btn.primary{border:0;background:linear-gradient(180deg,#feb264 -2.46%,#c65811 103.25%);color:#fff}
+ .about-restyled .brand-main .btn.outline{border:1px solid #1d2731;background:transparent;color:#1d2731}
+ .about-restyled .brand-main .btn.outline:hover{background:#faeee5;border-color:#eb8348}
+ .about-restyled .brand-main .text-link{display:inline-flex;width:max-content;max-width:100%;font:400 13px/19px Geist,Arial,sans-serif;gap:0;color:#1d2731;text-decoration:underline;text-underline-offset:4px;border:0;padding:0;background:transparent}
+ .about-restyled .brand-main .text-link:hover{color:#b95c28}
+ .about-restyled .brand-hero{padding-top:0}
+ .about-restyled .brand-hero-top{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:40px;padding-bottom:30px;align-items:stretch}
+ .about-restyled .brand-hero-copy{padding:20px 0;justify-content:center}
+ .about-restyled .brand-hero h1{margin:0;max-width:none}
+ .about-restyled .brand-hero-lead{margin-top:22px;max-width:440px}
+ .about-restyled .brand-hero-lead>p{font:400 14px/21px Geist,Arial,sans-serif;margin:0 0 24px}
+ .about-restyled .brand-hero-image{height:390px;border:1px solid #d7dadd;border-radius:10px}
+ .about-restyled .brand-hero-image figcaption{left:24px;bottom:24px;font:400 12px/18px Geist,Arial,sans-serif}
+ /* Preserve the existing horizontal facts composition and its distinct type treatment. */
+ .about-restyled .brand-facts{grid-template-columns:1fr 1fr 1.2fr;gap:24px;padding:27px 0 28px}
+ .about-restyled .brand-facts>div{gap:18px}
+ .about-restyled .brand-facts>div+div{padding-left:24px}
+ .about-restyled .brand-page-nav{padding:20px 0;gap:28px;flex-wrap:wrap;font:400 12px/18px Geist,Arial,sans-serif}
+ .about-restyled .brand-story{grid-template-columns:1fr 1fr;gap:40px;padding:80px 0 40px;align-items:stretch}
+ .about-restyled .brand-story>div:first-child{padding:0}
+ .about-restyled .brand-story-copy p{font:400 14px/21px Geist,Arial,sans-serif;margin:0 0 16px}
+ .about-restyled .brand-story-copy .brand-large-copy{font:400 16px/24px Geist,Arial,sans-serif;color:#1d2731;margin-bottom:20px}
+ .about-restyled .brand-media{border:1px solid #d7dadd;border-radius:10px;background:#f3f3f3;padding:24px}
+ .about-restyled .brand-media::before,.about-restyled .brand-media-art::before,.about-restyled .brand-media-art::after{display:none}
+ .about-restyled .brand-media-art{inset:45px;opacity:.75}
+ .about-restyled .brand-media-art svg{stroke:#eb8348;stroke-width:1.5}
+ .about-restyled .brand-media-art b{display:none}
+ .about-restyled .brand-media figcaption{font:400 12px/18px Geist,Arial,sans-serif;color:#697178}
+ .about-restyled .brand-media>span{font:400 11px/16px Geist,Arial,sans-serif;color:#879195}
+ .about-restyled .brand-media--origin{height:auto;min-height:460px}
+ .about-restyled .brand-production{padding:40px 0}
+ .about-restyled .brand-section-heading{display:block;max-width:940px;margin:0 auto 32px;padding:0;text-align:center}
+ body.about-restyled #canvas .brand-section-heading h2{margin-bottom:0}
+ .about-restyled .brand-section-heading>p{max-width:640px;margin:16px auto 0;padding:0;font:400 16px/24px Geist,Arial,sans-serif;color:#697178}
+ .about-restyled .brand-process{border:0;gap:16px;border-radius:0;overflow:visible}
+ .about-restyled .brand-process li{padding:20px;border:1px solid #d7dadd;border-radius:10px;background:#f3f3f3}
+ .about-restyled .brand-process li+li{border-left:1px solid #d7dadd}
+ .about-restyled .brand-process li::after{display:none}
+ .about-restyled .brand-process li>span{display:grid;place-items:center;width:80px;height:80px;margin:0 0 24px;border:1px solid #fde3c8;border-radius:50%;background:#fff0df;box-shadow:inset 0 0 0 3px #fff;color:#eb8348;font:400 28px/1 Geist,Arial,sans-serif}
+ body.about-restyled #canvas .brand-process h3{font:600 16px/22px Geist,Arial,sans-serif;min-height:22px;margin:0 0 12px;text-transform:none}
+ .about-restyled .brand-process p{font:400 13px/19px Geist,Arial,sans-serif;margin:0}
+ .about-restyled .brand-media--wide{height:260px;margin-top:24px;background:#f3f3f3}
+ .about-restyled .brand-media--wide .brand-media-art{inset:40px}
+ .about-restyled .brand-value{margin:40px 0;padding:32px;gap:40px;grid-template-columns:1fr 1fr;background:#f3f3f3;border:1px solid #d7dadd;border-radius:10px}
+ .about-restyled .brand-value-intro{padding:0}
+ .about-restyled .brand-value-intro>p:not(.eyebrow){font:400 14px/21px Geist,Arial,sans-serif;max-width:440px}
+ .about-restyled .brand-media--value{height:220px;margin-top:24px;background:#fff}
+ .about-restyled .brand-value-rows article{grid-template-columns:32px 1fr;gap:16px;padding:24px 0;border-color:#d7dadd}
+ .about-restyled .brand-value-rows article>span{font:400 12px/18px Geist,Arial,sans-serif;color:#eb8348;padding-top:2px}
+ body.about-restyled #canvas .brand-value-rows h3{font:600 16px/22px Geist,Arial,sans-serif;margin:0 0 10px;text-transform:none}
+ .about-restyled .brand-value-rows p{font:400 13px/19px Geist,Arial,sans-serif}
+ .about-restyled .brand-product{grid-template-columns:1fr 1fr;gap:40px;padding:40px 0;align-items:stretch}
+ .about-restyled .brand-product-image{aspect-ratio:auto;min-height:410px;background:#f3f3f3;border:1px solid #d7dadd;border-radius:10px}
+ .about-restyled .brand-product-image img{height:100%;object-fit:contain}
+ .about-restyled .brand-product-copy{padding:0;align-self:center}
+ .about-restyled .brand-product-copy>p:not(.eyebrow){font:400 14px/21px Geist,Arial,sans-serif;margin:0 0 16px}
+ .about-restyled .brand-product-copy .brand-product-example{border-left:2px solid #eb8348;padding-left:16px;font:400 13px/19px Geist,Arial,sans-serif}
+ .about-restyled .brand-inline-links{gap:12px;flex-wrap:wrap;margin-top:24px}
+ .about-restyled .brand-responsibility{padding:40px 0}
+ .about-restyled .brand-responsibility .brand-section-heading{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;max-width:none;text-align:left;align-items:end}
+ .about-restyled .brand-responsibility .brand-section-heading>p{margin:0;font:400 14px/21px Geist,Arial,sans-serif}
+ .about-restyled .brand-proof-grid{grid-template-columns:32% 68%;border:1px solid #d7dadd;border-radius:10px;padding:24px}
+ /* Keep the large warranty numeral and left/right proof composition. */
+ .about-restyled .brand-guarantee{padding:0 40px 0 0}
+ .about-restyled .brand-guarantee>p{font:400 13px/19px Geist,Arial,sans-serif}
+ .about-restyled .brand-guarantee>span{color:#eb8348}
+ .about-restyled .brand-proof-details{padding:0}
+ .about-restyled .brand-proof-details details{padding:18px 0;border-color:#d7dadd}
+ .about-restyled .brand-proof-details details:first-child{padding-top:0}
+ .about-restyled .brand-proof-details details:last-child{border-bottom:0;padding-bottom:0}
+ .about-restyled .brand-proof-details summary{font:400 16px/24px Geist,Arial,sans-serif}
+ .about-restyled .brand-proof-details summary::after{font-size:22px;color:#697178}
+ .about-restyled .brand-proof-details details p{font:400 14px/21px Geist,Arial,sans-serif;margin:12px 32px 0 0}
+ .about-restyled .brand-audiences{padding:40px 0}
+ .about-restyled .brand-audience-grid{gap:20px}
+ .about-restyled .brand-audience-grid>a{padding:0 20px 20px;border:1px solid #d7dadd;border-radius:10px;overflow:hidden}
+ .about-restyled .brand-audience-grid>a:hover{background:#fff;border-color:#eb8348}
+ .about-restyled .brand-audience-photo{display:block;flex:none;width:calc(100% + 40px);height:180px;margin:0 -20px 20px;background:#f3f3f3;overflow:hidden}
+ .about-restyled .brand-audience-photo img{display:block;width:100%;height:100%;object-fit:cover}
+ .about-restyled .brand-audience-grid>a:last-child .brand-audience-photo img{object-position:right center;transform:scale(1.45);transform-origin:right center}
+ .about-restyled .brand-audience-photo--contractors{background:url('assets/home1440/cooperation-layout-reference.png') 49.15% 35.64%/341.13% auto no-repeat}
+ .about-restyled .brand-audience-grid>a>span:not(.brand-audience-photo){font:600 11px/16px Geist,Arial,sans-serif;color:#eb8348}
+ body.about-restyled #canvas .brand-audience-grid h3{font:600 16px/22px Geist,Arial,sans-serif;margin:14px 0 12px}
+ .about-restyled .brand-audience-grid p{font:400 13px/19px Geist,Arial,sans-serif;margin:0 0 24px}
+ .about-restyled .brand-audience-grid b{border-top:1px solid #d7dadd;font:400 13px/19px Geist,Arial,sans-serif;text-decoration:underline;text-underline-offset:4px;padding-top:16px}
+ .about-restyled .brand-direct-buy{padding:20px 0;margin-top:24px;font:400 13px/19px Geist,Arial,sans-serif;border-color:#d7dadd}
+ .about-restyled .brand-direct-buy a{text-decoration:underline;text-underline-offset:4px}
+ .about-restyled .brand-ecosystem{margin:40px 0;padding:32px;background:#f3f3f3;border:1px solid #d7dadd;border-radius:10px}
+ .about-restyled .brand-ecosystem .brand-section-heading{display:block;padding:0}
+ .about-restyled .brand-roles{gap:20px}
+ .about-restyled .brand-roles article{padding:26px;border-color:#d7dadd;border-radius:10px}
+ .about-restyled .brand-champion-logo{width:200px;height:44px;object-fit:contain}
+ .about-restyled .brand-monster-logo{width:230px;height:44px;object-fit:contain}
+ body.about-restyled #canvas .brand-roles h3{font:600 16px/22px Geist,Arial,sans-serif;margin:24px 0 14px;text-transform:none}
+ .about-restyled .brand-roles p{font:400 14px/21px Geist,Arial,sans-serif;margin-bottom:24px}
+ .about-restyled .brand-roles article:last-child{background:#1d2731;border-color:#1d2731;color:#fff}
+ .about-restyled .brand-roles article:last-child p{color:#d7dde2}
+ .about-restyled .brand-roles article:last-child .text-link{color:#38e6e5}
+ .about-restyled .brand-role-note{font:400 12px/18px Geist,Arial,sans-serif;margin:20px 0 0}
+ .about-restyled .brand-final{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;margin:80px 0 40px;padding:32px;border:1px solid #d7dadd;border-radius:10px;background:#f3f3f3}
+ .about-restyled .brand-final p:not(.eyebrow){font:400 14px/21px Geist,Arial,sans-serif}
+ .about-restyled .brand-final-actions{gap:18px;min-width:0;align-items:start}
+ .about-restyled .brand-final-actions .btn{min-width:0;justify-content:center;margin-bottom:4px}
+}
+
+@media(min-width:1101px){
+ .about-restyled .brand-hero-image::after{display:none}
+ .about-restyled .brand-hero-image>img{object-fit:cover;object-position:center}
+}
+
+/* Homepage-style USP cards and visual process frames. */
+.about-restyled .brand-facts>div>img,.about-restyled .brand-process-visual{display:none}
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;border:0;padding:32px 0 0}
+ body.about-restyled #canvas .brand-facts>div{display:grid;grid-template-columns:33px minmax(0,1fr);align-items:start;gap:10px;padding:18px 12px;border:0;border-radius:10px;background:#f3f3f3}
+ body.about-restyled #canvas .brand-facts>div>img{display:block;width:33px;height:37px;object-fit:contain}
+ body.about-restyled #canvas .brand-facts p{margin:0}
+ body.about-restyled #canvas .brand-facts strong{display:block;max-width:none;min-height:0;margin:0;font:600 14px/18px Geist,Arial,sans-serif;text-transform:uppercase;white-space:normal;color:#1d2731}
+ body.about-restyled #canvas .brand-facts p>span{display:block;margin-top:8px;font:400 13px/19px Geist,Arial,sans-serif;color:#697178}
+ body.about-restyled #canvas .brand-process li{padding:0;background:#fff;overflow:hidden}
+ body.about-restyled #canvas .brand-process-visual{display:block;width:100%;height:180px;margin:0;background:#f2f4f5;border-bottom:1px solid #e4e7e9}
+ body.about-restyled #canvas .brand-process-visual img{display:block;width:100%;height:100%;object-fit:contain}
+ body.about-restyled #canvas .brand-process li>span{position:relative;z-index:1;margin:-40px 20px 20px}
+ body.about-restyled #canvas .brand-process h3{margin:0 20px 12px}
+ body.about-restyled #canvas .brand-process p{margin:0 20px 22px}
+ body.about-restyled #canvas .brand-product{margin:80px 0 40px;padding:0;gap:0;border:0;border-radius:10px;overflow:hidden;background:#1d2731;color:#fff}
+ body.about-restyled #canvas .brand-product-image{border:0;border-radius:0;background:#1d2731;min-height:410px;position:relative}
+ body.about-restyled #canvas .brand-product-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+ body.about-restyled #canvas .brand-product-copy{align-self:center;padding:32px}
+ body.about-restyled #canvas .brand-product-copy h2{color:#fff}
+ body.about-restyled #canvas .brand-product-copy>p:not(.eyebrow){color:#d7dde2}
+ body.about-restyled #canvas .brand-product-copy .btn.outline{background:#fff;border-color:#fff;color:#1d2731}
+ body.about-restyled #canvas .brand-product-copy .btn.outline:hover{background:#faeee5;border-color:#eb8348}
+}
+
+/* Two brand panels on white, following the supplied reference. */
+.about-restyled .brand-role-photo,.about-restyled .brand-role-label,.about-restyled .brand-final-photo{display:none}
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-ecosystem{padding:0;margin:40px 0;background:#fff;border:0;border-radius:0}
+ body.about-restyled #canvas .brand-roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ body.about-restyled #canvas .brand-roles article{display:grid;grid-template-columns:46% 54%;align-items:stretch;padding:0;border:0;border-radius:10px;overflow:hidden;background:#1d2731;color:#fff}
+ body.about-restyled #canvas .brand-role-copy{display:flex;flex-direction:column;align-items:start;min-width:0;padding:26px 20px}
+ body.about-restyled #canvas .brand-role-label{display:block;font:600 10px/16px Geist,Arial,sans-serif;letter-spacing:.13em;color:#ffb366;margin-bottom:26px}
+ body.about-restyled #canvas .brand-role-monster .brand-role-label{color:#00cccc}
+ body.about-restyled #canvas .brand-role-copy>img{display:block;width:100%;max-width:100%;height:40px;object-fit:contain;object-position:left center;flex:none}
+ body.about-restyled #canvas .brand-role-copy h3{font:500 14px/20px Geist,Arial,sans-serif;margin:24px 0 12px;color:#fff}
+ body.about-restyled #canvas .brand-role-copy p{font:400 13px/19px Geist,Arial,sans-serif;margin:0 0 24px;color:#e1e6e9}
+ body.about-restyled #canvas .brand-role-copy .text-link{margin-top:auto;color:#ffb366;font-size:12px}
+ body.about-restyled #canvas .brand-role-monster .text-link{color:#38e6e5}
+ body.about-restyled #canvas .brand-role-photo{display:block;position:relative;min-width:0;min-height:360px;margin:0;overflow:hidden}
+ body.about-restyled #canvas .brand-role-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+ body.about-restyled #canvas .brand-role-champion .brand-role-photo>img{object-position:65% center}
+ /* Final invitation: office visual at left, copy and actions at right. */
+ body.about-restyled #canvas .brand-final{grid-template-columns:.9fr 1.1fr;gap:0;padding:0;overflow:hidden}
+ body.about-restyled #canvas .brand-final-photo{display:block;position:relative;min-width:0;min-height:420px;margin:0;overflow:hidden}
+ body.about-restyled #canvas .brand-final-photo>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+ body.about-restyled #canvas .brand-final-photo figcaption{position:absolute;left:20px;bottom:20px;margin:0;padding:8px 12px;border-radius:4px;background:#1d2731d9;color:#fff;font:400 12px/18px Geist,Arial,sans-serif}
+ body.about-restyled #canvas .brand-final-content{padding:32px;min-width:0}
+ body.about-restyled #canvas .brand-final-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px;margin-top:24px;align-items:start}
+ body.about-restyled #canvas .brand-final-actions>.btn{grid-column:1/-1;justify-self:start;margin:0}
+ body.about-restyled #canvas .brand-final-actions>a:last-child{grid-column:1/-1}
+}
+
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-process-photo-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#f2f4f5;color:#a4adb4}
+ body.about-restyled #canvas .brand-process-photo-slot>svg{width:48px;height:36px}
+ body.about-restyled #canvas .brand-process-photo-slot>figcaption{font:400 12px/18px Geist,Arial,sans-serif;color:#87929b}
+}
+
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-final-actions{display:flex;flex-direction:column;align-items:stretch;gap:18px}
+ body.about-restyled #canvas .brand-final-buttons{display:flex;align-items:center;gap:12px}
+ body.about-restyled #canvas .brand-final-buttons>.btn{margin:0;min-width:0;white-space:nowrap}
+ body.about-restyled #canvas .brand-final-buttons>.btn.outline{background:#fff}
+ body.about-restyled #canvas .brand-final-buttons>.btn.outline:hover{background:#faeee5}
+ body.about-restyled #canvas .brand-final-locations{display:flex;justify-content:space-between;align-items:start;gap:20px}
+ body.about-restyled #canvas .brand-final-locations>.text-link{white-space:nowrap}
+}
+
+/* Product introduction mirrors the brand-origin split layout, with media at left. */
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-product{grid-template-columns:1fr 1fr;gap:40px;padding:0;border:0;border-radius:0;overflow:visible;background:#fff;color:#1d2731;align-items:stretch}
+ body.about-restyled #canvas .brand-product-image{min-height:460px;border:1px solid #d7dadd;border-radius:10px;background:#f3f3f3;overflow:hidden}
+ body.about-restyled #canvas .brand-product-copy{padding:0;align-self:start}
+ body.about-restyled #canvas .brand-product-copy h2{color:#1d2731}
+ body.about-restyled #canvas .brand-product-copy>p:not(.eyebrow){color:#697178}
+ body.about-restyled #canvas .brand-product-copy>p:nth-of-type(2){font:400 16px/24px Geist,Arial,sans-serif;color:#1d2731;margin-bottom:20px}
+ body.about-restyled #canvas .brand-product-copy .btn.outline{background:#fff;border-color:#1d2731;color:#1d2731}
+}
+
+/* Applied content audit: proof before assortment, compact cooperation and an open photo finale. */
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-product{margin:40px 0}
+ body.about-restyled #canvas .brand-product-image{min-height:380px}
+ body.about-restyled #canvas .brand-audience-cards-section{padding:40px 0}
+ body.about-restyled #canvas .brand-audience-cards-section .brand-section-heading{margin-bottom:32px}
+ body.about-restyled #canvas .brand-audience-cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+ body.about-restyled #canvas .brand-audience-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #cbd0d4;border-radius:10px;background:#fff;transition:border-color .18s,box-shadow .18s}
+ body.about-restyled #canvas .brand-audience-card:hover{border-color:#eb8348;box-shadow:0 4px 18px #1e293210}
+ body.about-restyled #canvas .brand-audience-card:focus-visible{outline:2px solid #eb8348;outline-offset:4px}
+ body.about-restyled #canvas .brand-audience-card-photo{height:220px;flex-shrink:0;overflow:hidden;background:#f2f3f4}
+ body.about-restyled #canvas .brand-audience-card-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+ body.about-restyled #canvas .brand-audience-card-photo-contractors{background-image:url('assets/home1440/cooperation-layout-reference.png');background-size:auto 313.35%;background-position:49.15% 35.64%;background-repeat:no-repeat}
+ body.about-restyled #canvas .brand-audience-card-copy{display:flex;flex-direction:column;flex:1;align-items:center;padding:16px 14px 20px;text-align:center}
+ body.about-restyled #canvas .brand-audience-card h3{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid #d7dadd;font:300 18px/24px Science,Arial,sans-serif;text-transform:uppercase}
+ body.about-restyled #canvas .brand-audience-card p{margin:0 0 20px;font:400 13px/19px Geist,Arial,sans-serif;color:#697178}
+ body.about-restyled #canvas .brand-audience-card-more{margin-top:auto;font:400 13px/19px Geist,Arial,sans-serif;text-decoration:underline;text-underline-offset:4px}
+ body.about-restyled #canvas .brand-audience-card:hover .brand-audience-card-more{color:#b95c28}
+ body.about-restyled #canvas .brand-final.brand-showroom-open{display:grid;grid-template-columns:470px minmax(0,1fr);gap:48px;align-items:stretch;margin:80px 0 40px;padding:0;border:0;border-radius:0;background:#fff;overflow:visible}
+ body.about-restyled #canvas .brand-final-heading{text-align:left;margin:0}
+ body.about-restyled #canvas .brand-final-heading h2{margin:0 0 16px}
+ body.about-restyled #canvas .brand-final-heading>p:not(.eyebrow){max-width:440px;margin:0;font:400 16px/24px Geist,Arial,sans-serif;color:#697178}
+ body.about-restyled #canvas .brand-showroom-open .brand-final-photo{height:100%;min-height:400px;border-radius:10px;overflow:hidden;margin:0}
+ body.about-restyled #canvas .brand-showroom-open .brand-final-photo>img{object-position:center 52%}
+ body.about-restyled #canvas .brand-showroom-links{display:flex;flex-direction:column;justify-content:start;align-items:flex-start;gap:12px;margin-top:24px}
+ body.about-restyled #canvas .brand-showroom-links .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:0;padding:12px 24px;background:#fff;border:1px solid #1e2932;border-radius:4px;font:400 14px/20px Geist,Arial,sans-serif;text-decoration:none;white-space:nowrap}
+ body.about-restyled #canvas .brand-showroom-links .btn:hover{background:#faeee5;border-color:#eb8348}
+ body.about-restyled #canvas .brand-showroom-links .btn:focus-visible{outline:2px solid #eb8348;outline-offset:4px}
+}
+
+/* About finale and FAQ use the shared desktop rhythm and native disclosure controls. */
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-showroom-copy{align-self:center;padding:24px 0}
+ body.about-restyled #canvas .brand-showroom-open .brand-final-photo>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% center}
+ body.about-restyled #canvas .brand-faq{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;padding:40px 0;margin:0;border-top:0}
+ body.about-restyled #canvas .brand-faq h2{margin:0;font:300 32px/38px Science,Arial,sans-serif}
+ body.about-restyled #canvas .brand-faq>div>p:not(.eyebrow){max-width:300px;margin:16px 0 0;font:400 14px/21px Geist,Arial,sans-serif;color:#697178}
+ body.about-restyled #canvas .brand-faq .faq-list{border-top:1px solid #d7dadd}
+ body.about-restyled #canvas .brand-faq details{padding:18px 0;border-bottom:1px solid #d7dadd}
+ body.about-restyled #canvas .brand-faq summary{display:flex;align-items:center;gap:24px;min-height:28px;font:400 16px/24px Geist,Arial,sans-serif;cursor:pointer;list-style:none}
+ body.about-restyled #canvas .brand-faq summary::-webkit-details-marker{display:none}
+ body.about-restyled #canvas .brand-faq summary:after{color:#eb8348;flex-shrink:0}
+ body.about-restyled #canvas .brand-faq details p{margin:14px 36px 0 0;font:400 14px/21px Geist,Arial,sans-serif;color:#697178}
+ body.about-restyled #canvas .brand-faq details a{text-decoration:underline;text-underline-offset:3px}
+}
+
+@media(min-width:1101px){body.about-restyled #canvas .brand-audience-card[href="designers-1440.html"] .brand-audience-card-photo img{object-position:right center}}
+
+@media(min-width:1101px){
+ body.about-restyled #canvas #brand-marking{scroll-margin-top:160px}
+ body.about-restyled #canvas #brand-marking:target>summary{color:#b95c28}
+}

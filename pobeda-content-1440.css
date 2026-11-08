@@ -1,0 +1,1196 @@
+@font-face{
+                        font-family: "PobedaReading";
+                        src: url('assets/pobeda/ac7841b3744674094c2d.woff2') format('woff2');
+                        font-weight: 700;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaReading";
+                        src: url('assets/pobeda/e0ff657c37d1188d9c63.woff2') format('woff2');
+                        font-weight: 500;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaReading";
+                        src: url('assets/pobeda/0a5fb97ddfddaadb54be.woff2') format('woff2');
+                        font-weight: 400;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaReading";
+                        src: url('assets/pobeda/27a6935031a891257135.woff2') format('woff2');
+                        font-weight: 600;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaGeist";
+                        src: url('assets/pobeda/ac7841b3744674094c2d.woff2') format('woff2');
+                        font-weight: 700;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaGeist";
+                        src: url('assets/pobeda/e0ff657c37d1188d9c63.woff2') format('woff2');
+                        font-weight: 500;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaGeist";
+                        src: url('assets/pobeda/0a5fb97ddfddaadb54be.woff2') format('woff2');
+                        font-weight: 400;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+@font-face{
+                        font-family: "PobedaScience";
+                        src: url('assets/pobeda/27a6935031a891257135.woff2') format('woff2');
+                        font-weight: 300 700;
+                        font-style: normal;
+                        font-display: swap;
+                    }
+#pobeda-content{--ink:#1d2731;--muted:#697178;--line:#d7dadd;--soft:#f3f3f3;--orange:#eb8348;--dark:#1d2731;--font:PobedaReading,Arial,sans-serif;color:var(--ink);font:400 15px/1.5 var(--font);background:#fff;font-synthesis:none}
+#pobeda-content *{box-sizing:border-box}
+#pobeda-content [hidden]{display:none!important}
+#pobeda-content{scroll-behavior:smooth;scroll-padding-top:126px}
+#pobeda-content{margin:0}
+#pobeda-content a{color:inherit;text-decoration:none}
+#pobeda-content button,#pobeda-content input,#pobeda-content select{font:inherit}
+#pobeda-content button,#pobeda-content a{touch-action:manipulation}
+#pobeda-content button{cursor:pointer;color:inherit}
+#pobeda-content button:disabled{opacity:.45;cursor:not-allowed}
+#pobeda-content button:focus-visible,#pobeda-content a:focus-visible,#pobeda-content input:focus-visible,#pobeda-content select:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+#pobeda-content h1,#pobeda-content h2,#pobeda-content h3,#pobeda-content h4,#pobeda-content p{margin:0}
+#pobeda-content h1,#pobeda-content h2,#pobeda-content h3,#pobeda-content h4{font-family:var(--font);font-weight:600;line-height:1.15}
+#pobeda-content h1,#pobeda-content h2{text-transform:uppercase;letter-spacing:.015em}
+#pobeda-content h1{font-size:40px}
+#pobeda-content h2{font-size:32px}
+#pobeda-content h3{font-size:22px}
+#pobeda-content img{max-width:100%;display:block}
+#pobeda-content .wrap{width:min(1200px,calc(100% - 64px));margin:auto}
+#pobeda-content .section{padding:58px 0}
+#pobeda-content .section.soft{background:#f5f5f4}
+#pobeda-content .section-head{max-width:830px;text-align:center;margin:0 auto 28px}
+#pobeda-content .section-head p{font-size:16px;line-height:1.45;color:var(--muted);max-width:740px;margin:16px auto 0}
+#pobeda-content .section-anchor{scroll-margin-top:0}
+#pobeda-content .eyebrow{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+#pobeda-content .btn{display:inline-flex;justify-content:center;align-items:center;min-height:34px;padding:8.96px 17.91px;border:0;border-radius:3.732px;background:linear-gradient(180deg,#FEB264 -2.46%,#C65811 103.25%);font-family:var(--font);font-size:12px;font-weight:500;line-height:1.2;color:#fff;text-align:center;vertical-align:middle;transition:filter .15s ease}
+#pobeda-content .btn:hover{filter:brightness(1.05)}
+#pobeda-content .btn.outline{background:transparent;border:1px solid #858d94;padding:7.96px 16.91px;color:var(--ink)}
+#pobeda-content .btn.small{min-height:34px;font-size:12px}
+#pobeda-content .btn.light{background:#fff;border-color:#fff;color:var(--ink)}
+#pobeda-content .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+#pobeda-content .center{text-align:center}
+#pobeda-content .more{margin-top:25px}
+#pobeda-content .text-link{display:inline-block;padding:0;background:none;border:0;border-bottom:1px solid #92999e;font-size:13px;line-height:1.4;margin-top:12px}
+#pobeda-content .tag{display:inline-block;border:1px solid #d4d8db;border-radius:4px;padding:3px 7px;font-size:11px;white-space:nowrap}
+#pobeda-content .site-header{position:sticky;top:0;z-index:50;background:#f3f4f6;border-bottom:1px solid #dce0e4}
+#pobeda-content .head-inner{height:65px;display:flex;gap:24px;align-items:center}
+#pobeda-content .logo{flex:none}
+#pobeda-content .logo img{width:192px;height:auto}
+#pobeda-content .header-catalog{margin-right:auto}
+#pobeda-content .header-phone{font-size:14px;white-space:nowrap}
+#pobeda-content .header-mail{font-size:13px;color:#616b73}
+#pobeda-content .nav{height:45px;display:flex;gap:26px;align-items:center;justify-content:center;font-size:12px;border-top:1px solid #e2e4e7}
+#pobeda-content .nav a:hover{color:#c86526}
+#pobeda-content .menu{display:none;background:none;border:1px solid #aab1b7;border-radius:4px;padding:8px 12px}
+#pobeda-content .hero{position:relative;background:#1d2731;color:white;overflow:hidden}
+#pobeda-content .hero-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#pobeda-content .hero-inner{position:relative;display:flex;justify-content:flex-end;min-height:540px}
+#pobeda-content .hero-copy{display:flex;flex-direction:column;justify-content:center;width:49%;padding:48px 38px;background:linear-gradient(90deg,#1d2731eb,#1d2731b8)}
+#pobeda-content .hero-copy h1{font-size:38px;line-height:1.16;max-width:510px}
+#pobeda-content .hero-copy p{font-size:16px;line-height:1.5;max-width:470px;margin-top:22px;color:#f4f5f6}
+#pobeda-content .hero-copy .eyebrow{color:#ffb47c}
+#pobeda-content .hero .btn.outline{border-color:#fff;background:transparent;color:#fff}
+#pobeda-content .hero-badges{margin-top:30px;width:320px;height:42px;object-fit:contain;object-position:left}
+#pobeda-content .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 0 0}
+#pobeda-content .fact{display:flex;align-items:center;gap:14px;background:#f2f2f2;border-radius:8px;padding:16px 18px}
+#pobeda-content .fact-icon{width:30px;height:34px;object-fit:contain;flex:none}
+#pobeda-content .fact b{display:block;font-size:16px;font-weight:500}
+#pobeda-content .fact span{display:block;font-size:12px;color:#697178;margin-top:3px}
+#pobeda-content .edition-intro{max-width:920px}
+#pobeda-content .edition-common{display:flex;align-items:center;justify-content:center;gap:10px 24px;flex-wrap:wrap;background:#f2f2f2;border-radius:6px;padding:14px 20px;margin-bottom:22px;font-size:13px}
+#pobeda-content .edition-common strong{font-weight:500}
+#pobeda-content .edition-common span{border-left:1px solid #c6cacc;padding-left:24px}
+#pobeda-content .versions{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+#pobeda-content .version-card{display:flex;flex-direction:column;border:1px solid #c6c9cc;border-radius:10px;padding:24px;background:#fff;min-width:0}
+#pobeda-content .version-card.selected{border:2px solid var(--orange);padding:23px}
+#pobeda-content .version-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#pobeda-content .version-top h3{font-size:25px;text-transform:uppercase}
+#pobeda-content .version-kind{font-size:12px;color:#b15a25;background:#fff1e7;border-radius:30px;padding:5px 10px}
+#pobeda-content .edition-comparison h4{font-weight:500;font-size:18px;margin-top:14px;line-height:1.4;min-height:50px}
+#pobeda-content .version-card .edition-material{font-size:14px;color:#65717a;line-height:1.5;margin:12px 0 16px;min-height:63px}
+#pobeda-content .edition-rail{width:100%;height:160px;object-fit:contain;background:#f5f5f5;border-radius:6px}
+#pobeda-content .edition-rail.eco-profile{object-fit:cover;object-position:50% 3%}
+#pobeda-content .edition-fixture-caption{font-size:12px;color:#697178;text-align:center;margin-top:8px}
+#pobeda-content .edition-mounts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;padding-bottom:14px;border-bottom:1px solid #d9dde0}
+#pobeda-content .edition-mount{text-align:center;font-size:12px}
+#pobeda-content .edition-mount svg{width:65px;height:38px;display:block;margin:0 auto 4px}
+#pobeda-content .eco-mounts p{grid-column:span 2;align-self:center;color:#697178;font-size:13px;margin:0}
+#pobeda-content .edition-details{margin:0 0 16px}
+#pobeda-content .edition-details>div{display:grid;grid-template-columns:.9fr 1.4fr;gap:14px;padding:10px 0;border-bottom:1px solid #e1e3e5;font-size:13px;line-height:1.45;min-height:44px}
+#pobeda-content .edition-details>div:first-child{min-height:63px}
+#pobeda-content .edition-details dt{color:#697178}
+#pobeda-content .edition-details dd{margin:0}
+#pobeda-content .edition-reason{background:#f4f4f3;padding:12px 14px;border-radius:6px;margin:auto 0 16px;font-size:13px;line-height:1.45}
+#pobeda-content .edition-reason b{font-weight:500;display:block;margin-bottom:5px}
+#pobeda-content .edition-reason span{color:#65717a}
+#pobeda-content .edition-compatibility{text-align:center;font-size:13px;line-height:1.5;max-width:850px;margin:18px auto 0;color:#697178}
+#pobeda-content .edition-compatibility strong{font-weight:500;color:var(--ink)}
+#pobeda-content .toggle{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+#pobeda-content .toggle button,#pobeda-content .chips button,#pobeda-content .choice{border:1px solid #9ba2a9;border-radius:4px;background:white;padding:9px 16px;font-size:13px;line-height:1.3;min-height:36px}
+#pobeda-content .toggle button[aria-pressed=true],#pobeda-content .chips button[aria-pressed=true],#pobeda-content .choice[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}
+#pobeda-content .chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+#pobeda-content .shop-label{display:flex;gap:20px;justify-content:space-between;font-size:13px;color:#6c747c;margin:16px 0}
+#pobeda-content .shop-label a{text-decoration:underline;text-underline-offset:3px}
+#pobeda-content .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#pobeda-content .product-card{border:1px solid #d0d3d6;background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+#pobeda-content .product-media{display:flex;align-items:center;justify-content:center;height:180px;min-height:0;background:#ededed;overflow:hidden}
+#pobeda-content .product-media img{width:100%;height:100%;object-fit:contain}
+#pobeda-content .product-body{display:flex;flex-direction:column;align-items:start;flex:1;padding:17px}
+#pobeda-content .product-type{font-size:10px;color:#7c858c;letter-spacing:.09em;text-transform:uppercase;margin-bottom:7px}
+#pobeda-content .product-card h3{font-size:21px;font-weight:500;line-height:1.25}
+#pobeda-content .product-card h3 a:hover{text-decoration:underline}
+#pobeda-content .product-card p{font-size:13px;color:#697178;margin-top:8px}
+#pobeda-content .product-params{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 12px}
+#pobeda-content .product-price{font-size:21px;font-weight:500;margin-top:auto}
+#pobeda-content .light-filter-status{text-align:center;font-size:12px;color:#7d858b;margin:10px 0 20px}
+#pobeda-content .light-model-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+#pobeda-content .light-model-card{border:1px solid #9b9494;border-radius:10px;overflow:hidden;min-width:0;background:#fff}
+#pobeda-content .light-model-card[hidden]{display:none}
+#pobeda-content .light-model-link{display:flex;flex-direction:column;height:100%}
+#pobeda-content .light-model-link:focus-visible{outline-offset:-4px}
+#pobeda-content .light-model-interior{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+#pobeda-content .light-model-body{display:grid;grid-template-columns:92px minmax(0,1fr);gap:15px;padding:20px 16px 24px;flex:1;align-items:start}
+#pobeda-content .light-model-product{width:100%;height:120px;object-fit:contain;object-position:center top}
+#pobeda-content .light-model-copy h3{font-size:23px;text-transform:uppercase;letter-spacing:.025em}
+#pobeda-content .light-model-type{font-size:12px;color:#e97e3c;font-weight:700;text-transform:uppercase;line-height:1.4;margin-top:11px}
+#pobeda-content .light-model-copy p{font-size:14px;line-height:1.45;margin-top:10px}
+#pobeda-content .quality-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px;align-items:center}
+#pobeda-content .quality-copy>p{font-size:16px;line-height:1.5;margin-top:18px;color:#626d75}
+#pobeda-content .quality-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+#pobeda-content .quality-facts span{padding:6px 12px;border-radius:4px;background:#fff;border:1px solid #d1d5d7;font-size:16px}
+#pobeda-content .quality-copy .quality-shared{font-size:13px;color:#737d85;margin-top:16px}
+#pobeda-content .quality-interior{width:100%;height:370px;border-radius:10px;object-fit:cover}
+#pobeda-content .mounting-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+#pobeda-content .mounting-card{border:1px solid #a8a9aa;border-radius:10px;overflow:hidden;background:#fff}
+#pobeda-content .mounting-photo{width:100%;aspect-ratio:1.6;object-fit:cover}
+#pobeda-content .mounting-body{padding:16px}
+#pobeda-content .mounting-body h3{font-size:20px;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid #d6d9db}
+#pobeda-content .mounting-detail{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;margin-top:14px}
+#pobeda-content .mounting-detail img{width:64px;height:70px;object-fit:contain}
+#pobeda-content .mounting-detail p{font-size:13px;color:#626d75;line-height:1.4}
+#pobeda-content .mounting-grid.single{grid-template-columns:1fr}
+#pobeda-content .mounting-grid.single .mounting-card{display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:850px;margin:auto}
+#pobeda-content .mounting-grid.single .mounting-photo{aspect-ratio:1.7}
+#pobeda-content .geometry-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:24px 0 0}
+#pobeda-content .geometry-item{display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff;border:1px solid #e0e2e3;border-radius:5px;padding:14px 16px;font-size:12px;min-width:130px}
+#pobeda-content .geometry-item svg{width:65px;height:45px}
+#pobeda-content .scheme{padding:26px;background:#fff;border:1px solid #a3a7aa;border-radius:10px;margin-top:30px}
+#pobeda-content .scheme-top{display:flex;align-items:start;gap:20px;justify-content:space-between}
+#pobeda-content .scheme-top h3{font-size:25px;text-transform:uppercase}
+#pobeda-content .scheme-top p{font-size:14px;color:#697178;margin-top:10px;max-width:700px}
+#pobeda-content .scheme-visual{margin:18px 0}
+#pobeda-content .scheme-visual img{width:100%;height:auto;max-height:500px;object-fit:contain}
+#pobeda-content .scheme-visual #schemeLegendImage{max-height:190px;margin-top:8px}
+#pobeda-content .scheme-legend{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+#pobeda-content .scheme-item{background:#f5f5f4;padding:12px;border-radius:5px;font-size:12px}
+#pobeda-content .scheme-item b{display:block;font-size:13px;font-weight:500}
+#pobeda-content .scheme-item .text-link{font-size:12px;margin-top:8px}
+#pobeda-content .install-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#pobeda-content .install{min-width:0}
+#pobeda-content .install-art{position:relative;border:1px solid #9b9494;border-radius:8px;background:#fff;overflow:hidden;aspect-ratio:1.5}
+#pobeda-content .install-art img{width:100%;height:100%;object-fit:contain;padding:10px}
+#pobeda-content .install-art span{position:absolute;top:12px;left:14px;font-size:20px;font-weight:600}
+#pobeda-content .install h3{font-size:20px;text-transform:uppercase;margin-top:16px;text-align:center}
+#pobeda-content .install p{font-size:14px;color:#626d75;line-height:1.5;margin:10px auto 0;max-width:320px;text-align:center}
+#pobeda-content .install-safety{text-align:center;font-size:12px;color:#7a8289;margin-top:20px}
+#pobeda-content .control-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#pobeda-content .control-card{border:1px solid #a9aaac;border-radius:10px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-width:0}
+#pobeda-content .control-photo{height:220px;width:100%;object-fit:cover}
+#pobeda-content .control-body{padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1}
+#pobeda-content .control-body h3{font-size:22px;text-transform:uppercase}
+#pobeda-content .control-body .eyebrow{margin-bottom:10px;letter-spacing:.04em}
+#pobeda-content .control-body p{font-size:14px;color:#6b737a;line-height:1.45;margin:12px 0 18px}
+#pobeda-content .control-body .btn{margin-top:auto}
+#pobeda-content .tech-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:24px;align-items:stretch}
+#pobeda-content .specs{border-collapse:collapse;width:100%;font-size:13px}
+#pobeda-content .specs td{border-bottom:1px solid #ccd2d6;padding:11px 12px;vertical-align:top}
+#pobeda-content .specs td:first-child{width:44%;font-weight:500}
+#pobeda-content .documents{background:#1d2731;color:#fff;border-radius:8px;padding:28px}
+#pobeda-content .documents h3{font-size:24px;text-transform:uppercase;margin-bottom:16px}
+#pobeda-content .doc-link{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #4d565e;padding:15px 0;font-size:13px}
+#pobeda-content .doc-link span{color:#f4aa70;white-space:nowrap}
+#pobeda-content .doc-link:hover{color:#ffb57f}
+#pobeda-content .warranty{border-top:1px solid #4d565e;padding-top:18px;margin-top:12px;font-size:13px;color:#d0d6da}
+#pobeda-content .warranty b{display:block;font-weight:500;color:#fff;font-size:23px;margin-bottom:8px}
+#pobeda-content .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+#pobeda-content .gallery>article{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #d0d3d5}
+#pobeda-content .gallery-photo{width:100%;aspect-ratio:1.25;object-fit:cover}
+#pobeda-content .gallery-caption{padding:18px}
+#pobeda-content .gallery-caption h3{font-size:21px;text-transform:uppercase}
+#pobeda-content .gallery-caption p{font-size:14px;color:#6f777e;line-height:1.45;margin-top:10px}
+#pobeda-content .project{padding:40px 0 20px;background:#fff}
+#pobeda-content .consultation-cta-kit__inner{display:grid;grid-template-columns:minmax(0,617fr) minmax(0,528fr);border:1px solid #1d2731;border-radius:10px;overflow:hidden;background:#fff}
+#pobeda-content .consultation-cta-kit__media{position:relative;aspect-ratio:4/3;min-height:100%;margin:0;background:#eee;overflow:hidden}
+#pobeda-content .consultation-cta-kit__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#pobeda-content .consultation-cta-kit__content{display:flex;flex-direction:column;justify-content:center;align-items:start;padding:clamp(26px,3vw,44px)}
+#pobeda-content .consultation-cta-kit__title{font-size:30px;line-height:1.15;text-transform:uppercase}
+#pobeda-content .consultation-cta-kit__text{font-size:15px;line-height:1.5;color:#637079;margin-top:20px}
+#pobeda-content .consultation-cta-kit__actions{margin-top:24px}
+#pobeda-content .project-kicker{font-size:12px;letter-spacing:.1em;color:#b35e29;text-transform:uppercase;margin-bottom:14px}
+#pobeda-content .faq{max-width:1000px;margin:auto;border-top:1px solid #d6dce0}
+#pobeda-content .faq details{border-bottom:1px solid #d6dce0;background:#fff;padding:18px 8px}
+#pobeda-content .faq summary{cursor:pointer;list-style:none;display:flex;gap:20px;justify-content:space-between;align-items:center;font-size:16px}
+#pobeda-content .faq summary:after{content:'+';font-size:25px;line-height:1;font-weight:400;color:#697178;flex:none}
+#pobeda-content .faq details[open] summary:after{content:'−'}
+#pobeda-content .faq summary::-webkit-details-marker{display:none}
+#pobeda-content .faq details p{font-size:14px;line-height:1.55;color:#737d85;margin-top:14px;max-width:860px}
+#pobeda-content .footer{background:#1d2731;color:#d0d5d9;padding:40px 0 24px}
+#pobeda-content .footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;align-items:start}
+#pobeda-content .footer .logo img{width:190px}
+#pobeda-content .footer p{font-size:13px;line-height:1.5;margin-top:16px;max-width:340px;color:#b4bdc5}
+#pobeda-content .footer-contact{display:grid;gap:10px;font-size:14px}
+#pobeda-content .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:13px}
+#pobeda-content .footer a:hover{color:#ffb47b}
+#pobeda-content .footer-bottom{font-size:11px;color:#8c99a2;border-top:1px solid #414b54;margin-top:30px;padding-top:18px}
+#pobeda-content .media{display:flex;align-items:center;justify-content:center;background:#f2f2f2}
+#pobeda-content .media:before,#pobeda-content .media:after{display:none}
+@media(min-width:1500px){#pobeda-content .hero-copy{padding:60px}
+#pobeda-content .hero-copy h1{font-size:42px}
+#pobeda-content .hero-inner{min-height:590px}}
+@media(max-width:1050px){#pobeda-content .wrap{width:calc(100% - 48px)}
+#pobeda-content .header-mail{display:none}
+#pobeda-content .hero-copy{width:52%;padding:36px 28px}
+#pobeda-content .hero-copy h1{font-size:32px}
+#pobeda-content .hero-inner{min-height:500px}
+#pobeda-content .hero-copy p{font-size:15px}
+#pobeda-content .facts{gap:10px}
+#pobeda-content .fact{padding:13px;gap:10px}
+#pobeda-content .fact b{font-size:14px}
+#pobeda-content .fact-icon{width:25px}
+#pobeda-content .version-top h3{font-size:23px}
+#pobeda-content .version-card{padding:20px}
+#pobeda-content .version-card.selected{padding:19px}
+#pobeda-content .light-model-body{grid-template-columns:70px 1fr;gap:10px;padding:16px 12px 22px}
+#pobeda-content .light-model-copy h3{font-size:20px}
+#pobeda-content .light-model-copy p{font-size:13px}
+#pobeda-content .light-model-type{font-size:11px}
+#pobeda-content .mounting-body{padding:14px}
+#pobeda-content .mounting-body h3{font-size:18px}
+#pobeda-content .mounting-detail{gap:10px;grid-template-columns:48px 1fr}
+#pobeda-content .mounting-detail img{width:48px;height:60px}
+#pobeda-content .control-body{padding:18px}
+#pobeda-content .control-body h3{font-size:20px}
+#pobeda-content .control-photo{height:180px}
+#pobeda-content .quality-layout{gap:28px}
+#pobeda-content .quality-copy h2{font-size:29px}
+#pobeda-content .consultation-cta-kit__title{font-size:27px}
+#pobeda-content .consultation-cta-kit__text{font-size:14px}
+#pobeda-content .result{padding:20px}
+#pobeda-content .build-form{padding:20px}
+#pobeda-content .result h3{font-size:22px}
+#pobeda-content .extra-picker{grid-template-columns:1fr}
+#pobeda-content .extra-picker label{grid-column:auto}
+#pobeda-content .light-quantity{flex-wrap:wrap}}
+@media(max-width:800px){#pobeda-content h2{font-size:28px}
+#pobeda-content .section{padding:42px 0}
+#pobeda-content .section-head p{font-size:15px}
+#pobeda-content .head-inner{gap:16px}
+#pobeda-content .logo img{width:170px}
+#pobeda-content .nav{gap:18px;font-size:11px}
+#pobeda-content .hero-inner{min-height:480px}
+#pobeda-content .hero-copy{width:55%;padding:28px 22px}
+#pobeda-content .hero-copy h1{font-size:28px}
+#pobeda-content .hero-copy p{font-size:14px}
+#pobeda-content .hero-badges{height:32px;margin-top:22px}
+#pobeda-content .facts{grid-template-columns:repeat(2,1fr);gap:12px}
+#pobeda-content .fact b{font-size:16px}
+#pobeda-content .fact{padding:14px 16px}
+#pobeda-content .version-kind{font-size:11px;padding:5px 8px}
+#pobeda-content .version-top{flex-wrap:wrap;gap:8px}
+#pobeda-content .edition-comparison h4{font-size:17px;min-height:72px}
+#pobeda-content .version-card .edition-material{min-height:105px}
+#pobeda-content .edition-common{gap:8px 16px;font-size:12px}
+#pobeda-content .edition-common span{padding-left:16px}
+#pobeda-content .edition-details>div{grid-template-columns:1fr 1.3fr;font-size:12px}
+#pobeda-content .edition-details>div:first-child{min-height:74px}
+#pobeda-content .edition-mount{font-size:11px}
+#pobeda-content .edition-reason{font-size:12px}
+#pobeda-content .product-grid{gap:14px}
+#pobeda-content .product-media{height:140px}
+#pobeda-content .product-body{padding:13px}
+#pobeda-content .product-card h3{font-size:18px}
+#pobeda-content .product-card p{font-size:12px}
+#pobeda-content .product-params{gap:4px}
+#pobeda-content .tag{padding:3px 5px;font-size:10px}
+#pobeda-content .light-model-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#pobeda-content .light-model-body{grid-template-columns:76px 1fr;padding:18px 14px 22px;gap:12px}
+#pobeda-content .light-model-copy h3{font-size:23px}
+#pobeda-content .light-model-copy p{font-size:14px}
+#pobeda-content .light-model-type{font-size:12px}
+#pobeda-content .quality-copy h2{font-size:25px}
+#pobeda-content .quality-copy>p{font-size:14px}
+#pobeda-content .quality-interior{height:330px}
+#pobeda-content .mounting-grid{gap:12px}
+#pobeda-content .mounting-detail{grid-template-columns:1fr;gap:8px}
+#pobeda-content .mounting-detail img{height:52px;object-position:left}
+#pobeda-content .mounting-body h3{font-size:16px}
+#pobeda-content .scheme{padding:20px}
+#pobeda-content .scheme-top h3{font-size:22px}
+#pobeda-content .scheme-legend{grid-template-columns:repeat(2,1fr)}
+#pobeda-content .geometry-item{min-width:110px;padding:12px}
+#pobeda-content .install-row{gap:14px}
+#pobeda-content .install h3{font-size:17px}
+#pobeda-content .install p{font-size:13px}
+#pobeda-content .install-art{aspect-ratio:1.2}
+#pobeda-content .control-grid{gap:14px}
+#pobeda-content .control-body{padding:15px}
+#pobeda-content .control-body h3{font-size:18px}
+#pobeda-content .control-body p{font-size:13px}
+#pobeda-content .control-photo{height:155px}
+#pobeda-content .builder-layout{grid-template-columns:1fr 1fr;gap:16px}
+#pobeda-content .build-form,#pobeda-content .result{padding:17px}
+#pobeda-content .light-options{grid-template-columns:1fr}
+#pobeda-content .light-quantity{flex-wrap:nowrap}
+#pobeda-content .step-title{font-size:15px}
+#pobeda-content .choices{gap:6px}
+#pobeda-content .choice{font-size:12px;padding:8px 10px}
+#pobeda-content .result h3{font-size:21px}
+#pobeda-content .tech-layout{gap:18px}
+#pobeda-content .documents{padding:22px}
+#pobeda-content .documents h3{font-size:21px}
+#pobeda-content .specs td{padding:10px 8px;font-size:12px}
+#pobeda-content .doc-link{font-size:12px}
+#pobeda-content .consultation-cta-kit__content{padding:25px}
+#pobeda-content .consultation-cta-kit__title{font-size:24px}
+#pobeda-content .consultation-cta-kit__text{margin-top:14px;font-size:13px}
+#pobeda-content .consultation-cta-kit__media{aspect-ratio:auto;min-height:350px}
+#pobeda-content .consultation-cta-kit__actions{margin-top:18px}
+#pobeda-content .gallery{gap:14px}
+#pobeda-content .gallery-caption{padding:14px}
+#pobeda-content .gallery-caption h3{font-size:18px}
+#pobeda-content .gallery-caption p{font-size:13px}
+#pobeda-content .footer-inner{grid-template-columns:1.2fr 1fr;gap:28px}
+#pobeda-content .footer-links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px 24px}}
+@media(max-width:600px){#pobeda-content{scroll-padding-top:80px}
+#pobeda-content .wrap{width:calc(100% - 32px)}
+#pobeda-content h2{font-size:25px}
+#pobeda-content .section{padding:36px 0}
+#pobeda-content .section-head{margin-bottom:24px}
+#pobeda-content .section-head p{font-size:14px;line-height:1.5;margin-top:13px}
+#pobeda-content .head-inner{height:64px;gap:12px}
+#pobeda-content .logo img{width:164px}
+#pobeda-content .header-catalog,#pobeda-content .header-phone,#pobeda-content .head-inner>.btn{display:none}
+#pobeda-content .menu{display:block;margin-left:auto;font-size:13px}
+#pobeda-content .nav{display:none;position:absolute;top:64px;left:0;right:0;height:auto;background:#f3f4f6;border-bottom:1px solid #c5cbd0;padding:12px 16px;flex-direction:column;gap:0;align-items:stretch;font-size:14px}
+#pobeda-content .nav.open{display:flex}
+#pobeda-content .nav a{padding:11px 8px}
+#pobeda-content .hero-backdrop{object-position:35% center}
+#pobeda-content .hero-inner{min-height:600px;align-items:flex-end;width:100%}
+#pobeda-content .hero-copy{width:100%;padding:28px 24px 30px;background:linear-gradient(0deg,#1d2731f5,#1d2731d9);margin-top:170px}
+#pobeda-content .hero-copy h1{font-size:29px;line-height:1.2;max-width:450px}
+#pobeda-content .hero-copy p{font-size:14px;line-height:1.5;margin-top:17px}
+#pobeda-content .hero-copy .eyebrow{font-size:10px;margin-bottom:12px}
+#pobeda-content .hero-copy .actions{gap:10px;margin-top:20px}
+#pobeda-content .hero-badges{height:30px;margin-top:22px}
+#pobeda-content .facts{padding-top:16px;gap:10px}
+#pobeda-content .fact{padding:12px;gap:10px;align-items:start}
+#pobeda-content .fact-icon{width:24px;height:28px}
+#pobeda-content .fact b{font-size:14px}
+#pobeda-content .fact span{font-size:11px}
+#pobeda-content .versions{grid-template-columns:1fr;gap:16px}
+#pobeda-content .version-card{padding:20px}
+#pobeda-content .version-card.selected{padding:19px}
+#pobeda-content .version-top{flex-wrap:nowrap}
+#pobeda-content .version-top h3{font-size:24px}
+#pobeda-content .edition-comparison h4{min-height:0;font-size:18px;margin-top:14px}
+#pobeda-content .version-card .edition-material{min-height:0;margin:10px 0 15px;font-size:14px}
+#pobeda-content .edition-common{display:grid;grid-template-columns:1fr;padding:14px 18px;gap:5px;margin-bottom:16px;font-size:13px}
+#pobeda-content .edition-common span{padding:0;border:0}
+#pobeda-content .edition-rail{height:170px}
+#pobeda-content .edition-details>div{font-size:13px;padding:9px 0}
+#pobeda-content .edition-details>div:first-child{min-height:0}
+#pobeda-content .edition-mount{font-size:12px}
+#pobeda-content .edition-reason{font-size:13px}
+#pobeda-content .edition-compatibility{font-size:12px;margin-top:16px;text-align:left}
+#pobeda-content .toggle{gap:7px}
+#pobeda-content .toggle button,#pobeda-content .chips button{font-size:12px;padding:9px 12px}
+#pobeda-content .chips{gap:6px;margin-top:12px}
+#pobeda-content .shop-label{font-size:12px;gap:12px}
+#pobeda-content .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#pobeda-content .product-media{height:135px}
+#pobeda-content .product-body{padding:12px}
+#pobeda-content .product-card h3{font-size:17px}
+#pobeda-content .product-card p{font-size:12px}
+#pobeda-content .product-price{font-size:18px}
+#pobeda-content .product-type{font-size:9px}
+#pobeda-content .tag{font-size:10px}
+#pobeda-content .product-params{margin:11px 0}
+#pobeda-content .light-model-grid{grid-template-columns:1fr;gap:18px}
+#pobeda-content .light-model-interior{aspect-ratio:1.1}
+#pobeda-content .light-model-body{grid-template-columns:92px minmax(0,1fr);gap:16px;padding:21px 18px 26px}
+#pobeda-content .light-model-copy h3{font-size:25px}
+#pobeda-content .light-model-product{height:120px}
+#pobeda-content .light-model-copy p{font-size:14px}
+#pobeda-content .quality-layout{grid-template-columns:1fr;gap:24px}
+#pobeda-content .quality-copy h2 br{display:none}
+#pobeda-content .quality-copy>p{font-size:15px;margin-top:15px}
+#pobeda-content .quality-interior{height:285px}
+#pobeda-content .quality-facts{gap:8px;margin-top:18px}
+#pobeda-content .quality-facts span{font-size:14px;padding:6px 10px}
+#pobeda-content .mounting-grid{grid-template-columns:1fr;gap:16px;margin-top:20px}
+#pobeda-content .mounting-photo{aspect-ratio:1.7}
+#pobeda-content .mounting-body{padding:18px}
+#pobeda-content .mounting-body h3{font-size:22px}
+#pobeda-content .mounting-detail{grid-template-columns:56px 1fr;gap:16px}
+#pobeda-content .mounting-detail img{height:65px;width:56px}
+#pobeda-content .mounting-detail p{font-size:14px}
+#pobeda-content .mounting-grid.single .mounting-card{display:block}
+#pobeda-content .geometry-row{gap:8px;margin-top:20px}
+#pobeda-content .geometry-item{min-width:calc(33% - 8px);flex:1;padding:10px 7px;font-size:11px}
+#pobeda-content .geometry-item svg{width:52px;height:37px}
+#pobeda-content .scheme{padding:16px;margin-top:24px}
+#pobeda-content .scheme-top{display:block}
+#pobeda-content .scheme-top h3{font-size:22px}
+#pobeda-content .scheme-top p{font-size:13px;line-height:1.5}
+#pobeda-content .scheme-top>.btn{margin-top:12px}
+#pobeda-content .scheme-visual{margin:16px -7px 0;overflow-x:auto}
+#pobeda-content .scheme-visual img{min-width:500px;max-width:none;max-height:none;width:100%;object-fit:contain}
+#pobeda-content .scheme-legend{gap:8px}
+#pobeda-content .scheme-item{padding:10px;font-size:12px}
+#pobeda-content .scheme-item b{font-size:12px}
+#pobeda-content .install-row{grid-template-columns:1fr;gap:24px}
+#pobeda-content .install-art{aspect-ratio:1.6}
+#pobeda-content .install-art span{font-size:23px;top:15px;left:18px}
+#pobeda-content .install h3{font-size:22px;margin-top:14px}
+#pobeda-content .install p{font-size:14px;max-width:none;padding:0 10px}
+#pobeda-content .control-grid{grid-template-columns:1fr;gap:18px}
+#pobeda-content .control-photo{height:230px}
+#pobeda-content .control-body{padding:22px}
+#pobeda-content .control-body h3{font-size:24px}
+#pobeda-content .control-body p{font-size:14px;max-width:350px}
+#pobeda-content .builder-layout{grid-template-columns:1fr;gap:20px}
+#pobeda-content .build-form,#pobeda-content .result{padding:20px}
+#pobeda-content .result{position:static}
+#pobeda-content .result h3{font-size:24px}
+#pobeda-content .light-options{grid-template-columns:1fr 1fr}
+#pobeda-content .config-light{padding:9px}
+#pobeda-content .config-light-info{font-size:11px;margin-left:23px}
+#pobeda-content .light-quantity{flex-wrap:wrap}
+#pobeda-content .config-light strong{font-size:12px}
+#pobeda-content .rail-quantity{font-size:13px;justify-content:space-between}
+#pobeda-content .step-title{font-size:16px}
+#pobeda-content .choice{font-size:12px;padding:8px 11px}
+#pobeda-content .extra-picker{grid-template-columns:1fr}
+#pobeda-content .extra-picker select{font-size:12px}
+#pobeda-content .config-item{font-size:13px}
+#pobeda-content .configuration-total strong{font-size:26px}
+#pobeda-content .tech-layout{grid-template-columns:1fr;gap:24px}
+#pobeda-content .specs td{font-size:13px;padding:10px 7px}
+#pobeda-content .documents{padding:24px}
+#pobeda-content .documents h3{font-size:23px}
+#pobeda-content .doc-link{font-size:13px}
+#pobeda-content .gallery{grid-template-columns:1fr;gap:18px}
+#pobeda-content .gallery-photo{aspect-ratio:1.4}
+#pobeda-content .gallery-caption{padding:18px}
+#pobeda-content .gallery-caption h3{font-size:22px}
+#pobeda-content .gallery-caption p{font-size:14px}
+#pobeda-content .project{padding:24px 0 0}
+#pobeda-content .consultation-cta-kit__inner{grid-template-columns:1fr}
+#pobeda-content .consultation-cta-kit__media{min-height:0;aspect-ratio:4/3}
+#pobeda-content .consultation-cta-kit__content{padding:25px 22px 28px}
+#pobeda-content .consultation-cta-kit__title{font-size:25px;line-height:1.15}
+#pobeda-content .consultation-cta-kit__text{font-size:14px;line-height:1.5;margin-top:17px}
+#pobeda-content .project-kicker{font-size:11px}
+#pobeda-content .faq details{padding:17px 4px}
+#pobeda-content .faq summary{font-size:15px;line-height:1.4}
+#pobeda-content .faq details p{font-size:14px}
+#pobeda-content .footer{padding:30px 0 22px}
+#pobeda-content .footer-inner{grid-template-columns:1fr;gap:24px}
+#pobeda-content .footer .logo img{width:185px}
+#pobeda-content .footer-contact{font-size:14px}
+#pobeda-content .footer-links{grid-column:auto;display:grid;grid-template-columns:1fr 1fr;font-size:13px;gap:12px}
+#pobeda-content .footer-bottom{margin-top:25px;font-size:11px}
+#pobeda-content .cart-dialog{padding:20px 17px}
+#pobeda-content .cart-heading h2{font-size:21px}}
+@media(prefers-reduced-motion:reduce){#pobeda-content{scroll-behavior:auto}
+#pobeda-content *{transition:none!important}}
+#pobeda-content .edition-comparison h4{min-height:0;margin-top:12px}
+#pobeda-content .version-card .edition-material{min-height:0;margin:10px 0 14px}
+#pobeda-content .edition-fixture-caption{display:none}
+#pobeda-content .edition-details>div:first-child{min-height:0}
+#pobeda-content .edition-mounts{padding-bottom:10px;margin-top:12px}
+#pobeda-content .edition-details>div{padding:8px 0}
+#pobeda-content .edition-reason{margin-bottom:14px}
+@media(min-width:1051px){#pobeda-content .edition-comparison .version-card{display:grid;grid-template-columns:1fr 1fr;align-content:start;column-gap:16px}
+#pobeda-content .edition-comparison .version-card>*{grid-column:1/-1}
+#pobeda-content .edition-comparison .edition-rail{grid-column:1;height:140px;margin-bottom:10px}
+#pobeda-content .edition-comparison .edition-mounts{grid-column:2;grid-row:4;align-content:center;align-items:center;margin:0 0 10px;padding:0;border:0}
+#pobeda-content .edition-comparison .edition-mounts.eco-mounts{grid-template-columns:1fr 1fr}
+#pobeda-content .edition-comparison .eco-mounts p{grid-column:2}
+#pobeda-content .edition-comparison .edition-details{margin-bottom:14px}
+#pobeda-content .edition-comparison .edition-reason{margin-top:0}}
+#pobeda-content .cart-heading h2{min-width:0;overflow-wrap:anywhere}
+#pobeda-content .cart-close{flex:none}
+#pobeda-content .scheme-visual>a,#pobeda-content .scheme-visual picture{display:block}
+#pobeda-content .scheme-visual img{width:100%;height:auto;max-height:none;max-width:1050px;margin:auto}
+#pobeda-content .scheme-zoom-hint{font-size:12px;color:#7a848c;text-align:center;margin-top:10px}
+@media(max-width:600px){#pobeda-content .scheme-visual{overflow:visible;margin:16px 0 0}
+#pobeda-content .scheme-visual img{min-width:0;max-width:100%;width:100%;height:auto}}
+#pobeda-content .shop-edition-label{text-align:center;color:#697178;font-size:13px;margin:0 0 10px}
+#pobeda-content .shop-edition-picker .toggle{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#pobeda-content .shop-edition-picker [data-edition]{width:100%;min-height:62px;padding:15px 22px;font-size:22px;font-weight:600;letter-spacing:.015em;text-transform:uppercase;border:1px solid #dc7c40;border-radius:6px;background:#fff7f1;color:#a64f1a}
+#pobeda-content .shop-edition-picker [data-edition][aria-pressed=true]{background:#eb8348;border-color:#d3763d;color:#1d2731}
+#pobeda-content .shop-edition-picker+.chips{margin-top:22px}
+@media(max-width:600px){#pobeda-content .shop-edition-picker .toggle{gap:10px}
+#pobeda-content .shop-edition-picker [data-edition]{font-size:18px;min-height:56px;padding:12px 9px}
+#pobeda-content .shop-edition-picker+.chips{margin-top:18px}}
+#pobeda-content .shop-filters{display:grid;grid-template-columns:minmax(0,1fr);width:max-content;max-width:100%;margin:0 auto;padding:16px;border:1px solid #ded9d5;border-radius:8px;background:#fff}
+#pobeda-content .shop-filters .shop-edition-label{margin:0 0 10px;font-size:12px}
+#pobeda-content .shop-filters .shop-edition-picker .toggle{gap:8px}
+#pobeda-content .shop-filters .shop-edition-picker [data-edition]{min-height:46px;padding:10px 16px;font-size:18px}
+#pobeda-content .shop-filters #categories{margin:12px 0 0;gap:7px}
+#pobeda-content .shop-filters #categories button{padding:9px 13px}
+@media(max-width:600px){#pobeda-content .shop-filters{width:100%;padding:13px}
+#pobeda-content .shop-filters .shop-edition-picker [data-edition]{min-height:44px;font-size:16px;padding:10px 8px}
+#pobeda-content .shop-filters #categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+#pobeda-content .shop-filters #categories button{width:100%;font-size:12px;padding:9px 7px}}
+#pobeda-content .shop-filters{background:transparent;border:0;border-radius:0;padding:0}
+#pobeda-content .shop-filters .shop-edition-picker [data-edition]{background:transparent;color:var(--ink);border:1px solid #bdab9e}
+#pobeda-content .shop-filters .shop-edition-picker [data-edition][aria-pressed=true]{background:transparent;color:var(--ink);border-color:#d3763d;box-shadow:inset 0 -2px 0 #eb8348}
+@media(max-width:600px){#pobeda-content .shop-filters{padding:0}}
+#pobeda-content #shop{background:#fff}
+#pobeda-content #shop .product-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:42px 26px}
+#pobeda-content #shop .product-card{border:0;border-radius:0;background:transparent;overflow:visible;display:block;min-width:0}
+#pobeda-content #shop .product-media{display:block;aspect-ratio:1;height:auto;min-height:0;border-radius:9px;background:#e3e3e3;overflow:hidden}
+#pobeda-content #shop .product-media img{width:100%;height:100%;object-fit:contain}
+#pobeda-content #shop .product-body{display:block;padding:0;margin-top:4px}
+#pobeda-content #shop .product-card h3{font-size:16px;font-weight:400;line-height:1.3;height:2.6em;margin:0}
+#pobeda-content #shop .product-card h3 a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#pobeda-content #shop .product-price{margin-top:9px;font-size:20px;font-weight:650;line-height:1.25}
+@media(max-width:1050px){#pobeda-content #shop .product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}}
+@media(max-width:600px){#pobeda-content #shop .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px}
+#pobeda-content #shop .product-card h3{font-size:14px}
+#pobeda-content #shop .product-price{font-size:19px;margin-top:7px}}
+#pobeda-content .edition-comparison .edition-comparison-image{grid-column:1/-1;display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:6px;margin:0 0 16px}
+#pobeda-content .edition-comparison .btn{justify-self:start;align-self:start;width:auto}
+#pobeda-content .btn:active{filter:brightness(.95)}
+@media(pointer:coarse){#pobeda-content .btn{min-height:40px}}
+#pobeda-content #schemeZoom{position:relative;container-type:inline-size}
+#pobeda-content .scheme-copy{position:absolute;z-index:1;top:9.6%;left:7.1%;width:32%;text-align:left;color:var(--ink)}
+#pobeda-content .scheme-copy h4{font-size:clamp(18px,2.6cqw,28px);font-weight:500;line-height:1.12;text-transform:uppercase;letter-spacing:.015em;margin:0 0 14px}
+#pobeda-content .scheme-copy ul{list-style:none;padding:0;margin:0;display:grid;gap:5px;font-size:clamp(10px,1.35cqw,15px);line-height:1.35}
+#pobeda-content .scheme-copy li{position:relative;padding-left:13px}
+#pobeda-content .scheme-copy li::before{content:"";position:absolute;left:0;top:.48em;width:5px;height:5px;border-radius:50%;background:var(--orange)}
+@media(max-width:600px){#pobeda-content .scheme-copy{position:static;width:auto;padding:0 4px 16px}
+#pobeda-content .scheme-copy h4{font-size:22px;margin-bottom:12px}
+#pobeda-content .scheme-copy h4 br{display:initial}
+#pobeda-content .scheme-copy ul{font-size:14px;gap:7px}}
+#pobeda-content .scheme-art{position:relative}
+body.scheme-dialog-open{overflow:hidden}
+#pobeda-content .scheme-dialog{width:min(1440px,96vw);max-width:96vw;max-height:92dvh;padding:0;border:0;border-radius:8px;color:var(--ink);background:#fff;box-shadow:0 16px 70px #0004;overflow:hidden}
+#pobeda-content .scheme-dialog[open]{display:flex;flex-direction:column}
+#pobeda-content .scheme-dialog::backdrop{background:#15202bd1}
+#pobeda-content .scheme-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex:none;padding:12px 16px 12px 22px;border-bottom:1px solid var(--line)}
+#pobeda-content .scheme-dialog-header h2{font-size:20px;line-height:1.25}
+#pobeda-content .scheme-dialog-close{display:flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border:1px solid var(--line);border-radius:5px;background:#fff;color:var(--ink);font:400 30px/1 Arial,sans-serif;cursor:pointer}
+#pobeda-content .scheme-dialog-close:hover{background:#f2f2f2}
+#pobeda-content .scheme-dialog-pane{overflow:auto;overscroll-behavior:contain;padding:16px;min-height:0}
+#pobeda-content .scheme-dialog-pane img{display:block;width:100%;min-width:760px;height:auto;max-width:none}
+@media(max-width:600px){#pobeda-content .scheme-dialog{width:96vw;max-height:94dvh}
+#pobeda-content .scheme-dialog-header{padding:10px 12px;gap:10px}
+#pobeda-content .scheme-dialog-header h2{font-size:16px}
+#pobeda-content .scheme-dialog-pane{padding:10px}}
+#pobeda-content #project .consultation-cta-kit__inner{grid-template-columns:minmax(0,60fr) minmax(0,40fr);background:rgb(29,39,49);border-color:rgb(29,39,49)}
+#pobeda-content #project .consultation-cta-kit__media{aspect-ratio:auto;min-height:460px}
+#pobeda-content #project .consultation-cta-kit__content{background:rgb(29,39,49);color:#fff;padding:32px 36px;justify-content:center}
+#pobeda-content #project .consultation-cta-kit__logo{width:250px;max-width:100%;height:auto;margin:0 0 32px}
+#pobeda-content #project .project-kicker{color:#ff9a3e;font-size:12px;font-weight:600;letter-spacing:.1em;line-height:1.4;margin-bottom:15px}
+#pobeda-content #project .consultation-cta-kit__title{color:#fff;font-size:27px;line-height:1.18}
+#pobeda-content #project .consultation-cta-kit__text{color:#fff;font-size:14px;line-height:1.5;margin-top:18px}
+#pobeda-content #project .consultation-cta-kit__actions{margin-top:22px}
+@media(max-width:1050px){#pobeda-content #project .consultation-cta-kit__content{padding:28px}
+#pobeda-content #project .consultation-cta-kit__title{font-size:24px}
+#pobeda-content #project .consultation-cta-kit__logo{width:230px;margin-bottom:26px}}
+@media(max-width:760px){#pobeda-content #project .consultation-cta-kit__inner{grid-template-columns:1fr}
+#pobeda-content #project .consultation-cta-kit__media{min-height:0;aspect-ratio:1800/1211}
+#pobeda-content #project .consultation-cta-kit__content{padding:28px 24px 30px}
+#pobeda-content #project .consultation-cta-kit__logo{width:230px;margin-bottom:26px}
+#pobeda-content #project .consultation-cta-kit__title{font-size:25px}
+#pobeda-content #project .consultation-cta-kit__text{font-size:14px}}
+#pobeda-content .hero .hero-badges{width:410px;max-width:100%;height:auto;object-fit:contain;object-position:left}
+#pobeda-content .quality-copy .quality-facts{display:block;max-width:100%;padding:0;background:transparent;border-radius:0;margin-top:22px}
+#pobeda-content .quality-copy .quality-badges{display:block;width:100%;height:auto}
+#pobeda-content .scheme-top>div:first-child{min-width:0}
+#pobeda-content .scheme-edition-links{display:flex;gap:16px;align-self:flex-start;flex:none;padding-top:4px;white-space:nowrap}
+#pobeda-content .scheme-edition-link{font-size:13px;line-height:1.4;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;color:var(--muted)}
+#pobeda-content .scheme-edition-link[aria-current="true"]{color:#c9682c;font-weight:600}
+#pobeda-content .scheme-edition-link:hover{color:#c9682c}
+@media(max-width:760px){#pobeda-content .scheme-top{display:flex;flex-direction:column;gap:14px}
+#pobeda-content .scheme-edition-links{align-self:flex-end;padding-top:0;gap:18px}}
+#pobeda-content #documents .tech-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:0;border:1px solid #1d2731;border-radius:10px;overflow:hidden;align-items:stretch}
+#pobeda-content .spec-panel{padding:16px 20px;background:#fff;min-width:0}
+#pobeda-content #documents .specs{width:100%;border-collapse:collapse;font-size:12px}
+#pobeda-content #documents .specs th,#pobeda-content #documents .specs td{padding:6px 4px;border-bottom:1px solid #858b90;vertical-align:middle;line-height:1.35;text-align:left}
+#pobeda-content #documents .specs th{width:43%;font-size:10.5px;font-weight:600;text-transform:uppercase}
+#pobeda-content #documents .specs td{font-weight:400;width:auto}
+#pobeda-content #documents .specs tr:last-child th,#pobeda-content #documents .specs tr:last-child td{border-bottom:0}
+#pobeda-content .spec-note{font-size:10px;line-height:1.4;color:var(--muted);margin-top:12px}
+#pobeda-content #documents .documents{padding:28px;background:rgb(29,39,49);color:#fff;border-radius:0;display:flex;flex-direction:column;min-width:0}
+#pobeda-content #documents .documents h3{font-size:25px;line-height:1.2;font-weight:500;margin:0}
+#pobeda-content .documents-intro{font-size:14px;line-height:1.5;margin-top:20px}
+#pobeda-content .document-types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0 24px}
+#pobeda-content .document-type{display:flex;gap:9px;align-items:flex-start;min-width:0}
+#pobeda-content .document-type-icon{width:28px;height:34px;flex:none}
+#pobeda-content .document-type h4{font-size:12px;font-weight:600;line-height:1.2;text-transform:uppercase;margin:0 0 8px}
+#pobeda-content .document-type p{font-size:11px;line-height:1.4;color:#e4e7e9;margin:0}
+#pobeda-content .request-documents-button{align-self:flex-start;margin-top:auto}
+#pobeda-content .documents-warranty{font-size:10px;line-height:1.5;color:#c0c7cc;margin-top:16px}
+#pobeda-content .documents-warranty a{text-decoration:underline;text-underline-offset:3px}
+body.request-dialog-open{overflow:hidden}
+#pobeda-content .request-dialog{width:760px;max-width:calc(100vw - 32px);max-height:92dvh;padding:0;border:0;border-radius:8px;background:#fff;color:var(--ink);overflow:hidden;box-shadow:0 16px 70px #0004}
+#pobeda-content .request-dialog[open]{display:flex;flex-direction:column}
+#pobeda-content .request-dialog::backdrop{background:#15202bd1}
+#pobeda-content .request-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px 14px;flex:none;border-bottom:1px solid var(--line)}
+#pobeda-content .request-dialog-header h2{font-size:24px;line-height:1.25}
+#pobeda-content .request-dialog-close{display:flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:0;border:1px solid var(--line);border-radius:4px;background:#fff;font:400 30px/1 Arial,sans-serif}
+#pobeda-content .request-dialog-body{padding:20px 24px 26px;overflow:auto;min-height:0}
+#pobeda-content .request-intro{font-size:14px;line-height:1.5;color:var(--muted);margin:0 0 20px}
+#pobeda-content .pobeda-request-form{display:grid;gap:14px}
+#pobeda-content .pobeda-request-form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+#pobeda-content .pobeda-request-form label{display:block;min-width:0;font-size:13px;line-height:1.4}
+#pobeda-content .pobeda-request-form label>span[aria-hidden]{color:#ba5f25}
+#pobeda-content .pobeda-request-form input:not([type=checkbox]):not([type=hidden]),#pobeda-content .pobeda-request-form textarea{display:block;width:100%;min-width:0;margin-top:7px;border:1px solid #c4ccd2;border-radius:4px;padding:10px 12px;background:#fff;color:var(--ink);font:400 14px/1.4 var(--font)}
+#pobeda-content .pobeda-request-form input:not([type=checkbox]):not([type=hidden]){min-height:42px}
+#pobeda-content .pobeda-request-form textarea{min-height:88px;resize:vertical}
+#pobeda-content .request-required,#pobeda-content .request-demo-note{font-size:11px;line-height:1.5;color:var(--muted)}
+#pobeda-content .request-consents{display:grid;gap:10px}
+#pobeda-content .request-consents label{display:flex;align-items:flex-start;gap:9px;font-size:11px;line-height:1.5}
+#pobeda-content .request-consents input{flex:none;accent-color:#c9682c;width:15px;height:15px;margin:1px 0 0}
+#pobeda-content .request-consents a{text-decoration:underline;text-underline-offset:2px}
+#pobeda-content .pobeda-request-form>.btn{justify-self:start;margin-top:4px}
+#pobeda-content .request-result h3{font-size:22px;margin:0 0 12px}
+#pobeda-content .request-result p{font-size:14px;line-height:1.5;color:var(--muted)}
+@media(max-width:1050px){#pobeda-content #documents .documents{padding:23px}
+#pobeda-content .document-types{gap:12px}
+#pobeda-content .document-type{display:block}
+#pobeda-content .document-type-icon{margin-bottom:10px}
+#pobeda-content #documents .documents h3{font-size:23px}}
+@media(max-width:760px){#pobeda-content #documents .tech-layout{grid-template-columns:1fr}
+#pobeda-content .spec-panel{padding:16px}
+#pobeda-content #documents .documents{padding:25px 22px}
+#pobeda-content .document-types{gap:18px;margin-top:24px}
+#pobeda-content #documents .specs th{font-size:10.5px}
+#pobeda-content #documents .specs td{font-size:12px}
+#pobeda-content .request-dialog-header{padding:14px 16px}
+#pobeda-content .request-dialog-header h2{font-size:21px}
+#pobeda-content .request-dialog-body{padding:18px 16px 24px}
+#pobeda-content .pobeda-request-form-row{grid-template-columns:1fr;gap:14px}}
+@media(max-width:430px){#pobeda-content .document-types{grid-template-columns:1fr;gap:18px}
+#pobeda-content .document-type{display:flex;gap:13px}
+#pobeda-content .document-type-icon{margin:0}
+#pobeda-content .document-type h4{font-size:13px;margin-bottom:5px}
+#pobeda-content .document-type p{font-size:12px}}
+#pobeda-content #documents .documents h3{font-family:PobedaScience,Arial,sans-serif;font-weight:400}
+#pobeda-content #documents .specs,#pobeda-content #documents .specs th,#pobeda-content #documents .specs td,#pobeda-content .documents-intro,#pobeda-content .document-type h4,#pobeda-content .document-type p,#pobeda-content .documents-warranty{font-family:PobedaGeist,Arial,sans-serif}
+#pobeda-content .document-type h4{font-weight:600;letter-spacing:0}
+#pobeda-content .request-dialog{font-family:PobedaGeist,Arial,sans-serif}
+#pobeda-content .request-dialog-header h2,#pobeda-content .request-result h3{font-family:PobedaScience,Arial,sans-serif;font-weight:400}
+#pobeda-content .pobeda-request-form input,#pobeda-content .pobeda-request-form textarea{font-family:PobedaGeist,Arial,sans-serif!important}
+#pobeda-content .document-type h4{white-space:nowrap}
+#pobeda-content .application-head{max-width:1000px}
+#pobeda-content .application-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+#pobeda-content .application-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);min-height:320px;border:1px solid #929a9f;border-radius:10px;overflow:hidden;background:#fff}
+#pobeda-content .application-copy{display:flex;flex-direction:column;justify-content:center;padding:26px;min-width:0}
+#pobeda-content .application-copy h3{font-family:PobedaScience,Arial,sans-serif;font-size:24px;font-weight:400;text-transform:uppercase;line-height:1.2;margin:0}
+#pobeda-content .application-spaces{font-family:PobedaGeist,Arial,sans-serif;font-size:11px;font-weight:600;line-height:1.45;text-transform:uppercase;color:#d97738;margin:12px 0 14px}
+#pobeda-content .application-description{font-family:PobedaGeist,Arial,sans-serif;font-size:14px;line-height:1.45;margin:0}
+#pobeda-content .application-card .gallery-photo{width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+#pobeda-content .application-business{background:#1d2731;color:#fff;border-color:#1d2731}
+#pobeda-content .application-business .application-spaces{color:#f89a56}
+@media(max-width:1000px){#pobeda-content .application-grid{grid-template-columns:1fr}
+#pobeda-content .application-card{min-height:300px}
+#pobeda-content .application-copy{padding:28px}
+#pobeda-content .application-copy h3{font-size:26px}
+#pobeda-content .application-spaces{font-size:12px}
+#pobeda-content .application-description{font-size:15px}}
+@media(max-width:600px){#pobeda-content .application-head h2 br{display:none}
+#pobeda-content .application-card{grid-template-columns:1fr;min-height:0}
+#pobeda-content .application-card .gallery-photo{grid-row:1;aspect-ratio:1.65;height:auto}
+#pobeda-content .application-copy{padding:24px 22px}
+#pobeda-content .application-copy h3{font-size:25px}
+#pobeda-content .application-description{font-size:14px}}
+#pobeda-content .cases-head{max-width:1000px}
+#pobeda-content .cases-head p{max-width:760px}
+#pobeda-content .cases-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:30px}
+#pobeda-content .case-card{margin:0;min-width:0}
+#pobeda-content .case-photo{display:block;width:100%;aspect-ratio:1;height:auto;object-fit:cover;border-radius:8px}
+#pobeda-content .case-card figcaption{font-family:PobedaGeist,Arial,sans-serif;font-size:14px;line-height:1.4;font-weight:400;text-align:center;text-transform:uppercase;margin-top:12px}
+#pobeda-content .mounting-detail{align-items:start}
+#pobeda-content .mounting-detail img{height:98px;object-position:top center}
+#pobeda-content .mounting-detail .mounting-lead{font-family:PobedaGeist,Arial,sans-serif;font-size:14px;font-weight:400;color:var(--ink);line-height:1.35;margin:0}
+#pobeda-content .mounting-detail .mounting-note{font-family:PobedaGeist,Arial,sans-serif;font-size:13px;font-weight:400;color:#8c8e90;line-height:1.4;margin:10px 0 0}
+@media(max-width:760px){#pobeda-content .cases-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+#pobeda-content .case-card figcaption{font-size:13px}
+#pobeda-content .cases-head h2 br{display:none}}
+@media(max-width:600px){#pobeda-content .mounting-detail img{height:95px}
+#pobeda-content .mounting-detail .mounting-lead{font-size:14px}
+#pobeda-content .mounting-detail .mounting-note{font-size:14px}}
+#pobeda-content .edition-image-button{display:block;padding:0;border:0;border-radius:6px;background:transparent;overflow:hidden;cursor:zoom-in;width:100%;height:220px;margin:0 0 16px}
+#pobeda-content .edition-comparison .edition-image-button .edition-comparison-image{width:100%;height:100%;object-fit:contain;aspect-ratio:auto;margin:0}
+@media(min-width:1001px){#pobeda-content #editions{padding:20px 0 8px;scroll-margin-top:0}
+#pobeda-content #editions .edition-intro{max-width:1100px;margin-bottom:14px}
+#pobeda-content #editions .edition-intro h2{font-size:27px;line-height:1.15}
+#pobeda-content #editions .edition-intro p{max-width:1000px;font-size:14px;line-height:1.4;margin-top:10px}
+#pobeda-content #editions .edition-common{font-size:12px;padding:9px 14px;gap:8px 18px;margin-bottom:14px}
+#pobeda-content #editions .versions{gap:18px}
+#pobeda-content #editions .version-card{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-content:start;gap:0 16px;padding:16px}
+#pobeda-content #editions .version-card.selected{padding:15px}
+#pobeda-content #editions .version-top{grid-row:1}
+#pobeda-content #editions .version-top h3{font-size:22px}
+#pobeda-content #editions .version-kind{font-size:11px;padding:4px 8px}
+#pobeda-content #editions .version-card h4{grid-row:2;font-size:16px;line-height:1.3;min-height:0;margin:9px 0 0}
+#pobeda-content #editions .version-card .edition-material{grid-row:3;font-size:13px;line-height:1.4;min-height:0;margin:8px 0 12px}
+#pobeda-content #editions .edition-image-button{grid-column:1;grid-row:4;height:185px;margin:0;align-self:center}
+#pobeda-content #editions .edition-details{grid-column:2;grid-row:4;align-self:center;margin:0}
+#pobeda-content #editions .edition-details>div{display:block;min-height:0;padding:6px 0;font-size:12px;line-height:1.35}
+#pobeda-content #editions .edition-details dt{font-size:11px;margin-bottom:3px}
+#pobeda-content #editions .edition-reason{grid-row:5;font-size:12px;line-height:1.35;padding:10px 12px;margin:12px 0 10px}
+#pobeda-content #editions .version-card>.btn{grid-row:6}
+#pobeda-content #editions .edition-compatibility{font-size:12px;line-height:1.4;margin-top:12px}}
+@media(max-width:600px){#pobeda-content .edition-image-button{height:230px}}
+#pobeda-content #editions [data-version-card="eco"]{background:#1d2731;color:#fff;border-color:#1d2731}
+#pobeda-content #editions [data-version-card="eco"].selected{border-color:var(--orange)}
+#pobeda-content #editions [data-version-card="eco"] .edition-material,#pobeda-content #editions [data-version-card="eco"] .edition-details dt,#pobeda-content #editions [data-version-card="eco"] .edition-reason span{color:#c5cdd3}
+#pobeda-content #editions [data-version-card="eco"] .edition-details>div{border-color:#ffffff2b}
+#pobeda-content #editions [data-version-card="eco"] .edition-reason{background:#2a3742}
+#pobeda-content #editions [data-version-card="eco"] .version-kind{background:#ffffff12;color:#ffb47c}
+#pobeda-content #editions .edition-intro{max-width:940px;margin-bottom:22px}
+#pobeda-content #editions .edition-intro h2{max-width:780px;margin:0 auto;line-height:1.18}
+#pobeda-content #editions .edition-intro p{max-width:900px;margin:14px auto 0;line-height:1.5;text-wrap:pretty}
+@media(max-width:600px){#pobeda-content #editions .edition-intro h2 br{display:none}
+#pobeda-content #editions .edition-intro{margin-bottom:24px}}
+#pobeda-content #editions{margin-top:32px}
+@media(max-width:600px){#pobeda-content #editions{margin-top:24px}}
+@media(min-width:1001px){#pobeda-content #editions .versions{grid-template-rows:repeat(9,auto);row-gap:0;align-items:stretch}
+#pobeda-content #editions .version-card{grid-row:span 9;grid-template-rows:subgrid;row-gap:0}
+#pobeda-content #editions .edition-image-button{grid-row:4 / span 4;align-self:start}
+#pobeda-content #editions .edition-details{grid-row:4 / span 4;display:grid;grid-template-rows:subgrid;align-self:stretch}
+#pobeda-content #editions .edition-details>div{grid-column:1;align-self:stretch}
+#pobeda-content #editions .edition-reason{grid-row:8}
+#pobeda-content #editions .version-card>.btn{grid-row:9;align-self:start}}
+#pobeda-content .facts{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+#pobeda-content .fact{align-items:flex-start;padding:16px 14px;gap:10px;min-width:0}
+#pobeda-content .fact .fact-icon{width:26px;height:28px;flex:none;color:#eb8348;margin-top:1px}
+#pobeda-content .fact b{font-family:PobedaGeist,Arial,sans-serif;font-size:14px;line-height:1.3;font-weight:600}
+#pobeda-content .fact span{font-family:PobedaGeist,Arial,sans-serif;font-size:12px;line-height:1.45;margin-top:7px}
+#pobeda-content #editions [data-version-card="eco"] .version-kind{color:#fff}
+@media(max-width:1100px){#pobeda-content .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+#pobeda-content .fact:last-child{grid-column:1/-1}}
+@media(max-width:600px){#pobeda-content .facts{grid-template-columns:1fr;gap:10px}
+#pobeda-content .fact:last-child{grid-column:auto}
+#pobeda-content .fact{padding:15px 16px;gap:14px}
+#pobeda-content .fact b{font-size:15px}
+#pobeda-content .fact span{font-size:13px;margin-top:5px}}
+@media(min-width:1101px){#pobeda-content .fact b{min-height:2.6em}}
+#pobeda-content{
+  --font: PobedaGeist, Arial, sans-serif;
+  --section-space: 48px;
+  --section-title-size: 32px;
+  --section-intro-size: 16px;
+  --section-title-gap: 16px;
+  --section-content-gap: 28px;
+  --card-title-size: 22px;
+}
+#pobeda-content main h1,#pobeda-content main h2,#pobeda-content main .section-head h2,#pobeda-content #editions .edition-intro h2,#pobeda-content .quality-copy h2,#pobeda-content #project .consultation-cta-kit__title{
+  font-family: PobedaScience, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .015em;
+  line-height: 1.18;
+}
+#pobeda-content main h2,#pobeda-content main .section-head h2,#pobeda-content #editions .edition-intro h2,#pobeda-content .quality-copy h2,#pobeda-content #project .consultation-cta-kit__title{
+  font-size: var(--section-title-size);
+}
+#pobeda-content .hero-copy h1{ font-size: 40px; line-height: 1.16; }
+#pobeda-content .section,#pobeda-content #editions,#pobeda-content .project{ padding: var(--section-space) 0; }
+#pobeda-content #editions{ margin-top: 24px; }
+#pobeda-content .section-head,#pobeda-content #editions .edition-intro,#pobeda-content .application-head,#pobeda-content .cases-head{
+  max-width: 1040px;
+  margin: 0 auto var(--section-content-gap);
+}
+#pobeda-content #editions .edition-intro h2{ max-width: none; margin: 0 auto; }
+#pobeda-content .section-head p,#pobeda-content #editions .edition-intro p{
+  max-width: 860px;
+  margin: var(--section-title-gap) auto 0;
+  font-size: var(--section-intro-size);
+  line-height: 1.5;
+}
+#pobeda-content #editions .edition-intro p{ max-width: 720px; }
+#pobeda-content #light .section-head p{ max-width: 640px; text-wrap: balance; }
+#pobeda-content .version-top h3,#pobeda-content .light-model-copy h3,#pobeda-content .mounting-body h3,#pobeda-content .scheme-top h3,#pobeda-content .application-copy h3,#pobeda-content .install h3,#pobeda-content .control-body h3{
+  font-family: PobedaScience, Arial, sans-serif;
+  font-size: var(--card-title-size);
+  font-weight: 400;
+  line-height: 1.2;
+}
+#pobeda-content .facts{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 32px;
+}
+#pobeda-content .fact{
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  padding: 20px 18px;
+  border-radius: 10px;
+}
+#pobeda-content .fact .fact-icon{ width: 36px; height: 40px; margin-top: 0; }
+#pobeda-content .fact b{
+  min-height: 2.6em;
+  font-family: PobedaGeist, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#pobeda-content .fact span{
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #626d75;
+}
+@media (max-width: 1100px){#pobeda-content .facts{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#pobeda-content .fact:last-child{ grid-column: 1 / -1; }}
+@media (max-width: 1000px){#pobeda-content{
+    --section-space: 40px;
+    --section-title-size: 28px;
+    --section-intro-size: 15px;
+    --card-title-size: 20px;
+  }
+#pobeda-content .hero-copy h1{ font-size: 34px; }}
+@media (max-width: 600px){#pobeda-content{
+    --section-space: 32px;
+    --section-title-size: 24px;
+    --section-intro-size: 14px;
+    --section-title-gap: 14px;
+    --section-content-gap: 24px;
+  }
+#pobeda-content .hero-copy h1{ font-size: 30px; }
+#pobeda-content .facts{ grid-template-columns: 1fr; gap: 12px; padding-top: 24px; }
+#pobeda-content .fact{ grid-template-columns: 36px minmax(0, 1fr); padding: 18px; }
+#pobeda-content .fact:last-child{ grid-column: auto; }
+#pobeda-content .fact .fact-icon{ width: 36px; height: 40px; }
+#pobeda-content .fact b{ min-height: 0; font-size: 13px; }
+#pobeda-content .fact b br{ display: none; }
+#pobeda-content .fact span{ margin-top: 8px; }}
+#pobeda-content .installation-layout{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch; }
+#pobeda-content .installation-feature{ display:flex; flex-direction:column; border-radius:10px; overflow:hidden; background:#f3f3f3; }
+#pobeda-content .installation-photo,#pobeda-content .installation-step-image{ padding:0; border:0; background:transparent; cursor:default; }
+#pobeda-content .installation-photo{ width:100%; height:350px; flex:1 1 350px; min-height:0; }
+#pobeda-content .installation-photo img{ width:100%; height:100%; object-fit:contain; }
+#pobeda-content .installation-feature-copy{ padding:22px 26px 26px; }
+#pobeda-content .installation-feature-copy h3,#pobeda-content .installation-step h3{ font-family:PobedaScience,Arial,sans-serif; font-size:var(--card-title-size); font-weight:400; line-height:1.2; text-transform:uppercase; }
+#pobeda-content .installation-feature-copy p{ font-size:14px; line-height:1.5; color:#626d75; margin-top:12px; }
+#pobeda-content .installation-steps{ display:grid; grid-template-rows:repeat(3,1fr); list-style:none; padding:0; margin:0; }
+#pobeda-content .installation-step{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:20px; align-items:center; padding:12px 0; border-top:1px solid #d7dadd; }
+#pobeda-content .installation-step:last-child{ border-bottom:1px solid #d7dadd; }
+#pobeda-content .installation-step-image{ width:150px; height:150px; }
+#pobeda-content .installation-step-diagram{ width:100%; height:100%; object-fit:contain; }
+#pobeda-content .installation-step-heading{ display:flex; align-items:center; gap:10px; }
+#pobeda-content .installation-step-number{ font-family:PobedaGeist,Arial,sans-serif; font-size:12px; font-weight:500; color:#c6682d; flex:none; }
+#pobeda-content .installation-step p{ margin-top:10px; font-size:14px; line-height:1.5; color:#626d75; }
+#pobeda-content .installation-safety{ margin-top:20px; font-size:13px; line-height:1.5; text-align:center; color:#697178; }
+@media(max-width:1000px){#pobeda-content .installation-layout{ gap:24px; }
+#pobeda-content .installation-step{ grid-template-columns:115px minmax(0,1fr); gap:14px; }
+#pobeda-content .installation-step-image{ width:115px; height:140px; }
+#pobeda-content .installation-step h3{ font-size:18px; }
+#pobeda-content .installation-feature-copy{ padding:22px; }}
+@media(max-width:760px){#pobeda-content .installation-layout{ grid-template-columns:1fr; gap:24px; }
+#pobeda-content .installation-photo{ flex:none; height:320px; }
+#pobeda-content .installation-feature-copy{ padding:22px; }
+#pobeda-content .installation-step{ grid-template-columns:130px minmax(0,1fr); gap:18px; padding:14px 0; }
+#pobeda-content .installation-step-image{ width:130px; height:150px; }
+#pobeda-content .installation-step h3{ font-size:18px; }
+#pobeda-content .installation-safety{ text-align:left; }}
+@media(max-width:380px){#pobeda-content .installation-step{ grid-template-columns:110px minmax(0,1fr); gap:12px; }
+#pobeda-content .installation-step-image{ width:110px; }
+#pobeda-content .installation-step h3{ font-size:16px; }}
+#pobeda-content .installation-photo,#pobeda-content .installation-step-image{ position:relative; }
+@media(min-width:761px){#pobeda-content .installation-layout{ grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); }}
+#pobeda-content .installation-feature{ background:#eee; align-self:start; }
+#pobeda-content .installation-photo{ display:block; flex:none; height:auto; aspect-ratio:1439 / 1620; }
+#pobeda-content .installation-photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+#pobeda-content .installation-photo-caption{
+ position:absolute; left:16px; bottom:16px; max-width:calc(100% - 64px);
+ padding:6px 9px; border-radius:4px; background:#ffffffdf; color:#1d2731;
+ font-family:PobedaGeist,Arial,sans-serif; font-size:11px; line-height:1.4; text-align:left;
+}
+#pobeda-content .installation-step h3{
+ font-family:PobedaGeist,Arial,sans-serif; font-size:16px; font-weight:400;
+ letter-spacing:.025em; line-height:1.3; text-transform:uppercase;
+}
+@media(max-width:760px){#pobeda-content .installation-photo{ height:auto; }}
+#pobeda-content .installation-feature{ align-self:stretch; min-height:0; }
+#pobeda-content .installation-photo{ flex:1; height:100%; min-height:0; aspect-ratio:auto; }
+#pobeda-content .installation-step h3{ font-size:14px; }
+#pobeda-content .installation-step-copy{ max-width:290px; }
+#pobeda-content .installation-step p{ max-width:290px; text-wrap:pretty; }
+@media(min-width:1001px){#pobeda-content .installation-step{
+  grid-template-columns:150px minmax(0,290px);
+  justify-content:center;
+ }}
+@media(min-width:1001px){#pobeda-content .installation-photo{ flex:none; height:auto; aspect-ratio:1439 / 1620; }
+#pobeda-content .installation-steps{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:minmax(0,1fr) auto auto;
+  column-gap:20px;
+ }
+#pobeda-content .installation-step{
+  grid-row:span 3;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:subgrid;
+  justify-content:normal;
+  align-items:stretch;
+  gap:0;
+  padding:0;
+  border:0;
+ }
+#pobeda-content .installation-step:last-child{ border:0; }
+#pobeda-content .installation-step-image{
+  grid-row:1; width:100%; height:auto; min-height:0;
+  margin:0 0 20px; align-self:stretch;
+ }
+#pobeda-content .installation-step-copy{ display:contents; max-width:none; }
+#pobeda-content .installation-step-heading{
+  grid-row:2; gap:7px; align-items:baseline;
+  padding-top:14px; border-top:1px solid #d7dadd;
+ }
+#pobeda-content .installation-step h3{ font-size:14px; letter-spacing:0; }
+#pobeda-content .installation-step p{
+  grid-row:3; max-width:none; margin-top:10px;
+  font-size:13px; line-height:1.45;
+ }}
+@media(min-width:1001px){#pobeda-content .installation-steps{ grid-template-rows:260px auto auto; align-content:center; }}
+@media(min-width:1001px){#pobeda-content #documents .documents h3{ font-size:24px; line-height:1.2; }
+#pobeda-content #documents .documents-intro{ max-width:460px; margin-top:16px; line-height:1.45; }
+#pobeda-content #documents .document-types{ grid-template-columns:1fr; gap:0; margin:22px 0; }
+#pobeda-content #documents .document-type{
+  display:grid; grid-template-columns:32px 128px minmax(0,1fr);
+  gap:14px; align-items:center; padding:12px 0;
+  border-top:1px solid #ffffff26;
+ }
+#pobeda-content #documents .document-type:last-child{ border-bottom:1px solid #ffffff26; }
+#pobeda-content #documents .document-type>div{ display:contents; }
+#pobeda-content #documents .document-type-icon{ width:32px; height:39px; margin:0; }
+#pobeda-content #documents .document-type h4{ margin:0; font-size:12px; line-height:1.3; }
+#pobeda-content #documents .document-type p{ max-width:260px; font-size:12px; line-height:1.45; text-wrap:pretty; }
+#pobeda-content #documents .request-documents-button{ margin-top:auto; }}
+#pobeda-content #project .project-kicker{ color:#38e6e5; }
+#pobeda-content #project .consultation-cta-kit__actions .btn{ background:#38e6e5; color:#1d2731; }
+#pobeda-content #project .consultation-cta-kit__actions .btn:focus-visible{ outline-color:#38e6e5; }
+#pobeda-content .installation-layout{ border:1px solid #d7dadd; border-radius:10px; overflow:hidden; background:#fff; }
+#pobeda-content .installation-feature{ border-radius:0; }
+@media(min-width:1001px){#pobeda-content .installation-steps{ padding:24px 24px 24px 0; }}
+@media(min-width:1001px){#pobeda-content #documents .spec-panel{ padding:28px; }}
+#pobeda-content #control .control-grid{ gap:22px; align-items:stretch; }
+#pobeda-content #control .control-card{ border:1px solid #c6c9cc; border-radius:10px; overflow:hidden; background:#fff; }
+#pobeda-content #control .control-visual{ position:relative; aspect-ratio:1.35; overflow:hidden; }
+#pobeda-content #control .control-photo{ width:100%; height:100%; object-fit:cover; }
+#pobeda-content #control .control-badge{
+  position:absolute; left:16px; bottom:16px; display:flex; align-items:center;
+  gap:12px; min-height:50px; padding:10px 14px; max-width:calc(100% - 32px);
+  border:1px solid #ffffff24; border-radius:6px; background:#1d2731b8;
+  backdrop-filter:blur(10px); color:#fff; font-family:PobedaGeist,Arial,sans-serif;
+  font-size:14px; line-height:1.2; font-weight:500;
+ }
+#pobeda-content #control .control-mode-icon{ width:26px; height:26px; flex:none; }
+#pobeda-content #control .control-protocol-logo{ display:block; flex:none; }
+#pobeda-content #control .control-logo-dali{ width:76px; height:29px; }
+#pobeda-content #control .control-logo-casambi{ width:104px; height:25px; }
+#pobeda-content #control .control-logo-zigbee{ width:88px; height:32px; }
+#pobeda-content #control .control-badge-divider{ width:1px; height:24px; background:#ffffff45; flex:none; }
+#pobeda-content #control .control-body{ display:flex; flex-direction:column; align-items:center; padding:20px 22px 24px; text-align:center; }
+#pobeda-content #control .control-body h3{ min-height:2.4em; font-size:22px; line-height:1.2; margin:0; text-transform:uppercase; }
+#pobeda-content #control .control-protocol{ font-family:PobedaGeist,Arial,sans-serif; font-size:13px; line-height:1.3; font-weight:600; color:#d37636; margin-top:10px; }
+#pobeda-content #control .control-body p{ max-width:300px; font-size:14px; line-height:1.5; margin-top:12px; color:#626d75; }
+@media(max-width:1000px){#pobeda-content #control .control-body h3{ font-size:20px; }
+#pobeda-content #control .control-body{ padding:18px; }
+#pobeda-content #control .control-badge{ left:12px; bottom:12px; padding:9px 11px; gap:9px; max-width:calc(100% - 24px); }
+#pobeda-content #control .control-logo-casambi{ width:88px; }
+#pobeda-content #control .control-logo-zigbee{ width:76px; }
+#pobeda-content #control .control-logo-dali{ width:64px; }
+#pobeda-content #control .control-mode-icon{ width:22px; height:22px; }}
+@media(max-width:1000px){#pobeda-content #control .control-grid{ grid-template-columns:1fr; max-width:560px; margin:auto; }
+#pobeda-content #control .control-visual{ aspect-ratio:1.5; }
+#pobeda-content #control .control-body h3{ min-height:0; }
+#pobeda-content .installation-layout{ grid-template-columns:1fr; gap:16px; }
+#pobeda-content .installation-photo{ flex:none; height:auto; aspect-ratio:1439 / 1620; }
+#pobeda-content .installation-steps{ padding:0 16px 16px; }
+#pobeda-content .installation-step{ grid-template-columns:110px minmax(0,1fr); gap:12px; }
+#pobeda-content .installation-step-image{ width:110px; height:140px; }
+#pobeda-content .installation-step-copy,#pobeda-content .installation-step p{ max-width:none; }
+#pobeda-content .installation-step h3{ font-size:13px; }
+#pobeda-content .installation-step p{ font-size:13px; line-height:1.45; margin-top:8px; }
+#pobeda-content #documents .documents h3{ font-size:20px; line-height:1.25; }
+#pobeda-content #documents .documents-intro{ font-size:14px; margin-top:16px; }
+#pobeda-content #documents .document-types{ grid-template-columns:1fr; gap:0; margin:22px 0; }
+#pobeda-content #documents .document-type{ display:grid; grid-template-columns:32px minmax(0,1fr); gap:14px; padding:14px 0; align-items:start; border-top:1px solid #ffffff26; }
+#pobeda-content #documents .document-type:last-child{ border-bottom:1px solid #ffffff26; }
+#pobeda-content #documents .document-type>div{ display:block; }
+#pobeda-content #documents .document-type-icon{ width:32px; height:39px; margin:0; }
+#pobeda-content #documents .document-type h4{ font-size:13px; line-height:1.3; margin-bottom:6px; }
+#pobeda-content #documents .document-type p{ font-size:13px; line-height:1.45; }
+#pobeda-content .pobeda-request-form input:not([type=checkbox]):not([type=hidden]),#pobeda-content .pobeda-request-form textarea{ font-size:16px; min-height:44px; }
+#pobeda-content .request-consents label{ font-size:12px; min-height:44px; align-items:flex-start; padding:4px 0; }
+#pobeda-content .request-consents input{ width:20px; height:20px; }}
+@media(max-width:600px){#pobeda-content .hero-backdrop{ position:relative; inset:auto; width:100%; height:auto; aspect-ratio:1.65; object-fit:cover; object-position:12% center; }
+#pobeda-content .hero-inner{ display:block; min-height:0; width:100%; }
+#pobeda-content .hero-copy{ display:block; width:100%; margin:0; padding:26px 24px 28px; background:#1d2731; }
+#pobeda-content .hero-copy h1{ font-size:28px; text-wrap:balance; }
+#pobeda-content .hero-copy p{ line-height:1.5; }
+#pobeda-content .hero-copy .actions{ display:grid; grid-template-columns:1fr; gap:10px; }
+#pobeda-content .hero-copy .actions .btn{ width:100%; }
+#pobeda-content .btn,#pobeda-content .btn.small,#pobeda-content .toggle button,#pobeda-content .chips button,#pobeda-content .menu{ min-height:44px; }
+#pobeda-content .menu{ min-width:60px; }
+#pobeda-content .nav.open{ max-height:calc(100dvh - 64px); overflow-y:auto; }
+#pobeda-content .nav a{ display:flex; align-items:center; min-height:44px; }
+#pobeda-content .shop-edition-picker [data-edition]{ min-height:44px; }
+#pobeda-content .scheme-edition-links a{ display:inline-flex; align-items:center; min-height:40px; }
+#pobeda-content .scheme-legend{ grid-template-columns:1fr 1fr; }
+#pobeda-content .scheme-item{ padding:12px; }
+#pobeda-content .scheme-item b{ line-height:1.4; }
+#pobeda-content .scheme-item .text-link{ min-height:36px; display:inline-flex; align-items:center; }
+#pobeda-content #project .consultation-cta-kit__actions .btn{ width:100%; }
+#pobeda-content .faq summary{ min-height:44px; }}
+@media(max-width:1000px){#pobeda-content .versions{ grid-template-columns:1fr; max-width:760px; margin:auto; }
+#pobeda-content .version-card .edition-material,#pobeda-content .edition-comparison h4{ min-height:0; }
+#pobeda-content .installation-layout{ max-width:620px; margin:auto; }
+#pobeda-content #documents .tech-layout{ grid-template-columns:1fr; }
+#pobeda-content #documents .spec-panel{ padding:20px; }
+#pobeda-content #documents .documents{ padding:24px; }
+#pobeda-content #project .consultation-cta-kit__inner{ grid-template-columns:1fr; }
+#pobeda-content #project .consultation-cta-kit__media{ min-height:0; aspect-ratio:1800 / 1211; }}
+#pobeda-content #light .light-model-grid{
+ display:grid; grid-template-columns:none; grid-auto-flow:column;
+ grid-auto-columns:calc((100% - 44px) / 3); column-gap:22px;
+ align-items:stretch; overflow-x:auto; overscroll-behavior-x:contain;
+ scroll-snap-type:x mandatory; scroll-behavior:smooth; scroll-padding-inline:2px;
+ scrollbar-width:none; padding:4px 2px 8px;
+}
+#pobeda-content #light .light-model-grid::-webkit-scrollbar{ display:none; }
+#pobeda-content #light .light-model-card{ scroll-snap-align:start; }
+#pobeda-content .light-slider-controls{ display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:12px; }
+#pobeda-content .light-slider-position{ font-family:PobedaGeist,Arial,sans-serif; font-size:13px; color:#697178; margin-right:6px; }
+#pobeda-content .light-slider-arrow{ display:grid; place-items:center; width:44px; height:44px; padding:10px; border:1px solid #aab1b7; border-radius:4px; background:#fff; }
+#pobeda-content .light-slider-arrow svg{ width:22px; height:22px; }
+#pobeda-content .light-slider-arrow:disabled{ opacity:.3; cursor:default; }
+@media(max-width:1000px){#pobeda-content #light .light-model-grid{ grid-auto-columns:calc((100% - 18px) / 2); column-gap:18px; }}
+@media(max-width:600px){#pobeda-content #light .light-model-grid{ grid-auto-columns:calc(100% - 24px); column-gap:14px; }
+#pobeda-content .light-slider-controls{ justify-content:center; }}
+@media(prefers-reduced-motion:reduce){#pobeda-content #light .light-model-grid{ scroll-behavior:auto; }}
+#pobeda-content .light-slider-meta{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin:12px 0 18px; }
+#pobeda-content #light .light-filter-status{ margin:0; text-align:left; min-width:0; }
+#pobeda-content .light-slider-meta .light-slider-controls{ flex:none; margin:0; gap:8px; }
+@media(max-width:600px){#pobeda-content .light-slider-meta{ margin:12px 0 16px; }
+#pobeda-content .light-slider-position{ font-size:12px; }}
+#pobeda-content .mounting-grid.single .mounting-detail{ grid-template-columns:128px minmax(0,1fr); gap:16px; }
+#pobeda-content .mounting-detail img.mounting-profile-eco{ width:128px; height:auto; filter:none; background:transparent; }
+@media(max-width:600px){#pobeda-content .mounting-grid.single .mounting-detail{ grid-template-columns:88px minmax(0,1fr); gap:14px; }
+#pobeda-content .mounting-detail img.mounting-profile-eco{ width:88px; }}
+#pobeda-content .hero-title-break{ display:none; }
+@media(min-width:1001px){#pobeda-content .hero-title-break{ display:initial; }
+#pobeda-content .hero-copy h1{ font-size:34px; line-height:1.2; }
+#pobeda-content .hero-copy p{ max-width:400px; font-size:16px; line-height:1.3; margin-top:24px; }
+#pobeda-content .hero-copy .actions{ gap:14px; margin-top:26px; }
+#pobeda-content .hero-copy .actions .btn{ font-size:14px; font-weight:500; line-height:1.2; min-height:42px; padding:12px 20px; }}
+/* Shared desktop edges; preserve the approved landing's internal composition. */
+@media(min-width:1101px){
+ #pobeda-content .wrap{width:1100px;max-width:calc(100% - 64px)}
+ #pobeda-content .btn{appearance:none;box-shadow:none;height:42px;min-height:42px;padding:10px 20px;border-radius:4px;font:400 14px/20px PobedaGeist,Arial,sans-serif}
+ #pobeda-content .hero-copy .actions .btn{height:42px;padding:10px 20px;line-height:20px}
+ #pobeda-content .btn:not(.outline){border:0}
+}
+/* Desktop integration with the approved homepage and individual-case components.
+   The imported responsive layout remains intact. */
+@media(min-width:1101px){
+ body.pobeda-page{background:#fff}
+ #pobeda-content{--section-space:40px;background:#fff}
+ #pobeda-content .section.soft{background:#fff}
+
+ /* The homepage's compact icon/text composition, with five equal fact cards. */
+ #pobeda-content .facts{gap:16px;padding-top:24px}
+ #pobeda-content .fact{grid-template-columns:28px minmax(0,1fr);gap:12px;padding:16px 14px;align-items:start}
+ #pobeda-content .fact .fact-icon{width:28px;height:32px;margin:2px 0 0}
+ #pobeda-content .fact b{font:600 13px/18px Geist,Arial,sans-serif;min-height:36px}
+ #pobeda-content .fact span{font:400 12px/18px Geist,Arial,sans-serif;min-height:36px;margin-top:8px;color:#697178}
+ #pobeda-content #editions{margin-top:0;padding-top:80px}
+
+ /* Homepage case previews: open cards, 16:9 images and reading-font captions. */
+ #pobeda-content #cases .cases-head p{max-width:640px}
+ #pobeda-content #cases .cases-grid{gap:12px;margin-top:0;align-items:start}
+ #pobeda-content #cases .case-card{padding:0;border:0;background:transparent;box-shadow:none}
+ #pobeda-content #cases .case-photo{aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+ #pobeda-content #cases .case-card figcaption{margin:14px 0 0;font:400 13px/19px Geist,Arial,sans-serif;text-transform:none}
+ #pobeda-content #cases .more{margin-top:28px}
+ #pobeda-content #cases .projects-logo-base{display:flex;flex-direction:column;align-items:center;gap:10px;width:280px;margin:0 auto 28px;background:transparent}
+ #pobeda-content #cases .projects-logo-label{display:flex;justify-content:space-between;width:100%;font:400 11px/16px Geist,Arial,sans-serif;color:#838383;text-transform:uppercase}
+ #pobeda-content #cases .projects-group-logo{display:block;width:280px;height:auto;margin:0}
+ #pobeda-content #cases .case-installer-credit{margin:0 0 28px;text-align:center;font:400 12px/18px Geist,Arial,sans-serif;color:#7b8085}
+ #pobeda-content #cases .home-projects-slider{position:relative;--project-thumb:calc((1100px - 48px)/5)}
+ #pobeda-content #cases .home-projects-window{overflow:hidden}
+ #pobeda-content #cases .home-projects-track{display:flex;gap:12px;align-items:stretch;transition:transform .3s ease}
+ #pobeda-content #cases .project-case-card{display:block;flex:0 0 calc((100% - 48px)/5);min-width:0;padding:0;border:0;background:transparent;text-align:center}
+ #pobeda-content #cases .project-case-card>img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+ #pobeda-content #cases .project-case-card>span{display:block;margin-top:14px;font:400 13px/19px Geist,Arial,sans-serif}
+ #pobeda-content #cases .project-case-card:hover>span{color:#b95c28}
+ #pobeda-content #cases .home-projects-arrow,#pobeda-content #cases .home-projects-radio{position:absolute;top:calc(var(--project-thumb)*.28125 - 28px);width:56px;height:56px;border-radius:50%}
+ #pobeda-content #cases .home-projects-arrow{display:grid;place-items:center;padding:0;border:1px solid #d7dadd;background:#fff;color:#697178;box-shadow:none;z-index:2;cursor:pointer}
+ #pobeda-content #cases .home-projects-arrow svg{width:22px;height:22px}
+ #pobeda-content #cases .home-projects-prev,#pobeda-content #cases #projects-page-1{left:0;display:none}
+ #pobeda-content #cases .home-projects-next,#pobeda-content #cases #projects-page-2{right:0}
+ #pobeda-content #cases .home-projects-radio{appearance:none;opacity:0;z-index:3;margin:0;cursor:pointer}
+ #pobeda-content #cases #projects-page-2:checked{display:none}
+ #pobeda-content #cases #projects-page-2:checked~#projects-page-1,#pobeda-content #cases #projects-page-2:checked~.home-projects-prev{display:grid}
+ #pobeda-content #cases #projects-page-2:checked~.home-projects-next{display:none}
+ #pobeda-content #cases #projects-page-2:checked~.home-projects-window .home-projects-track{transform:translateX(calc((1100px + 12px)/5 * var(--projects-overflow-count,1) * -1))}
+ #pobeda-content #cases #projects-page-2:focus-visible~.home-projects-next,#pobeda-content #cases #projects-page-1:focus-visible~.home-projects-prev{outline:2px solid #eb8348;outline-offset:3px}
+ #pobeda-content #cases #projects-page-2:hover~.home-projects-next,#pobeda-content #cases #projects-page-1:hover~.home-projects-prev{background:#f3f3f3}
+
+ /* Same 56px circular arrows and toolbar as the individual-case gallery. */
+ #pobeda-content .light-slider-meta{margin:12px 0 16px;min-height:56px}
+ #pobeda-content .light-slider-meta .light-slider-controls{gap:12px;height:56px}
+ #pobeda-content .light-slider-position{font:400 12px/18px Geist,Arial,sans-serif;font-variant-numeric:tabular-nums}
+ #pobeda-content .light-slider-arrow{display:grid;place-items:center;width:56px;height:56px;min-width:56px;padding:0;border:1px solid #d7dadd;border-radius:50%;background:#fff;color:#697178;box-shadow:none;appearance:none}
+ #pobeda-content .light-slider-arrow svg{width:22px;height:22px}
+ #pobeda-content .light-slider-arrow:not(:disabled):hover{background:#f3f3f3}
+ #pobeda-content .light-slider-arrow:focus-visible{outline:2px solid #eb8348;outline-offset:3px}
+ #pobeda-content .scheme-item .text-link:hover,#pobeda-content .scheme-item .text-link:focus-visible{color:#eb8348}
+ #pobeda-content .scheme-item .text-link{transition:color .18s ease}
+ #pobeda-content .btn.outline{border-color:#1d2731}
+ #pobeda-content .hero .btn.outline{border-color:#fff}
+
+ /* Homepage FAQ: heading and introduction left, native accordion right. */
+ #pobeda-content #faq .pobeda-faq-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start;padding-top:40px;border-top:1px solid #d7dadd}
+ #pobeda-content #faq .pobeda-faq-intro{text-align:left}
+ #pobeda-content #faq .pobeda-faq-intro .eyebrow{margin:0 0 14px;font:600 11px/16px Geist,Arial,sans-serif;letter-spacing:.1em;color:#eb8348}
+ #pobeda-content #faq .pobeda-faq-intro h2{margin:0;font:400 32px/38px Science,Arial,sans-serif;text-align:left;letter-spacing:.015em}
+ #pobeda-content #faq .pobeda-faq-intro>p:last-child{max-width:340px;margin:16px 0 0;font:400 14px/21px Geist,Arial,sans-serif;color:#697178}
+ #pobeda-content #faq .faq-list{width:100%;max-width:none;margin:0;border-top:1px solid #d7dadd}
+ #pobeda-content #faq .faq-list details{margin:0;padding:18px 0;border:0;border-bottom:1px solid #d7dadd;background:transparent}
+ #pobeda-content #faq .faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:28px;padding:0;font:400 15px/21px Geist,Arial,sans-serif;list-style:none;cursor:pointer}
+ #pobeda-content #faq .faq-list summary::-webkit-details-marker{display:none}
+ #pobeda-content #faq .faq-list summary::after{content:'+';margin-left:auto;flex:none;color:#eb8348;font:400 23px/1 Geist,Arial,sans-serif}
+ #pobeda-content #faq .faq-list details[open] summary::after{content:'−'}
+ #pobeda-content #faq .faq-list details p{margin:14px 36px 0 0;max-width:none;font:400 14px/21px Geist,Arial,sans-serif;color:#697178}
+ #pobeda-content #faq .faq-list .text-link{font:inherit;text-decoration:underline;text-underline-offset:3px}
+}
+@media(prefers-reduced-motion:reduce){#pobeda-content #cases .home-projects-track{transition:none}}

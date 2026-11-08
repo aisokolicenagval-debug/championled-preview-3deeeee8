@@ -1,0 +1,36 @@
+/* Shared footer for the eleven worked site pages. Desktop design stage only. */
+@media(min-width:1101px){
+ #canvas .site-footer{padding:32px 0 0;background:#1d2731;color:#f2f4f7;font-family:Geist,Arial,sans-serif}
+ #canvas .site-footer>.container{width:1100px;max-width:calc(100% - 64px);margin-left:auto;margin-right:auto}
+ #canvas .site-footer .footer-grid{display:grid;grid-template-columns:244px 145px 120px 155px 324px;gap:28px;align-items:start;padding-bottom:24px}
+ #canvas .site-footer .footer-brand{max-width:220px}
+ #canvas .site-footer .footer-grid a{display:block;margin:0;padding:0;color:#b7bec5;font:400 11px/17px Geist,Arial,sans-serif;text-align:left}
+ #canvas .site-footer a:hover{color:#eb8348}
+ #canvas .site-footer a:focus-visible{outline:2px solid #eb8348;outline-offset:4px}
+ #canvas .site-footer .footer-brand .footer-logo{display:block;width:200px;max-width:100%;margin:0 0 20px}
+ #canvas .site-footer .footer-logo img{display:block;width:100%;height:44px;object-fit:contain;object-position:left center;filter:none}
+ #canvas .site-footer .footer-brand .brand-slogan{font:400 14px/21px Geist,Arial,sans-serif;color:#f2f4f7;margin:0 0 14px}
+ #canvas .site-footer .footer-brand .brand-descriptor{font:400 11px/17px Geist,Arial,sans-serif;color:#b7bec5;max-width:none;margin:0 0 20px}
+ #canvas .site-footer .footer-social{display:flex;gap:10px}
+ #canvas .site-footer .footer-social a{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#303b45;color:#f2f4f7;font:600 9px/1 Geist,Arial,sans-serif}
+ #canvas .site-footer .footer-social svg{width:20px;height:20px}
+ #canvas .site-footer .footer-menu{grid-column:auto;border:0;padding:64px 0 0;min-width:0}
+ #canvas .site-footer .footer-menu summary{display:block;list-style:none;pointer-events:none;margin:0 0 16px;min-height:0;padding:0;font:500 12px/18px Geist,Arial,sans-serif;color:#f2f4f7;text-transform:uppercase}
+ #canvas .site-footer .footer-menu summary::-webkit-details-marker{display:none}
+ #canvas .site-footer .footer-menu summary::after{display:none}
+ #canvas .site-footer .footer-menu summary a{font:inherit;color:inherit;pointer-events:auto}
+ #canvas .site-footer .footer-menu nav{display:grid;gap:10px;padding:0}
+ #canvas .site-footer .footer-contacts{grid-column:auto;padding:64px 0 0;border:0}
+ #canvas .site-footer .footer-contact-title{margin:0 0 14px;padding:0}
+ #canvas .site-footer .footer-contact-title>a{font:500 12px/18px Geist,Arial,sans-serif;text-transform:uppercase;color:#f2f4f7}
+ #canvas .site-footer .footer-contact-lines{display:grid;gap:7px}
+ #canvas .site-footer .footer-contact-lines .footer-common-phone{font:400 18px/24px Geist,Arial,sans-serif;color:#f2f4f7;white-space:nowrap;min-height:0}
+ #canvas .site-footer .footer-location{display:block;margin-top:18px}
+ #canvas .site-footer .footer-location .footer-location-title{font:400 11px/17px Geist,Arial,sans-serif;color:#99a3ac;margin:0 0 5px}
+ #canvas .site-footer .footer-location p,#canvas .site-footer .footer-location address{font:400 11px/17px Geist,Arial,sans-serif;color:#d7dde2;font-style:normal;margin:0}
+ #canvas .site-footer .footer-location address a{display:inline;font:inherit;color:inherit;margin:0;padding:0}
+ #canvas .site-footer .footer-location .footer-hours{color:#99a3ac;margin:2px 0}
+ #canvas .site-footer .footer-legal{display:flex;justify-content:start;flex-wrap:wrap;gap:10px 22px;border-top:1px solid #46515d;padding:14px 0 0}
+ #canvas .site-footer .footer-legal a{font:400 11px/17px Geist,Arial,sans-serif;color:#99a3ac}
+ #canvas .site-footer .footer-bottom{display:block;border:0;padding:14px 0 20px;font:400 11px/17px Geist,Arial,sans-serif;color:#99a3ac}
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "key": "magnetic-48",
+    "label": "Магнитные трековые системы 48 В",
+    "group": "Товарные категории",
+    "file": "magnetic-48.svg"
+  },
+  {
+    "key": "three-phase-220",
+    "label": "Трёхфазные трековые системы 220 В",
+    "group": "Товарные категории",
+    "file": "three-phase-220.svg"
+  },
+  {
+    "key": "linear-systems",
+    "label": "Линейные системы",
+    "group": "Товарные категории",
+    "file": "linear-systems.svg"
+  },
+  {
+    "key": "modular-recessed",
+    "label": "Встраиваемые модульные светильники",
+    "group": "Товарные категории",
+    "file": "modular-recessed.svg"
+  },
+  {
+    "key": "outdoor",
+    "label": "Уличные светильники",
+    "group": "Товарные категории",
+    "file": "outdoor.svg"
+  },
+  {
+    "key": "surface-fixtures",
+    "label": "Накладные светильники",
+    "group": "Товарные категории",
+    "file": "surface-fixtures.svg"
+  },
+  {
+    "key": "hybrid",
+    "label": "Гибридные светильники",
+    "group": "Товарные категории",
+    "file": "hybrid.svg"
+  },
+  {
+    "key": "wall",
+    "label": "Настенные светильники (бра)",
+    "group": "Товарные категории",
+    "file": "wall.svg"
+  },
+  {
+    "key": "retail-48",
+    "label": "Магнитные системы 48 В для торговых конструкций",
+    "group": "Товарные категории",
+    "file": "retail-48.svg"
+  },
+  {
+    "key": "led-strip",
+    "label": "Светодиодная лента",
+    "group": "Товарные категории",
+    "file": "led-strip.svg"
+  },
+  {
+    "key": "led-profile",
+    "label": "Профиль для светодиодной ленты",
+    "group": "Товарные категории",
+    "file": "led-profile.svg"
+  },
+  {
+    "key": "power-supplies",
+    "label": "Блоки питания",
+    "group": "Товарные категории",
+    "file": "power-supplies.svg"
+  },
+  {
+    "key": "lighting-controls",
+    "label": "Управление",
+    "group": "Товарные категории",
+    "file": "lighting-controls.svg"
+  }
+]

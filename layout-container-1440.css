@@ -1,0 +1,20 @@
+/* One reference container for every homepage block: 1100 px, x=170 at 1440. */
+@media(min-width:1101px){
+ .home-restyled{--site-content-width:1100px;--site-content-gutter:64px}
+ .site-header-aligned.home-restyled .header-main.container,
+ .site-header-aligned.home-restyled .header-secondary>.container,
+ .site-header-aligned.home-restyled main .container,
+ .site-header-aligned.home-restyled footer .container{
+  width:min(var(--site-content-width),calc(100% - var(--site-content-gutter)));
+  max-width:none;margin-left:auto;margin-right:auto;
+ }
+ .home-restyled .series-grid{width:100%;max-width:none;margin-left:0;margin-right:0}
+ .home-restyled .focus-catalog-tabs,.home-restyled .unified-catalog-layout{
+  width:var(--site-content-width);max-width:calc(100% - var(--site-content-gutter));margin-left:auto;margin-right:auto;
+ }
+ /* Retain the approved hero panel position within the newly unified container. */
+ .home-restyled .hero .hero-copy{margin-left:22px}
+ /* Compact the icon/padding columns, retaining the readable description measure. */
+ .home-restyled .benefits>div{grid-template-columns:30px minmax(0,1fr);gap:12px;padding:18px 13px}
+ .home-restyled .benefits img,.home-restyled .benefits svg{width:30px;height:34px}
+}

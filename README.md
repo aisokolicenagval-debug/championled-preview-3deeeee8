@@ -1,3 +1,3 @@
-# Prototype
+# ChampionLED prototype
 
-Static demonstration build. Forms do not submit or store data.
+Current demonstration build. Forms do not submit or store contact data.

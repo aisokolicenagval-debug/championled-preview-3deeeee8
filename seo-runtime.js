@@ -11,7 +11,7 @@ function metadata(){let title=initialTitle,description=initialDescription;const 
   const rubric=rubrics[params.get('rubric')];if(rubric)[title,description]=rubric;
   if(params.get('q')){title='Поиск материалов | Блог ChampionLED';description='Поиск по темам освещения дома и бизнеса, устройству светильников и подготовке к покупке в блоге ChampionLED.'}
  }
- if(file==='case-1440.html'&&typeof CASE_PREVIEWS!=='undefined'){
+ if(file==='case-1440.html'&&!document.querySelector('[data-static-case]')&&typeof CASE_PREVIEWS!=='undefined'){
   const item=CASE_PREVIEWS.find(x=>x.key===(params.get('case')||'apartment'));
   if(item){title='Пример: '+item.title+' | ChampionLED';description=shorten('Пример кейса «'+item.title+'»: задача освещения, фото и видео, продукция и аналоги ChampionLED.')}else{title='Пример кейса не найден | ChampionLED';description='Вернитесь к выбору кейсов ChampionLED и найдите пример по пространству, задаче освещения или типу продукции.'}
  }
