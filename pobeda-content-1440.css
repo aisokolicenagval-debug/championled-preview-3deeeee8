@@ -1153,7 +1153,7 @@ body.request-dialog-open{overflow:hidden}
  #pobeda-content #cases .project-case-card>span{display:block;margin-top:14px;font:400 13px/19px Geist,Arial,sans-serif}
  #pobeda-content #cases .project-case-card:hover>span{color:#b95c28}
  #pobeda-content #cases .home-projects-arrow,#pobeda-content #cases .home-projects-radio{position:absolute;top:calc(var(--project-thumb)*.28125 - 28px);width:56px;height:56px;border-radius:50%}
- #pobeda-content #cases .home-projects-arrow{display:grid;place-items:center;padding:0;border:1px solid #d7dadd;background:#fff;color:#697178;box-shadow:none;z-index:2;cursor:pointer}
+ #pobeda-content #cases .home-projects-arrow{display:grid;place-items:center;padding:0;border:1px solid #d7dadd;background:transparent;color:#697178;box-shadow:none;z-index:2;cursor:pointer}
  #pobeda-content #cases .home-projects-arrow svg{width:22px;height:22px}
  #pobeda-content #cases .home-projects-prev,#pobeda-content #cases #projects-page-1{left:0;display:none}
  #pobeda-content #cases .home-projects-next,#pobeda-content #cases #projects-page-2{right:0}

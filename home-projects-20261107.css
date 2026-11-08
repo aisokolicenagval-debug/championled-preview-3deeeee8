@@ -26,3 +26,6 @@
  .home-restyled .projects-slider-section .case-all-link{margin-top:28px}
 }
 @media(prefers-reduced-motion:reduce){.home-restyled .home-projects-track{transition:none}}
+
+/* Project previews: transparent circular navigation over the photograph. */
+body.home-restyled #canvas .home-projects-arrow,body.home-restyled #canvas .home-projects-arrow:hover{background:transparent;border:1px solid #d7dadd;box-shadow:none}
