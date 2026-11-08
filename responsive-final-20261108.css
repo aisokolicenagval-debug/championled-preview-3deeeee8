@@ -1299,6 +1299,10 @@ body.home-restyled #canvas #about .product-marking-link:hover{background:transpa
  body.about-restyled #canvas .brand-showroom-links{display:flex;flex-direction:column;align-items:stretch;gap:12px;width:100%;margin-top:24px}
 }
 @media(max-width:360px){body.about-restyled #canvas .brand-main h2{font-size:24px;line-height:30px}}
+/* Preserve geometry while keeping the approved secondary action transparent. */
+@media(min-width:1101px){
+ body.about-restyled #canvas .brand-main .brand-product .brand-inline-links .btn.outline{background:transparent}
+}
 
 /* Shared mobile actions and common page-family corrections. */
 @media(max-width:767px){
