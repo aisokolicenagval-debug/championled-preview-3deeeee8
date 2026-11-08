@@ -816,6 +816,7 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
 }
 
 /* Final phone/tablet geometry. Component content and native controls stay shared. */
+body.site-consistent #canvas .mobile-account-link{display:none}
 @media(max-width:1100px){
  body.site-consistent{--font-display:Science,Arial,sans-serif;--font-reading:Geist,Arial,sans-serif;--site-ink:#1d2731;--site-muted:#697178;--site-line:#d7dadd;--site-soft:#f3f3f3;--type-h1:30px;--leading-h1:36px;--type-h2:28px;--leading-h2:34px;--type-h3:22px;--leading-h3:28px;--type-card-title:16px;--leading-card-title:22px;--type-body:14px;--leading-body:21px;--type-intro:16px;--leading-intro:24px;--type-caption:13px;--leading-caption:19px;--type-small:12px;--leading-small:18px;--type-kicker:11px;--leading-kicker:16px;--site-content-width:calc(100vw - 48px);--site-content-gutter:48px;background:#fff}
  body.site-consistent #canvas{width:100%;max-width:100%;zoom:1}
@@ -910,6 +911,8 @@ body.content-restyled #canvas .journal-conclusion>h2{margin:0 0 16px}
  #pobeda-content #faq h2{text-align:left}
 }
 @media(max-width:900px){
+ body.site-consistent #canvas .header-secondary nav .mobile-account-link{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;padding:12px 0;border:0;border-bottom:1px solid #d7dadd;background:transparent;color:#1d2731;font:400 15px/21px Geist,Arial,sans-serif;text-align:left}
+ body.site-consistent #canvas .mobile-account-link img{width:20px;height:20px;flex:none}
  body.site-consistent #canvas .header-main{height:auto;display:grid;grid-template-columns:104px minmax(0,1fr) 36px 36px 36px;grid-template-rows:44px 44px;gap:8px;padding-top:8px;padding-bottom:10px}
  body.site-consistent #canvas .header-main .logo{width:160px;grid-column:1/3;grid-row:1}
  body.site-consistent #canvas .header-main .head-icon[data-popup=favorites]{grid-column:3;grid-row:1}
@@ -1096,9 +1099,9 @@ body.home-restyled #canvas #about .product-marking-link:hover{background:transpa
  body.home-restyled #canvas .hero .buttons>:is(.btn,.hero-series-link){display:flex;width:100%;min-height:44px;padding:11px 16px;border-radius:4px;justify-content:center;font:400 14px/20px Geist,Arial,sans-serif}
  body.home-restyled #canvas .hero .hero-signature{margin:24px 0 16px}
  body.home-restyled #canvas .home-hero-badges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;width:100%;max-width:none;margin:0}
- body.home-restyled #canvas .home-hero-badges li{display:flex;align-items:center;justify-content:center;gap:2px;min-width:0;min-height:34px;height:34px;padding:4px 1px;font:400 10px/12px Geist,Arial,sans-serif}
+ body.home-restyled #canvas .home-hero-badges li{display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:34px;height:34px;padding:4px 1px;font:400 10px/12px Geist,Arial,sans-serif}
  body.home-restyled #canvas .home-hero-badges li svg{width:10px;height:10px;flex:0 0 10px}
- body.home-restyled #canvas .home-hero-badges li span{font:inherit;white-space:normal;text-align:left}
+ body.home-restyled #canvas .home-hero-badges li span{min-width:0;font:inherit;white-space:normal;text-align:left}
  body.home-restyled #canvas :is(.section-heading,.sale-heading,.purchase-heading){display:block;max-width:none;text-align:center;margin:0 0 24px}
  body.home-restyled #canvas main :is(h1,h2,h3){word-break:normal;overflow-wrap:normal;hyphens:none}
  body.home-restyled #canvas main h2{font:400 25px/31px Science,Arial,sans-serif;letter-spacing:0;margin:0;text-wrap:balance}
@@ -1135,6 +1138,8 @@ body.home-restyled #canvas #about .product-marking-link:hover{background:transpa
  body.home-restyled #canvas #project .home-project-media{position:relative;width:100%;height:auto;min-height:0;aspect-ratio:16/9}
  body.home-restyled #canvas #project .home-project-copy{display:flex;flex-direction:column;align-items:flex-start;padding:24px 20px;text-align:left}
  body.home-restyled #canvas #project .home-project-brand{display:grid;gap:18px;width:240px;max-width:100%;margin-bottom:20px}
+ body.home-restyled #canvas #project .home-project-brand>.eyebrow,body.site-consistent #canvas .au-project-shared .home-project-brand>.eyebrow{order:-1}
+ body.home-restyled #canvas #project .home-project-media>img,body.site-consistent #canvas .au-project-shared .home-project-media>img{object-position:center bottom}
  body.home-restyled #canvas #project .home-project-logo-frame{display:block;position:relative;width:100%;aspect-ratio:908/88;overflow:hidden}
  body.home-restyled #canvas #project .home-project-logo-frame>.home-project-logo{position:absolute;display:block;width:110.132159%;max-width:none;height:150%;left:-3.524229%;top:-22.727273%;margin:0}
  body.home-restyled #canvas #project .home-project-brand>.eyebrow{font:600 10px/16px Geist,Arial,sans-serif;letter-spacing:.045em;margin:0;white-space:normal;text-align:left}
@@ -1223,4 +1228,7 @@ body.home-restyled #canvas #about .product-marking-link:hover{background:transpa
  body.home-restyled #canvas main h2,body.home-restyled #canvas #documents h2{font-size:24px;line-height:30px}
  body.home-restyled #canvas #home-hero-title{font-size:22px;line-height:28px}
  body.home-restyled #canvas .home-hero-badges li{font-size:9px}
+}
+@media(max-width:340px){
+ body.home-restyled #canvas .home-hero-badges li{font-size:8.5px}
 }
