@@ -1,7 +1,7 @@
 const SALE_PRODUCTS = [
   {
     "id": "sale-boks",
-    "name": "Накладной светодиодный светильник БОКС 10Вт 3000K белый",
+    "name": "Накладной светодиодный светильник БОКС 10 Вт 3000 К белый",
     "short": "БОКС",
     "sku": "05-04-001",
     "price": 4990,
@@ -11,8 +11,8 @@ const SALE_PRODUCTS = [
     "category": "Распродажа",
     "status": "catalog",
     "sale": true,
-    "power": "10Вт",
-    "specs": "10Вт · 3000K · белый · 220В",
+    "power": "10 Вт",
+    "specs": "10 Вт · 3000 К · белый · 220 В",
     "images": [
       "assets/home1440/sale-0.webp",
       "assets/home1440/sale-0.webp"
@@ -25,7 +25,7 @@ const SALE_PRODUCTS = [
   },
   {
     "id": "sale-marta",
-    "name": "Встраиваемый светильник МАРТА 8Вт 4000K белый",
+    "name": "Встраиваемый светильник МАРТА 8 Вт 4000 К белый",
     "short": "МАРТА",
     "sku": "05-10-019",
     "price": 4900,
@@ -35,8 +35,8 @@ const SALE_PRODUCTS = [
     "category": "Распродажа",
     "status": "catalog",
     "sale": true,
-    "power": "8Вт",
-    "specs": "8Вт · 4000K · белый · 220В",
+    "power": "8 Вт",
+    "specs": "8 Вт · 4000 К · белый · 220 В",
     "images": [
       "assets/home1440/sale-1.webp",
       "assets/home1440/sale-1.webp"
@@ -49,7 +49,7 @@ const SALE_PRODUCTS = [
   },
   {
     "id": "sale-jackson",
-    "name": "Подвесной светильник ДЖАКСОН БОЛЛ 8Вт 3000K",
+    "name": "Подвесной светильник ДЖАКСОН БОЛЛ 8 Вт 3000 К",
     "short": "ДЖАКСОН БОЛЛ",
     "sku": "05-05-001",
     "price": 6990,
@@ -59,8 +59,8 @@ const SALE_PRODUCTS = [
     "category": "Распродажа",
     "status": "catalog",
     "sale": true,
-    "power": "8Вт",
-    "specs": "8Вт · 3000K · белый · 220В",
+    "power": "8 Вт",
+    "specs": "8 Вт · 3000 К · белый · 220 В",
     "images": [
       "assets/home1440/sale-2.webp",
       "assets/home1440/sale-2.webp"
@@ -73,7 +73,7 @@ const SALE_PRODUCTS = [
   },
   {
     "id": "sale-ringus",
-    "name": "Подвесной светодиодный светильник РИНГУС 36Вт 3000K белый",
+    "name": "Подвесной светодиодный светильник РИНГУС 36 Вт 3000 К белый",
     "short": "РИНГУС",
     "sku": "05-05-003",
     "price": 8990,
@@ -83,8 +83,8 @@ const SALE_PRODUCTS = [
     "category": "Распродажа",
     "status": "catalog",
     "sale": true,
-    "power": "36Вт",
-    "specs": "36Вт · 3000K · белый · 220В",
+    "power": "36 Вт",
+    "specs": "36 Вт · 3000 К · белый · 220 В",
     "images": [
       "assets/home1440/sale-3.webp",
       "assets/home1440/sale-3.webp"
@@ -97,7 +97,7 @@ const SALE_PRODUCTS = [
   },
   {
     "id": "sale-boll",
-    "name": "Накладной светодиодный светильник БОЛЛ 10Вт 3000K IP44",
+    "name": "Накладной светодиодный светильник БОЛЛ 10 Вт 3000 К IP44",
     "short": "БОЛЛ",
     "sku": "05-04-003",
     "price": 4990,
@@ -107,8 +107,8 @@ const SALE_PRODUCTS = [
     "category": "Распродажа",
     "status": "catalog",
     "sale": true,
-    "power": "10Вт",
-    "specs": "10Вт · 3000K · белый · 220В · IP44",
+    "power": "10 Вт",
+    "specs": "10 Вт · 3000 К · белый · 220 В · IP44",
     "images": [
       "assets/home1440/sale-boll-1.webp",
       "assets/home1440/sale-boll-2.webp"
