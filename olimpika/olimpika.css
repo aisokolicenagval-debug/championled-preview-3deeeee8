@@ -828,17 +828,14 @@ body.olimpika-page { background: #fff; }
 }
 
 .concept-point--driver { --lead-start: 74%; }
-.concept-point--connector { --lead-start: 80%; }
 .concept-point--module { --lead-start: 65%; }
-.concept-point--optics { --lead-start: 79%; }
-.concept-point--mesh, .concept-point--ring { --lead-start: 62%; }
+.concept-point--optics, .concept-point--mesh { --lead-start: 62%; }
 .concept-point--trim { --lead-start: 67%; }
 .concept-point--frame { --lead-start: 76%; }
 
 .concept-artwork {
   position: relative;
   display: flex;
-  gap: 8px;
   align-items: center;
   justify-content: center;
 }
@@ -860,7 +857,7 @@ body.olimpika-page { background: #fff; }
   transition: transform 180ms ease-out;
 }
 
-.concept-art:not(.concept-art--module, .concept-art--driver, .concept-art--connector) .concept-render {
+.concept-art:not(.concept-art--module, .concept-art--driver) .concept-render {
   height: calc(100% + 4px);
   mask-image:
     linear-gradient(to right, transparent, #000 4px, #000 calc(100% - 4px), transparent),
@@ -879,16 +876,10 @@ body.olimpika-page { background: #fff; }
 
 /* Image windows position the original layers and leave their long shadows outside the diagram. */
 .concept-art--driver { --art-w: 133px; --art-h: 50px; }
-.concept-art--connector {
-  --art-w: 60px; --art-h: 94px; --img-w: 154px; --img-x: -71px; --img-y: -23px;
-  margin-inline-start: 100px;
-}
 .concept-art--module { --art-w: 92px; --art-h: 109px; }
 .olimpika-page main .concept-art--module img { height: 100%; object-fit: contain; }
-.concept-art--lens { --art-w: 76px; --art-h: 59px; --img-w: 164px; --img-x: -47px; --img-y: -8px; }
 .concept-art--reflector { --art-w: 74px; --art-h: 59px; --img-w: 157px; --img-x: -43px; --img-y: -6px; }
 .concept-art--mesh { --art-w: 75px; --art-h: 41px; --img-w: 235px; --img-x: -83px; --img-y: -9px; }
-.concept-art--ring { --art-w: 76px; --art-h: 36px; --img-w: 187px; --img-x: -56px; --img-y: -6px; }
 .concept-art--trim { --art-w: 100px; --art-h: 70px; --img-w: 246px; --img-x: -75px; --img-y: -7px; }
 .concept-art--frame { --art-w: 143px; --art-h: 86px; --img-w: 249px; --img-x: -56px; --img-y: -6px; }
 
