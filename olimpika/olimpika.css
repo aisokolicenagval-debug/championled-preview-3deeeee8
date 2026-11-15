@@ -1,0 +1,1429 @@
+/* Local series content; shared header, footer, type and actions come from ChampionLED. */
+:root {
+  --series-ink: #1d2731;
+  --series-muted: #626d75;
+  --series-orange: #eb8348;
+  --series-line: #d7dadd;
+  --series-soft: #f3f4f5;
+  --series-display: Science, Arial, sans-serif;
+  --series-reading: Geist, Arial, sans-serif;
+  --series-width: 1100px;
+  --series-card-radius: 10px;
+}
+
+body.olimpika-page { background: #fff; }
+.olimpika-page #canvas { width: 100%; max-width: none; margin: 0; background: #fff; }
+.olimpika-page #canvas .container {
+  width: min(var(--series-width), calc(100% - 64px));
+  max-width: none;
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  transform: translateY(-160%);
+  padding: 10px 16px;
+  background: #fff;
+}
+.skip-link:focus { transform: none; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.olimpika-page main { color: var(--series-ink); font: 400 14px/21px var(--series-reading); }
+.olimpika-page main img { display: block; width: 100%; max-width: 100%; }
+.olimpika-page main h1,
+.olimpika-page main h2,
+.olimpika-page main h3,
+.olimpika-page main p,
+.olimpika-page main figure { margin: 0; }
+.olimpika-page main h1 { font: 400 34px/41px var(--series-display); text-transform: uppercase; }
+.olimpika-page main h2 { font: 400 32px/38px var(--series-display); text-transform: uppercase; }
+.olimpika-page main h3 { font: 400 22px/28px var(--series-display); }
+.olimpika-page :is(a,summary):focus-visible {
+  outline: 2px solid #bd5d26;
+  outline-offset: 4px;
+}
+.olimpika-page .series-section { padding-block: 40px; scroll-margin-top: 16px; }
+.series-heading { margin: 0 auto 28px; max-width: 910px; text-align: center; }
+.olimpika-page main .series-heading p {
+  margin: 16px auto 0;
+  max-width: 625px;
+  color: var(--series-muted);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.series-hero {
+  position: relative;
+  isolation: isolate;
+  background: #24272a;
+  color: #fff;
+}
+.series-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent 34%, #171b2020 53%, #171b208c);
+}
+.olimpika-page main .series-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 46%;
+  mask-image: linear-gradient(90deg, transparent 16%, black 23%, black 77%, transparent 86%);
+}
+.series-hero-inner {
+  min-height: 444px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-block: 40px;
+}
+.series-hero-copy {
+  width: min(100%, 488px);
+  padding: 32px;
+  border-radius: 10px;
+  background: #1d2731ed;
+}
+.olimpika-page main .series-hero-copy h1 { color: #fff; }
+.olimpika-page main .series-hero-copy p {
+  margin-top: 16px;
+  color: #f2f4f7;
+  font-size: 16px;
+  line-height: 24px;
+}
+.series-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.center-actions { justify-content: center; }
+.olimpika-page #canvas main .series-actions .btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font: 400 14px/20px var(--series-reading);
+  text-align: center;
+  box-shadow: none;
+}
+.olimpika-page #canvas main .series-actions .btn.primary {
+  border: 0;
+  background: linear-gradient(180deg, #feb264 -2.46%, #c65811 103.25%);
+  color: #fff;
+}
+.olimpika-page #canvas main .series-actions .btn.outline {
+  border: 1px solid currentColor;
+  background: transparent;
+  color: var(--series-ink);
+}
+.olimpika-page #canvas main .series-hero .series-actions .btn.outline { color: #fff; }
+.olimpika-page #canvas main .series-actions .btn:hover { filter: brightness(.94); }
+.olimpika-page #canvas main .series-hero .btn:focus-visible { outline-color: #fff; }
+
+.series-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-block: 24px 40px; }
+.series-fact {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+  min-height: 94px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--series-soft);
+}
+.series-fact svg { width: 30px; flex: 0 0 30px; fill: none; stroke: #c65f28; stroke-width: 1.65; }
+.series-fact strong,
+.series-fact span { display: block; }
+.series-fact strong { font: 600 14px/20px var(--series-reading); }
+.series-fact span { margin-top: 4px; color: var(--series-muted); font-size: 12px; line-height: 18px; }
+
+.model-filter-groups,
+.model-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.model-filter-groups { gap: 10px 20px; }
+.model-filter-group {
+  position: relative;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.model-filter-group > input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.model-filter-group > label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 1px solid var(--series-line);
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.model-filter-group > input:checked + label { border-color: var(--series-ink); color: #fff; background: var(--series-ink); }
+.model-filter-group > input:focus-visible + label { outline: 2px solid #bd5d26; outline-offset: 3px; }
+.model-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 16px; margin-top: 22px; }
+.model-filters:has(#model-framed:checked) .model-card:not(.is-framed),
+.model-filters:has(#model-trimless:checked) .model-card:not(.is-trimless),
+.model-filters:has(#model-adjustable:checked) .model-card:not(.is-adjustable),
+.model-filters:has(#model-round:checked):not(:has(#model-square:checked)) .model-card:not(.is-round),
+.model-filters:has(#model-square:checked):not(:has(#model-round:checked)) .model-card:not(.is-square) { display: none; }
+.model-card img { aspect-ratio: 4 / 3; border-radius: 8px; object-fit: cover; background: var(--series-soft); }
+.olimpika-page main .model-card h3 { margin-top: 12px; font: 600 16px/22px var(--series-reading); }
+.olimpika-page main .model-card p { margin-top: 3px; color: var(--series-muted); font-size: 13px; line-height: 19px; }
+
+.editorial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.olimpika-page main .series-note {
+  margin: 16px auto 0;
+  max-width: 775px;
+  color: var(--series-muted);
+  text-align: center;
+}
+
+.editorial-card, .mount-card {
+  overflow: hidden;
+  border: 1px solid var(--series-line);
+  border-radius: 8px;
+  background: #fff;
+}
+.editorial-card > img { aspect-ratio: 16 / 10; object-fit: cover; object-position: center 42%; }
+.editorial-card > div, .mount-card > div { padding: 16px 18px 18px; }
+.olimpika-page main .editorial-card p,
+.olimpika-page main .mount-card p { margin-top: 6px; color: var(--series-muted); }
+.driver-card > img { aspect-ratio: 2; object-fit: contain; padding: 28px 16%; background: var(--series-soft); }
+
+.light-temperature-card > .light-temperature-visual { position: relative; padding: 0; }
+.light-temperature-visual img { aspect-ratio: 16 / 10; object-fit: cover; }
+.light-temperature-label {
+  position: absolute;
+  top: 19%;
+  left: 6%;
+  right: 6%;
+  color: var(--series-ink);
+}
+.olimpika-page main .light-temperature-label p { margin-top: 2px; color: inherit; font-weight: 600; }
+.olimpika-page main .light-temperature-usage p { margin: 0; }
+
+.series-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.series-table caption { text-align: left; font: 400 22px/28px var(--series-display); padding-bottom: 10px; }
+.series-table th, .series-table td { padding: 8px 9px; border-bottom: 1px solid #e0e3e5; text-align: left; }
+.series-table th:first-child { padding-inline-start: 0; }
+.series-table th { font-weight: 600; }
+.series-table tbody tr:last-child > * { border-bottom: 0; }
+
+.beams { overflow: hidden; border: 1px solid var(--series-line); border-radius: 8px; }
+.beams > img { height: auto; }
+.beam-labels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--series-soft); }
+/* Match the horizontal centers of the four beams in the catalogue image. */
+#optics .beam-labels > div:nth-child(1) { --beam-center: 14.3%; }
+#optics .beam-labels > div:nth-child(2) { --beam-center: 38.1%; }
+#optics .beam-labels > div:nth-child(3) { --beam-center: 60.45%; }
+#optics .beam-labels > div:nth-child(4) { --beam-center: 83.45%; }
+
+.beam-labels > div { padding: 12px; text-align: center; }
+.beam-labels > div + div { border-left: 1px solid var(--series-line); }
+.beam-labels strong,
+.beam-labels span { display: block; }
+.beam-labels strong { font: 400 22px/28px var(--series-display); }
+.beam-labels span { color: var(--series-muted); font-size: 13px; line-height: 19px; }
+.split-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.optics-pair { margin-top: 20px; }
+.optics-pair article { padding: 16px 18px; border: 1px solid var(--series-line); border-radius: 8px; }
+.optics-pair .optics-accessory { display: grid; grid-template-columns: minmax(0, 1fr) 72px; align-items: center; gap: 12px; }
+.optics-accessory > img { aspect-ratio: 1; height: auto; object-fit: contain; }
+.olimpika-page main .optics-pair p { margin-top: 6px; color: var(--series-muted); }
+.mount-card { display: grid; grid-template-columns: 46% 1fr; align-items: stretch; }
+.mount-card > img { height: 100%; min-height: 200px; object-fit: cover; object-position: center 45%; }
+.mount-card > div { align-self: center; }
+.mount-cutout { display: none; }
+.mount-models a {
+  color: var(--series-ink);
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.mount-models a:hover { color: #a64d23; }
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  overflow: hidden;
+  border: 1px solid var(--series-ink);
+  border-radius: 10px;
+}
+.materials-spec, .material-links { min-width: 0; padding: 28px; }
+.material-links { background: var(--series-ink); color: #fff; }
+.materials-spec .series-table th,
+.materials-spec .series-table td {
+  padding: 6px 4px;
+  border-bottom-color: #858b90;
+  vertical-align: middle;
+  line-height: 1.35;
+  font-size: 12px;
+}
+.materials-spec .series-table th { width: 43%; font-size: 11px; text-transform: uppercase; }
+.olimpika-page main .materials-spec-note {
+  margin-top: 14px;
+  color: var(--series-muted);
+  font: 400 11px/16px var(--series-reading);
+}
+.olimpika-page #canvas #documents .material-links h3 {
+  font: 400 24px/1.2 var(--series-display);
+  text-transform: uppercase;
+}
+.olimpika-page main .materials-intro { margin-top: 16px; font: 400 14px/21px var(--series-reading); }
+.material-rows { margin-top: 22px; border-bottom: 1px solid #ffffff26; }
+.material-row {
+  display: grid;
+  grid-template-columns: 32px 128px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding-block: 12px;
+  border-top: 1px solid #ffffff26;
+}
+.olimpika-page main .material-row img { width: 32px; height: 39px; object-fit: contain; }
+.material-row strong { font: 600 12px/1.3 var(--series-reading); text-transform: uppercase; }
+.material-row span { color: #e4e7e9; font: 400 12px/1.45 var(--series-reading); }
+.material-row:is(a):hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.material-links .series-actions { margin-top: 22px; }
+.olimpika-page main .materials-warranty {
+  margin-top: 16px;
+  color: #c0c7cc;
+  font: 400 11px/16px var(--series-reading);
+}
+.materials-warranty a { text-decoration: underline; text-underline-offset: 3px; }
+
+.olimpika-request-dialog {
+  width: min(760px, calc(100% - 32px));
+  max-height: 92dvh;
+  padding: 0;
+  overflow: hidden;
+  color: var(--series-ink);
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 70px #0004;
+  font: 400 14px/20px var(--series-reading);
+}
+.olimpika-request-dialog[open] { display: flex; flex-direction: column; }
+.olimpika-request-dialog::backdrop { background: #15202bd1; }
+.olimpika-request-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid var(--series-line);
+}
+.olimpika-request-header h2 { margin: 0; font: 400 24px/30px var(--series-display); }
+.olimpika-request-header button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  flex: none;
+  border: 1px solid var(--series-line);
+  border-radius: 4px;
+  font: 400 28px/1 var(--series-reading);
+}
+.olimpika-request-body { min-height: 0; overflow: auto; padding: 20px 24px 24px; }
+.olimpika-request-body p { margin: 0; }
+.olimpika-request-form { display: grid; gap: 12px; margin-top: 12px; }
+.olimpika-request-form label { font-size: 13px; }
+.olimpika-request-form label > span[aria-hidden] { color: #a95629; }
+.olimpika-request-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; }
+.olimpika-request-form :is(input:not([type=checkbox]), textarea) {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px 12px;
+  border: 1px solid #c4ccd2;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--series-ink);
+}
+.olimpika-request-form textarea { resize: vertical; }
+.olimpika-request-hint { color: var(--series-muted); font-size: 11px; line-height: 16px; }
+.olimpika-request-consents { display: grid; gap: 8px; }
+.olimpika-request-consents label { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; }
+.olimpika-request-consents input { margin-top: 3px; accent-color: #c9682c; }
+.olimpika-request-consents a { text-decoration: underline; text-underline-offset: 2px; }
+.olimpika-request-form > .btn {
+  justify-self: start;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #feb264 -2.46%, #c65811 103.25%);
+  color: #fff;
+  font: 400 14px/20px var(--series-reading);
+}
+
+#interiors .editorial-card > img { aspect-ratio: 4 / 3; height: auto; }
+.series-showroom {
+  display: grid;
+  align-items: center;
+  gap: 24px;
+}
+.series-showroom .series-heading { margin: 0; text-align: left; }
+.olimpika-page main .series-showroom .series-heading p {
+  max-width: 500px;
+  margin-inline: 0;
+  text-wrap: wrap;
+}
+.olimpika-page main .series-showroom > img {
+  height: auto;
+  border-radius: var(--series-card-radius);
+}
+#project .au-project-shared .home-project-copy > p { margin-bottom: 20px; }
+#project .au-project-shared .home-project-copy .btn { background: #38e6e5; color: var(--series-ink); }
+.series-faq-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #9b4c25;
+  font: 600 11px/16px var(--series-reading);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.series-faq { max-width: 1000px; margin-inline: auto; border-top: 1px solid var(--series-line); }
+.series-faq details { padding: 18px 8px; border-bottom: 1px solid var(--series-line); }
+.series-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  font: 500 16px/24px var(--series-reading);
+  cursor: pointer;
+}
+.series-faq summary::-webkit-details-marker { display: none; }
+.series-faq summary::after { content: "+"; flex: none; color: var(--series-muted); font: 400 25px/1 var(--series-reading); }
+.series-faq details[open] summary::after { content: "−"; }
+.olimpika-page main .series-faq details p {
+  max-width: 860px;
+  margin: 14px 32px 0 0;
+  color: var(--series-muted);
+  font: 400 14px/1.55 var(--series-reading);
+}
+
+@media (min-width: 1101px) {
+  .olimpika-page .series-section { padding-block: 48px; }
+  .olimpika-page .series-showroom {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 390px);
+    gap: 48px;
+    padding-block: 16px;
+  }
+  .series-heading { max-width: 1040px; }
+  .olimpika-page main .series-heading h2 {
+    line-height: 1.18;
+    letter-spacing: .015em;
+  }
+  .olimpika-page main .series-heading p {
+    max-width: 860px;
+    text-wrap: balance;
+  }
+
+  .series-faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: 64px;
+    align-items: start;
+    padding-top: 40px;
+    border-top: 1px solid var(--series-line);
+  }
+
+  .series-faq-layout .series-heading { margin: 0; text-align: left; }
+  .series-faq-kicker { margin-bottom: 16px; color: #bd5d26; }
+  .olimpika-page main .series-faq-layout .series-heading p {
+    max-width: 320px;
+    margin-inline: 0;
+    font-size: 14px;
+    line-height: 21px;
+    text-wrap: wrap;
+  }
+
+  .series-faq-layout .series-faq { margin: 0; }
+  .series-faq-layout details { padding-inline: 0; }
+  .series-faq-layout summary { min-height: 28px; font: 400 15px/22px var(--series-reading); }
+  .series-faq-layout summary::after { color: var(--series-orange); }
+
+  :is(.editorial-card, .mount-card, .optics-pair article, .beams) {
+    border-radius: var(--series-card-radius);
+  }
+
+  .series-hero {
+    background: #24272a url("olimpika-hero-catalog.png") center 21% / cover no-repeat;
+  }
+
+  .series-hero::after { content: none; }
+
+  .olimpika-page main .series-hero-image {
+    left: -8.5%;
+    width: 93%;
+    /* Match the ceiling edge to the full-width backdrop beneath the copy. */
+    object-position: center 26%;
+    mask-image: linear-gradient(90deg, #000 64%, transparent 75%);
+  }
+
+  .olimpika-page #canvas .series-hero-inner {
+    --site-content-width: 1200px;
+    min-height: 540px;
+    align-items: stretch;
+    padding-block: 0;
+  }
+
+  .series-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 49%;
+    padding: 48px 38px;
+    border-radius: 0;
+    background: linear-gradient(90deg, #1d2731eb, #1d2731b8);
+  }
+
+  .olimpika-page main .series-hero-copy h1 {
+    font: 400 34px/1.2 var(--series-display);
+    letter-spacing: .015em;
+    text-wrap: balance;
+  }
+
+  .olimpika-page main .series-hero-copy p {
+    max-width: 400px;
+    margin-top: 24px;
+    line-height: 1.3;
+  }
+
+  .series-hero-copy .series-actions { gap: 14px; margin-top: 26px; }
+  .olimpika-page #canvas main .series-hero-copy .series-actions .btn {
+    padding: 12px 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .series-facts { gap: 18px; padding-block: 24px 0; }
+  .series-fact {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+    min-height: 108px;
+    padding: 20px 18px;
+    border-radius: var(--series-card-radius);
+    background: #f2f2f2;
+  }
+  .series-fact svg { width: 36px; height: 40px; stroke: var(--series-orange); }
+  .series-fact strong {
+    font: 600 13px/1.3 var(--series-reading);
+    text-transform: uppercase;
+  }
+  .series-fact span { margin-top: 10px; line-height: 1.45; }
+
+  #interiors .editorial-card > img {
+    aspect-ratio: 4 / 5;
+    object-position: center 20%;
+  }
+
+  #optics .beams {
+    position: relative;
+    container-type: inline-size;
+  }
+
+  #optics .optics-accessory { grid-template-columns: minmax(0, 1fr) 112px; }
+  .olimpika-page main #optics .optics-accessory > img { width: 72px; justify-self: center; }
+  .olimpika-page main #optics .optics-accessory > .optics-recess-visual { width: 94px; height: 80px; }
+
+  #optics .beams > img {
+    height: 35cqw;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  #optics .beams::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4.6cqw;
+    background: linear-gradient(90deg, #bcb7bb, #bdb4b5, #b9aead, #b7a9a9, #aa9d9b);
+  }
+
+  #optics .beam-labels {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+  }
+
+  #optics .beam-labels > div { padding: 0; border: 0; }
+
+  #optics .beam-labels > div::before,
+  #optics .beam-labels strong,
+  #optics .beam-labels span {
+    position: absolute;
+    left: var(--beam-center);
+    transform: translate(-50%, -50%);
+  }
+
+  #optics .beam-labels > div::before {
+    content: "";
+    top: 3.25cqw;
+    width: 48px;
+    height: 17px;
+    clip-path: ellipse(50% 50%);
+    background: url("alpha-white-ceiling.png") 50% 47% / 148.4% 241% no-repeat;
+  }
+
+  #optics .beam-labels strong {
+    top: calc(100% - 83px);
+    color: var(--series-ink);
+  }
+
+  #optics .beam-labels span {
+    top: calc(100% - 55px);
+    width: 21%;
+    color: var(--series-ink);
+  }
+}
+
+.series-hero-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.olimpika-page main .series-hero-details .hero-mark {
+  flex: none;
+  height: auto;
+}
+
+.olimpika-page main .hero-mark-honest-sign { width: 82px; }
+.olimpika-page main :is(.hero-mark-cri, .hero-mark-led) { width: 38px; }
+.olimpika-page main .hero-mark-bridgelux { width: 86px; }
+
+.hero-temperatures {
+  display: flex;
+  flex: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--series-ink);
+  font: 600 12px/16px var(--series-reading);
+}
+
+.hero-temperatures li { padding: 3px 9px; background: #f5c778; white-space: nowrap; }
+.hero-temperatures li:nth-child(2) { background: #ffe2a2; }
+.hero-temperatures li:nth-child(3) { background: #f9f2dc; }
+
+#light .light-temperature-visual {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+/* Align the transition between the light beam and the interior in all three images. */
+#light .light-temperature-visual img {
+  position: absolute;
+  top: var(--light-image-offset, 0%);
+  height: 104%;
+  aspect-ratio: auto;
+}
+
+#light .light-temperature-card {
+  --ceiling-color: #dea875;
+  --ceiling-edge: #c68e61;
+  --fixture-center: 52.5%;
+  --fixture-warmth: .24;
+}
+
+#light .light-temperature-card:nth-child(2) {
+  --light-image-offset: -3.3%;
+  --ceiling-color: #dcc5b1;
+  --ceiling-edge: #c5a98f;
+  --fixture-center: 52.1%;
+  --fixture-warmth: .12;
+}
+
+#light .light-temperature-card:nth-child(3) {
+  --light-image-offset: -2.6%;
+  --ceiling-color: #ded4c7;
+  --ceiling-edge: #cbc0b1;
+  --fixture-center: 52.6%;
+  --fixture-warmth: .04;
+}
+
+/* Cover the original fixtures and place the same Alpha photo over each beam. */
+#light .light-temperature-visual::before,
+#light .light-temperature-visual::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+#light .light-temperature-visual::before {
+  inset: 0 0 auto;
+  height: 34px;
+  background: linear-gradient(var(--ceiling-color) 68%, var(--ceiling-edge));
+}
+
+#light .light-temperature-visual::after {
+  top: 9px;
+  left: var(--fixture-center);
+  width: 46px;
+  height: 16px;
+  transform: translateX(-50%);
+}
+
+#light .light-temperature-visual::after,
+.light-interior-fixture::after {
+  clip-path: ellipse(50% 50%);
+  background: url("alpha-white-ceiling.png") 50% 47% / 148.4% 241% no-repeat;
+  filter: sepia(var(--fixture-warmth));
+}
+
+/* Follow the ceiling plane in the living room image. */
+.light-interior-fixture {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.light-interior-fixture--left { top: 57.5%; left: 39.5%; }
+.light-interior-fixture--right { top: 58.9%; left: 72.1%; }
+.light-interior-fixture--center {
+  top: 58.2%;
+  left: 55.8%;
+  background: radial-gradient(ellipse, #cb9d71 55%, transparent 76%);
+}
+
+.light-interior-fixture::after {
+  content: "";
+  width: 5px;
+  height: 2px;
+}
+
+.light-temperature-label {
+  top: 28%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.olimpika-page main #light .light-temperature-label h3 {
+  font: 400 24px/30px var(--series-display);
+}
+
+#mount .mount-card {
+  position: relative;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+#mount .mount-card > img {
+  aspect-ratio: 8 / 7;
+  height: auto;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid var(--series-line);
+  background: var(--series-soft);
+}
+
+#mount .mount-card > div {
+  align-self: stretch;
+  padding: 20px 24px 22px;
+}
+
+.mount-cutout {
+  position: absolute;
+  inset: 26px auto auto 28px;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  font: 500 11px/15px var(--series-reading);
+}
+
+.mount-cutout-icon {
+  width: 114px;
+  aspect-ratio: 498 / 169;
+  overflow: hidden;
+}
+
+.olimpika-page main .mount-cutout-icon img { height: auto; }
+.mount-cutout-note { display: none; }
+
+.olimpika-page main #mount .mount-card h3 + p {
+  color: var(--series-ink);
+  font-weight: 600;
+}
+
+
+.concept-layout {
+  display: grid;
+  grid-template-columns: 538px minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 24px 28px;
+  border: 1px solid var(--series-line);
+  border-radius: var(--series-card-radius);
+}
+
+.concept-figure {
+  --concept-diagram-width: 244px;
+  padding-inline-start: 94px;
+}
+
+.concept-figure figcaption {
+  width: var(--concept-diagram-width);
+  margin-bottom: 10px;
+  color: var(--series-muted);
+  font: 400 13px/19px var(--series-reading);
+  text-align: center;
+}
+
+.concept-diagram {
+  width: var(--concept-diagram-width);
+}
+
+.concept-hotspots {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.concept-point {
+  position: relative;
+  display: grid;
+  --concept-marker-size: 32px;
+  grid-template-columns: minmax(0, 1fr) var(--concept-marker-size);
+  align-items: center;
+  min-height: 36px;
+}
+
+.concept-point::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--lead-start, 68%);
+  right: calc(var(--concept-marker-size) / 2);
+  border-top: 1px solid #e4a478;
+  pointer-events: none;
+}
+
+.concept-point--driver { --lead-start: 74%; }
+.concept-point--connector { --lead-start: 80%; }
+.concept-point--module { --lead-start: 65%; }
+.concept-point--optics { --lead-start: 79%; }
+.concept-point--mesh, .concept-point--ring { --lead-start: 62%; }
+.concept-point--trim { --lead-start: 67%; }
+.concept-point--frame { --lead-start: 76%; }
+
+.concept-artwork {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-art {
+  display: block;
+  width: var(--art-w);
+  height: var(--art-h);
+  cursor: help;
+}
+
+.concept-render {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  transition: transform 180ms ease-out;
+}
+
+.concept-art:not(.concept-art--module, .concept-art--driver, .concept-art--connector) .concept-render {
+  height: calc(100% + 4px);
+  mask-image:
+    linear-gradient(to right, transparent, #000 4px, #000 calc(100% - 4px), transparent),
+    linear-gradient(to bottom, transparent, #000 2px, #000 calc(100% - 9px), transparent);
+  mask-composite: intersect;
+}
+
+.olimpika-page main .concept-render img {
+  position: absolute;
+  top: var(--img-y, 0px);
+  left: var(--img-x, 0px);
+  width: var(--img-w, 100%);
+  max-width: none;
+  height: auto;
+}
+
+/* Image windows position the original layers and leave their long shadows outside the diagram. */
+.concept-art--driver { --art-w: 133px; --art-h: 50px; }
+.concept-art--connector {
+  --art-w: 60px; --art-h: 94px; --img-w: 154px; --img-x: -71px; --img-y: -23px;
+  margin-inline-start: 100px;
+}
+.concept-art--module { --art-w: 92px; --art-h: 109px; }
+.olimpika-page main .concept-art--module img { height: 100%; object-fit: contain; }
+.concept-art--lens { --art-w: 76px; --art-h: 59px; --img-w: 164px; --img-x: -47px; --img-y: -8px; }
+.concept-art--reflector { --art-w: 74px; --art-h: 59px; --img-w: 157px; --img-x: -43px; --img-y: -6px; }
+.concept-art--mesh { --art-w: 75px; --art-h: 41px; --img-w: 235px; --img-x: -83px; --img-y: -9px; }
+.concept-art--ring { --art-w: 76px; --art-h: 36px; --img-w: 187px; --img-x: -56px; --img-y: -6px; }
+.concept-art--trim { --art-w: 100px; --art-h: 70px; --img-w: 246px; --img-x: -75px; --img-y: -7px; }
+.concept-art--frame { --art-w: 143px; --art-h: 86px; --img-w: 249px; --img-x: -56px; --img-y: -6px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .concept-point[data-active] .concept-render { transform: translate(-4px, -3px) scale(1.035); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concept-art .concept-render { transition: none; }
+}
+
+.concept-point > button {
+  position: relative;
+  display: grid;
+  width: var(--concept-marker-size);
+  height: var(--concept-marker-size);
+  padding: 0;
+  place-items: center;
+  border: 1px solid #e4a478;
+  border-radius: 50%;
+  background: #fff0df;
+  color: #984618;
+  font: 600 12px/1 var(--series-reading);
+  font-variant-numeric: tabular-nums;
+}
+
+.concept-point[data-active] { z-index: 1; }
+.concept-point[data-active] > button {
+  border-color: var(--series-ink);
+  background: var(--series-ink);
+  color: #fff;
+}
+
+.concept-tooltip {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 12px);
+  width: 204px;
+  padding: 11px 14px;
+  transform: translateY(-50%);
+  visibility: hidden;
+  border: 1px solid var(--series-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 18px #1d27311a;
+  font: 400 13px/19px var(--series-reading);
+}
+
+.concept-tooltip::before { content: ""; position: absolute; inset: 0 100% 0 -14px; }
+.concept-point[data-active] .concept-tooltip { visibility: visible; }
+.concept-tooltip strong { display: block; font-size: 14px; }
+.olimpika-page main .concept-tooltip p { margin-top: 4px; }
+.olimpika-page main .concept-tooltip-note { color: var(--series-muted); font-size: 12px; line-height: 17px; }
+
+.olimpika-page main #system .concept-intro h3 {
+  font: 600 22px/28px var(--series-reading);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.concept-benefits {
+  margin: 14px 0 0;
+  font: 400 14px/20px var(--series-reading);
+}
+
+.concept-benefits > div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 14px;
+  padding: 11px 0;
+}
+
+.concept-benefits > div + div { border-top: 1px solid #e4a478; }
+.concept-benefits dt { font-weight: 600; }
+.concept-benefits dd { margin: 0; color: var(--series-muted); }
+
+.concept-kit {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--series-orange);
+  border-radius: 8px;
+  background: #fff8f2;
+}
+
+.concept-kit h4 {
+  margin: 0;
+  font: 600 14px/20px var(--series-reading);
+}
+
+.olimpika-page main .concept-kit p { margin-top: 2px; font-size: 12px; line-height: 17px; }
+.concept-kit p span { margin-inline: 3px; color: #a74d21; font-weight: 600; }
+
+.concept-highlights {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.concept-highlights li { padding: 0 4px; }
+.concept-highlights li + li { border-inline-start: 1px solid var(--series-line); }
+
+/* Display the icon portion of the reference; the captions remain selectable text. */
+.concept-highlights li::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 5px;
+  background: url("concept-icons.png") var(--icon-x) 0 / 591.75px auto no-repeat;
+}
+
+.concept-highlights li:nth-child(1) { --icon-x: -19.625px; }
+.concept-highlights li:nth-child(2) { --icon-x: -148.125px; }
+.concept-highlights li:nth-child(3) { --icon-x: -275.875px; }
+.concept-highlights li:nth-child(4) { --icon-x: -403.625px; }
+.concept-highlights li:nth-child(5) { --icon-x: -531.75px; }
+
+.concept-highlights strong,
+.concept-highlights span { display: block; }
+.concept-highlights strong { font: 600 14px/19px var(--series-reading); }
+.concept-highlights span { color: var(--series-muted); font: 400 12px/16px var(--series-reading); }
+
+.assembly-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.assembly-step {
+  --step-visual-height: 184px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--step-visual-height) 1fr;
+  overflow: hidden;
+  border: 1px solid var(--series-line);
+  border-radius: var(--series-card-radius);
+  background: #fff;
+}
+
+.assembly-step-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 12px 44px;
+  border-bottom: 1px solid #e4e7e9;
+  background: #f2f4f5;
+}
+
+.assembly-step-number {
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--step-visual-height) - .5px);
+  left: 16px;
+  transform: translateY(-50%);
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border: 1px solid #fde3c8;
+  border-radius: 50%;
+  background: #fff0df;
+  box-shadow: inset 0 0 0 3px #fff;
+  color: var(--series-orange);
+  font: 400 28px/1 var(--series-reading);
+}
+
+.assembly-step-visual figure {
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+  justify-items: center;
+  gap: 5px;
+}
+
+.assembly-step-visual figcaption {
+  color: var(--series-ink);
+  font: 600 11px/15px var(--series-reading);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.olimpika-page main .assembly-step-visual img {
+  width: min(100%, 100px);
+  height: 96px;
+  object-fit: contain;
+}
+
+.olimpika-page main .assembly-module-visual img {
+  height: 118px;
+  object-position: center bottom;
+}
+
+.olimpika-page main .assembly-module-visual figure:first-child img { padding-top: 44px; }
+
+.assembly-step-visual.assembly-optic-visual {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-content: center;
+  gap: 8px 4px;
+}
+
+.assembly-optic-visual figure { grid-column: span 2; gap: 2px; }
+.assembly-optic-visual figure:nth-child(n+4) { grid-column: span 3; }
+.assembly-optic-visual figure:nth-child(n+4) figcaption { white-space: normal; }
+.olimpika-page main .assembly-optic-visual img { width: min(100%, 56px); height: 44px; }
+
+.assembly-step-visual.assembly-driver-visual {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: center;
+  gap: 8px;
+}
+
+.olimpika-page main .assembly-driver-visual img { height: 72px; }
+
+.assembly-step-copy { padding: 46px 16px 18px; }
+
+.olimpika-page #canvas #assembly .assembly-step h3,
+.olimpika-page #canvas #assembly .assembly-example h3 {
+  font: 600 15px/20px var(--series-reading);
+  letter-spacing: normal;
+}
+
+.olimpika-page main .assembly-step h3 { margin: 0 0 12px; }
+.olimpika-page main .assembly-step p {
+  margin: 0 0 8px;
+  color: var(--series-muted);
+  font: 400 12px/17px var(--series-reading);
+}
+
+.assembly-details {
+  margin: 0;
+  font: 400 12px/17px var(--series-reading);
+}
+
+.assembly-details > div + div {
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--series-line);
+}
+
+.assembly-details dt { display: inline; margin-right: 5px; font-weight: 600; }
+.assembly-details dd { display: inline; margin: 0; color: var(--series-muted); }
+
+.assembly-swatches { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; }
+.assembly-swatches > span { display: inline-flex; align-items: center; gap: 5px; }
+.assembly-ral { display: block; }
+.assembly-swatch { width: 13px; height: 13px; border: 1px solid #aeb5bc; border-radius: 50%; }
+.assembly-swatch.black { border-color: #1c1c1c; background: #1c1c1c; }
+.assembly-swatch.white { background: #fff; }
+
+.assembly-flux {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font: 400 12px/18px var(--series-reading);
+  font-variant-numeric: tabular-nums;
+}
+
+.assembly-flux caption { padding-bottom: 6px; text-align: left; font-weight: 600; }
+.assembly-flux th, .assembly-flux td { padding: 5px 3px; border-bottom: 1px solid var(--series-line); text-align: center; }
+.assembly-flux th { font-weight: 600; }
+.assembly-flux thead { background: #fff0df; }
+.assembly-flux sup { line-height: 0; }
+.assembly-flux a { color: #9b461e; text-decoration: underline; }
+.olimpika-page main .assembly-step .assembly-flux-note {
+  margin: 7px 0 0;
+  font: 400 11px/15px var(--series-reading);
+}
+.assembly-flux-note { scroll-margin-top: 18px; }
+.assembly-flux-note sup { line-height: 0; }
+
+.assembly-example {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--series-orange);
+  border-radius: 8px;
+  background: #fff8f2;
+}
+
+.assembly-example dl {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0 0;
+  font: 400 12px/17px var(--series-reading);
+}
+
+.assembly-example dl > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 64px;
+  padding-left: 64px;
+}
+
+.assembly-example dl > div + div {
+  padding-left: 72px;
+  border-left: 1px solid #e9c7b5;
+}
+
+.olimpika-page main .assembly-example img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 54px;
+  height: 52px;
+  object-fit: contain;
+  transform: translateY(-50%);
+}
+
+.olimpika-page main .assembly-example dl > div + div img { left: 8px; }
+.assembly-example dd { margin: 2px 0 0; color: var(--series-muted); font-variant-numeric: tabular-nums; }
+
+.olimpika-page main .assembly-example > p {
+  margin-top: 6px;
+  color: var(--series-muted);
+  font: 400 13px/19px var(--series-reading);
+}
+
+.assembly-example .series-actions { margin-top: 14px; }
+
+/* The store navigation is shared. Its links leave this standalone preview. */
+.olimpika-page #canvas header { position: relative; z-index: 5; }
+.olimpika-page #canvas .header-main .header-request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.olimpika-page .mobile-nav-toggle { display: none; }
+.olimpika-page #canvas .header-mobile-request { display: none; }
+
+@media (min-width: 1101px) and (max-width: 1163px) {
+  .olimpika-page #canvas .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 244fr) minmax(0, 145fr) minmax(0, 120fr) minmax(0, 155fr) minmax(0, 324fr);
+    gap: 20px;
+  }
+  .concept-highlights strong { font-size: 13px; }
+}
+
+@media (max-width: 1100px) {
+  .olimpika-page .series-heading { margin-bottom: 24px; }
+  .olimpika-page main .series-heading p { margin-top: 12px; }
+  .series-hero::after { content: none; }
+  .series-hero picture { position: absolute; inset: 0 51% 0 0; z-index: -1; }
+  .olimpika-page main .series-hero-image { mask-image: none; object-position: 26% center; }
+  .olimpika-page #canvas .series-hero .series-hero-inner {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    align-items: stretch;
+  }
+  .series-hero-copy { width: 51%; padding: 36px 28px; border-radius: 0; background: var(--series-ink); }
+  .olimpika-page #canvas main .series-hero .series-actions .btn.outline { border-color: #fff; }
+  .series-hero-details { gap: 12px; margin-top: 24px; }
+
+  .series-facts { gap: 12px; padding-bottom: 12px; }
+  .series-fact { gap: 9px; padding: 12px; }
+  .concept-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    padding: 20px;
+  }
+  .olimpika-page main .concept-figure { width: 100%; margin: 0; padding: 0; }
+  .concept-figure figcaption { width: min(100%, 270px); margin-inline: auto; }
+  .concept-diagram { width: min(100%, var(--concept-diagram-width)); margin-inline: auto; }
+  .concept-point { --concept-marker-size: 44px; }
+  .concept-tooltip {
+    right: calc(var(--concept-marker-size) + 8px);
+    left: auto;
+    width: min(204px, calc(100% - var(--concept-marker-size) - 8px));
+  }
+  .concept-tooltip::before { inset: 0 -9px 0 100%; }
+  .concept-benefits > div { grid-template-columns: 112px minmax(0, 1fr); gap: 10px; }
+  .concept-highlights { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 0; }
+  .concept-highlights li { flex: 0 0 min(105px, 33.333%); }
+  .concept-highlights li + li { border: 0; }
+
+  .assembly-steps, .assembly-example dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .assembly-example dl > div:nth-child(odd) { padding-left: 64px; border-left: 0; }
+  .olimpika-page main .assembly-example dl > div:nth-child(odd) img { left: 0; }
+  .olimpika-page main .assembly-step p, .assembly-details { font-size: 13px; line-height: 19px; }
+
+  .light-temperature-visual { container-type: inline-size; }
+  #light .light-temperature-visual::before { height: 9.6cqw; }
+  #light .light-temperature-visual::after { top: 2.55cqw; width: 13cqw; height: 4.52cqw; }
+  .light-interior-fixture { width: 6.8cqw; height: 2.8cqw; }
+  .light-interior-fixture::after { width: 1.42cqw; height: .57cqw; }
+  .olimpika-page main #light .light-temperature-label h3 { font-size: clamp(17px, 7cqw, 24px); }
+
+  #optics .beams { position: relative; container-type: inline-size; }
+  #optics .beams::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4.6cqw;
+    background: linear-gradient(90deg, #bcb7bb, #bdb4b5, #b9aead, #b7a9a9, #aa9d9b);
+  }
+  #optics .beam-labels > div::before {
+    content: "";
+    position: absolute;
+    top: 3.25cqw;
+    left: var(--beam-center);
+    width: 4.4cqw;
+    height: 1.56cqw;
+    transform: translate(-50%, -50%);
+    clip-path: ellipse(50% 50%);
+    background: url("alpha-white-ceiling.png") 50% 47% / 148.4% 241% no-repeat;
+  }
+
+  .mount-cutout { inset: 14px auto auto 14px; }
+  .mount-cutout-icon { width: clamp(64px, 10vw, 100px); }
+  #mount .mount-card > div { padding: 16px; }
+
+  .series-showroom { grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); padding-block: 18px; }
+  .series-faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--series-line);
+  }
+  .series-faq-layout .series-heading { margin: 0; text-align: left; }
+  .series-faq-layout .series-heading p { margin-inline: 0; }
+  .series-faq-layout .series-faq { width: 100%; margin: 0; }
+  .series-faq-layout details { padding-inline: 0; }
+  .series-faq-layout summary::after { color: var(--series-orange); }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .olimpika-page #canvas header .header-main { gap: 12px; }
+  .olimpika-page #canvas header .header-secondary nav { gap: 16px; }
+  .olimpika-page #canvas .site-footer :is(.footer-menu, .footer-contacts) { padding-top: 0; }
+}
+
+@media (max-width: 900px) {
+  .olimpika-page #canvas .header-main .header-request { display: none; }
+  .olimpika-page #canvas .header-mobile-request { display: flex; align-items: center; }
+  .olimpika-page #canvas .header-main .search button[aria-label="Искать"] { display: grid; width: 28px; min-width: 28px; }
+  .olimpika-page #canvas main .model-filter-group > label { min-height: 44px; padding-inline: 12px; }
+  .model-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .documents-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .series-hero picture { position: static; display: block; }
+  .olimpika-page main .series-hero-image {
+    position: static;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-position: 10% center;
+  }
+  .series-hero-copy { width: 100%; padding: 28px 20px; }
+  .olimpika-page .series-section { padding-block: 32px; }
+  .series-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .series-fact { min-height: 78px; }
+  .series-fact svg { width: 24px; flex-basis: 24px; }
+  .series-faq-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .series-faq-layout details { padding-block: 0; }
+  .series-faq-layout summary { min-height: 52px; padding-block: 12px; }
+  .olimpika-page main .series-faq-layout details p { margin-top: 0; margin-bottom: 16px; }
+  .olimpika-page #canvas .site-footer .footer-menu summary::after { display: block; content: "+"; color: var(--series-orange); }
+  .olimpika-page #canvas .site-footer .footer-menu[open] summary::after { content: "−"; }
+}
+
+@media (max-width: 700px) {
+  .concept-layout { grid-template-columns: minmax(0, 1fr); }
+  .olimpika-page main .concept-figure { max-width: 480px; justify-self: center; }
+  .concept-intro { padding-top: 18px; border-top: 1px solid var(--series-line); }
+  .concept-highlights li { flex-basis: 20%; }
+}
+
+@media (max-width: 600px) {
+  .editorial-grid, .split-grid, .assembly-steps, .series-showroom { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .series-showroom { gap: 20px; }
+  .olimpika-page #canvas main .series-actions .btn { width: 100%; }
+  .olimpika-page main .series-hero-image { aspect-ratio: 4 / 3; object-position: 5% center; }
+  .series-hero-details { column-gap: 14px; }
+  .concept-layout { padding: 14px; }
+  .concept-highlights li { flex-basis: 33.333%; }
+  .concept-benefits > div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding-block: 9px; }
+  .olimpika-page main #system .concept-intro h3 { font-size: 18px; line-height: 24px; }
+  .assembly-step { --step-visual-height: 172px; }
+  .assembly-step-number { width: 62px; height: 62px; font-size: 25px; }
+  .assembly-step-copy { padding-top: 42px; }
+  .assembly-example dl > div { padding-left: 48px; }
+  .assembly-example dl > div + div { padding-left: 54px; }
+  .assembly-example dl > div:nth-child(odd) { padding-left: 48px; }
+  .olimpika-page main .assembly-example img { width: 42px; height: 45px; }
+  .olimpika-page main #light .light-temperature-label h3 { font-size: 23px; }
+
+  .beam-labels > div { padding: 8px 3px; }
+  .beam-labels strong { font-size: 18px; line-height: 24px; }
+  .beam-labels span { font-size: 11px; line-height: 15px; overflow-wrap: break-word; }
+  .materials-spec, .material-links { padding: 16px; }
+  .material-row { grid-template-columns: 32px minmax(0, 1fr); gap: 4px 12px; }
+  .material-row img { grid-row: span 2; }
+  .olimpika-page dialog.olimpika-request-dialog { padding: 0; overflow: hidden; }
+  .olimpika-request-fields { grid-template-columns: minmax(0, 1fr); }
+  .olimpika-request-header { padding: 12px 14px; }
+  .olimpika-request-header h2 { font-size: 20px; line-height: 25px; }
+  .olimpika-request-body { padding: 16px 14px; }
+}
+
+@media (max-width: 380px) {
+  body.olimpika-page { --type-h1: 23px; --leading-h1: 29px; --type-h2: 22px; --leading-h2: 28px; }
+  .series-fact { padding: 9px; }
+  .series-fact strong { font-size: 12px; line-height: 17px; }
+  .series-fact span { line-height: 16px; }
+  .assembly-example dl { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .assembly-example dl > div + div { padding-left: 48px; border-left: 0; border-top: 1px solid #e9c7b5; }
+  .olimpika-page main .assembly-example dl > div + div img { left: 0; }
+}
+
+.material-document-request {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #ffffff26;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.material-document-request:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.material-document-request:focus-visible { outline: 2px solid var(--series-orange); outline-offset: 2px; }
