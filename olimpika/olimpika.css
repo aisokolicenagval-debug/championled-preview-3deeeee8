@@ -1418,3 +1418,52 @@ body.olimpika-page { background: #fff; }
 }
 .material-document-request:hover strong { text-decoration: underline; text-underline-offset: 3px; }
 .material-document-request:focus-visible { outline: 2px solid var(--series-orange); outline-offset: 2px; }
+
+/* Independent consents in forms that collect contact details. */
+form label.form-consent input.form-consent-checkbox[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  flex: none;
+  min-inline-size: 16px;
+  min-block-size: 16px;
+  border: 1.5px solid #eb8348;
+  border-radius: 2px;
+  background: white;
+  cursor: pointer;
+}
+
+form label.form-consent input.form-consent-checkbox[type="checkbox"]:checked {
+  background: #eb8348;
+}
+
+form .form-consent-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  inset: 42% auto auto 50%;
+  width: 4px;
+  height: 7px;
+  border: solid #1d2731;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+form .form-consent a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+form .form-consent input:focus-visible,
+form .form-consent a:focus-visible {
+  outline: 2px solid #1d2731;
+  outline-offset: 3px;
+}
+
+@media (forced-colors: active) {
+  form label.form-consent input.form-consent-checkbox[type="checkbox"] {
+    appearance: auto;
+  }
+
+  form .form-consent-checkbox:checked::after {
+    content: none;
+  }
+}
