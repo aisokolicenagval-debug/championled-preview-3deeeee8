@@ -3,8 +3,8 @@
  const header=document.querySelector('.header-main'),cart=header?.querySelector('[data-popup="cart"]');
  if(cart&&!header.querySelector('.header-request')){
   const action=document.createElement('button');
-  action.type='button';action.className='header-request';action.dataset.request='question';
-  action.textContent='Отправить запрос';
+  action.type='button';action.className='header-request';action.dataset.request='header-contact';
+  action.textContent='Связаться с нами';
   action.addEventListener('click',()=>{if(typeof closeCatalog==='function')closeCatalog()});
   cart.insertAdjacentElement('afterend',action);
  }
