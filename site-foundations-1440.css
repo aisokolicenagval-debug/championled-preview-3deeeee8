@@ -237,3 +237,7 @@ form .form-consent a:focus-visible {
     content: none;
   }
 }
+
+form.request-form[data-header-contact] :is(input:not([type="checkbox"]), textarea) {
+  border-color: #eb8348;
+}

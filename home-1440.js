@@ -32,7 +32,7 @@ function headerContact(){open('Чем можем помочь?',`
 <label><span>Сообщение (необязательно)</span><textarea name="message" aria-describedby="header-contact-message-help"></textarea><small id="header-contact-message-help">Если вопрос о товаре или заказе, укажите артикул или номер заказа, если знаете.</small></label>
 <div class="review-consents"><label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="personal_data" required><span>Даю <a href="https://championled.ru/personal-data-consent" target="_blank" rel="noopener">согласие на обработку персональных данных</a><span aria-hidden="true"> *</span></span></label>
 <label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="marketing"><span>Даю <a href="https://championled.ru/advertising-consent" target="_blank" rel="noopener">согласие на получение рекламных и информационных сообщений</a></span></label></div>
-<p class="demo-form-note">В прототипе данные не отправляются и не сохраняются.</p>
+<p class="form-required-note">* Обязательные поля</p>
 <button class="btn primary" type="submit">Отправить сообщение</button>
 </form>`)}
 function request(kind){if(kind==='header-contact'){headerContact();return}
