@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="responsive-final-20261108.css">
   <link rel="stylesheet" href="olimpika.css?v=form-consents-20261116">
   <script src="olimpika.js" defer></script>
+<link rel="stylesheet" href="project-form.css?v=20261116">
 </head>
 <body id="page-top" class="site-header-aligned site-consistent content-restyled olimpika-page">
 <a class="skip-link" href="#main">К содержанию</a>
@@ -501,7 +502,7 @@
       <img src="olimpika-showroom.jpg" width="929" height="804" alt="Демонстрационный кейс «Олимпики» с рамками и оптикой" loading="lazy">
     </section>
 
-    <section class="container series-section" id="project" aria-labelledby="project-heading"><div class="audience-project audience-project-separated au-project-shared"><div class="home-project-media"><img src="assets/home1440/ledmonster-showroom.webp" alt="Команда LEDMONSTER в шоуруме" loading="lazy"></div><div class="home-project-copy"><div class="home-project-brand"><span class="home-project-logo-frame"><img class="home-project-logo" src="assets/home1440/ledmonster-cta-logo.png" alt="LEDMONSTER" loading="lazy"></span><p class="eyebrow">ПРОЕКТНАЯ РАБОТА LEDMONSTER</p></div><h2 id="project-heading">От плана интерьера к световому проекту</h2><p>Подбор освещения под объект, светотехнический расчёт и работа со спецификацией. Состав и стоимость проектных работ согласуются отдельно.</p><a class="btn" href="https://ledmonster.ru/">Обсудить проект с LEDMONSTER</a></div></div>
+    <section class="container series-section" id="project" aria-labelledby="project-heading"><div class="audience-project audience-project-separated au-project-shared"><div class="home-project-media"><img src="assets/home1440/ledmonster-showroom.webp" alt="Команда LEDMONSTER в шоуруме" loading="lazy"></div><div class="home-project-copy"><div class="home-project-brand"><span class="home-project-logo-frame"><img class="home-project-logo" src="assets/home1440/ledmonster-cta-logo.png" alt="LEDMONSTER" loading="lazy"></span><p class="eyebrow">ПРОЕКТНАЯ РАБОТА LEDMONSTER</p></div><h2 id="project-heading">От плана интерьера к световому проекту</h2><p>Подбор освещения под объект, светотехнический расчёт и работа со спецификацией. Состав и стоимость проектных работ согласуются отдельно.</p><button class="btn" type="button" commandfor="ledmonster-project-form" command="show-modal" aria-haspopup="dialog">Обсудить проект с LEDMONSTER</button></div></div>
 </section>
 
     <section class="container series-section" id="faq" aria-labelledby="faq-heading">
@@ -554,5 +555,34 @@
   </div>
 </dialog>
 
+<dialog id="ledmonster-project-form" class="project-form-dialog" aria-labelledby="ledmonster-project-title">
+  <button class="project-form-close" type="button" commandfor="ledmonster-project-form" command="close" aria-label="Закрыть">×</button>
+  <div class="project-form-layout">
+    <div>
+      <h2 id="ledmonster-project-title">Получить консультацию<br>и обсудить проект</h2>
+      <p class="project-form-intro">Наши технические специалисты в срок подготовят для вас светотехнический расчёт.<br>Приложите альбом проекта или чертёж помещения.</p>
+      <form class="project-form" data-project-request method="dialog">
+        <input name="name" aria-label="Имя" placeholder="Имя *" autocomplete="name" required>
+        <input name="email" type="email" aria-label="Ваш email" placeholder="Ваш email *" autocomplete="email" required>
+        <input name="phone" type="tel" aria-label="Номер телефона" placeholder="Номер телефона *" autocomplete="tel" minlength="7" maxlength="25" required>
+        <textarea name="comment" aria-label="Ваш комментарий" placeholder="Ваш комментарий" rows="3"></textarea>
+        <p class="project-form-note">* Обязательные поля</p>
+        <div class="project-form-actions">
+          <label class="project-form-upload">
+            <span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/></svg>Загрузить проект</span>
+            <input type="file" name="project">
+          </label>
+          <button class="project-form-submit" type="submit">Отправить</button>
+        </div>
+        <div class="project-form-consents">
+          <label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="personal_data" required><span>Даю <a href="https://championled.ru/personal-data-consent" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span></label>
+          <label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="marketing"><span>Даю <a href="https://championled.ru/advertising-consent" target="_blank" rel="noopener">согласие на получение рекламных и информационных сообщений</a></span></label>
+        </div>
+        <p class="project-form-note">В прототипе данные и файлы не отправляются.</p>
+      </form>
+    </div>
+    <img class="project-form-image" src="assets/home1440/project-form-plans.webp" width="1280" height="1027" alt="Папка с альбомом проекта и чертежами помещения">
+  </div>
+</dialog>
 </body>
 </html>
