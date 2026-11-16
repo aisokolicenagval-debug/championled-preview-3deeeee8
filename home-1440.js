@@ -30,7 +30,7 @@ function headerContact(){open('Чем можем помочь?',`
 </div>
 <label><span>Электронная почта<span class="required-mark" aria-hidden="true"> *</span></span><input name="email" type="email" required autocomplete="email"></label>
 <label><span>Сообщение (необязательно)</span><textarea name="message" aria-describedby="header-contact-message-help"></textarea><small id="header-contact-message-help">Если вопрос о товаре или заказе, укажите артикул или номер заказа, если знаете.</small></label>
-<div class="review-consents"><label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="personal_data" required><span>Даю <a href="https://championled.ru/personal-data-consent" target="_blank" rel="noopener">согласие на обработку персональных данных</a><span aria-hidden="true"> *</span></span></label>
+<div class="review-consents"><label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="personal_data" required><span>Даю <a href="https://championled.ru/personal-data-consent" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span></label>
 <label class="form-consent"><input class="form-consent-checkbox" type="checkbox" name="marketing"><span>Даю <a href="https://championled.ru/advertising-consent" target="_blank" rel="noopener">согласие на получение рекламных и информационных сообщений</a></span></label></div>
 <p class="form-required-note">* Обязательные поля</p>
 <button class="btn primary" type="submit">Отправить сообщение</button>
