@@ -1,0 +1,52 @@
+body.case-detail-finalized #canvas .case-native-gallery {
+  position: relative;
+}
+
+body.case-detail-finalized #canvas .case-native-option {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+body.case-detail-finalized #canvas .case-native-option:not(:checked) + .case-native-panel {
+  display: none;
+}
+
+body.case-detail-finalized #canvas .case-native-option:focus-visible + .case-native-panel .case-gallery-stage {
+  outline: 2px solid #eb8348;
+  outline-offset: 3px;
+}
+
+body.case-detail-finalized #canvas .case-native-gallery .case-gallery-thumbs label {
+  display: block;
+  flex: 1 0 min(128px, 21%);
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: .65;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+body.case-detail-finalized #canvas .case-native-gallery .case-gallery-thumbs label:hover,
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-1:checked) .case-gallery-thumbs label[for="case-photo-1"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-2:checked) .case-gallery-thumbs label[for="case-photo-2"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-3:checked) .case-gallery-thumbs label[for="case-photo-3"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-4:checked) .case-gallery-thumbs label[for="case-photo-4"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-5:checked) .case-gallery-thumbs label[for="case-photo-5"] {
+  border-color: #eb8348;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  body.case-detail-finalized #canvas .case-native-gallery .case-gallery-controls label {
+    width: 44px;
+    height: 44px;
+  }
+}
