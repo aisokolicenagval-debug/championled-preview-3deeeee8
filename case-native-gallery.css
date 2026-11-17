@@ -71,3 +71,7 @@ body.case-detail-finalized #canvas .case-native-gallery .case-gallery-thumbs:foc
     height: 44px;
   }
 }
+
+body.case-detail-finalized #canvas .case-description-copy > h3:first-child {
+  margin-top: 0;
+}
