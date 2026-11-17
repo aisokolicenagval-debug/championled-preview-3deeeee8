@@ -29,7 +29,7 @@ body.case-detail-finalized #canvas .case-native-option:focus-visible + .case-nat
 
 body.case-detail-finalized #canvas .case-native-gallery .case-gallery-thumbs label {
   display: block;
-  flex: 1 0 min(128px, 21%);
+  flex: 1 0 128px;
   min-width: 0;
   aspect-ratio: 16 / 9;
   padding: 0;
@@ -46,12 +46,26 @@ body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-1:checke
 body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-2:checked) .case-gallery-thumbs label[for="case-photo-2"],
 body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-3:checked) .case-gallery-thumbs label[for="case-photo-3"],
 body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-4:checked) .case-gallery-thumbs label[for="case-photo-4"],
-body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-5:checked) .case-gallery-thumbs label[for="case-photo-5"] {
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-5:checked) .case-gallery-thumbs label[for="case-photo-5"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-6:checked) .case-gallery-thumbs label[for="case-photo-6"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-7:checked) .case-gallery-thumbs label[for="case-photo-7"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-8:checked) .case-gallery-thumbs label[for="case-photo-8"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-9:checked) .case-gallery-thumbs label[for="case-photo-9"],
+body.case-detail-finalized #canvas .case-native-gallery:has(#case-photo-10:checked) .case-gallery-thumbs label[for="case-photo-10"] {
   border-color: #eb8348;
   opacity: 1;
 }
 
+body.case-detail-finalized #canvas .case-native-gallery .case-gallery-thumbs:focus-visible {
+  outline: 2px solid #eb8348;
+  outline-offset: 2px;
+}
+
 @media (max-width: 767px) {
+  body.case-detail-finalized #canvas .case-native-gallery .case-gallery-thumbs label {
+    flex-basis: 84px;
+  }
+
   body.case-detail-finalized #canvas .case-native-gallery .case-gallery-controls label {
     width: 44px;
     height: 44px;
