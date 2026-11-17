@@ -3,12 +3,19 @@ body.case-detail-finalized #canvas .case-native-gallery {
 }
 
 body.case-detail-finalized #canvas .case-native-option {
-  position: absolute;
-  top: 0;
+  /* Clicking a label focuses its radio. Keep that target in the viewport. */
+  position: fixed;
+  top: 50%;
   left: 3px;
   width: 1px;
   height: 1px;
   opacity: 0;
+}
+
+body.case-detail-finalized #canvas .case-native-option:focus-visible {
+  position: absolute;
+  top: auto;
+  bottom: 80px;
 }
 
 body.case-detail-finalized #canvas .case-native-option:not(:checked) + .case-native-panel {
