@@ -1,0 +1,271 @@
+/* Adaptive text and spacing measured from the published Pobeda components.
+   Independent reference: style-alignment-20261120/mapped-reference.json.
+   Latest user rule takes precedence: Geist for small headings; mount names stay 18/24.
+   Image proportions, number seams and the 1440px composition remain unchanged. */
+
+@media (max-width: 1100px) {
+  /* H1 */
+  body.eurotrek-page #canvas main h1 { font-family: Science, Arial, sans-serif; font-size: 30px; font-weight: 400; line-height: 36px; }
+  /* Section headings */
+  body.eurotrek-page #canvas main .e-heading h2, body.eurotrek-page #canvas main .e-upcoming h2, body.eurotrek-page #canvas main .e-faq h2 { font-family: Science, Arial, sans-serif; font-size: 28px; font-weight: 400; line-height: 34px; }
+  /* Section spacing */
+  body.eurotrek-page #canvas main .e-section { padding-bottom: 48px; padding-top: 48px; }
+  /* First section spacing */
+  body.eurotrek-page #canvas main #concept { padding-bottom: 48px; padding-top: 48px; }
+  /* Project section spacing */
+  body.eurotrek-page #canvas main #project { padding-bottom: 48px; padding-top: 48px; }
+  /* Section introduction */
+  body.eurotrek-page #canvas main .e-heading > p { font-family: Geist, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; margin-top: 16px !important; }
+  /* Section heading interval */
+  body.eurotrek-page #canvas main .e-heading { margin-bottom: 28px !important; }
+  /* Hero copy frame */
+  body.eurotrek-page #canvas main .e-hero-copy { padding-bottom: 36px; padding-left: 28px; padding-right: 28px; padding-top: 36px; }
+  /* Hero copy */
+  body.eurotrek-page #canvas main .e-hero-copy > p { font-family: Geist, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 20.8px; margin-top: 24px !important; }
+  /* Hero action interval */
+  body.eurotrek-page #canvas main .e-hero .e-actions { gap: 14px; margin-top: 26px !important; }
+  /* Buttons */
+  body.eurotrek-page #canvas main .btn { border-radius: 4px; font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; min-height: 44px; padding-bottom: 11px; padding-left: 18px; padding-right: 18px; padding-top: 11px; }
+  /* Fact label */
+  body.eurotrek-page #canvas main .e-fact strong { font-family: Geist, Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 16.9px; text-transform: uppercase; }
+  /* Fact copy */
+  body.eurotrek-page #canvas main .e-fact span { font-family: Geist, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 17.4px; margin-top: 10px !important; }
+  /* Fact frame */
+  body.eurotrek-page #canvas main .e-fact { border-radius: 10px; gap: 20px; padding-bottom: 20px; padding-left: 18px; padding-right: 18px; padding-top: 20px; }
+  /* Scenario heading */
+  body.eurotrek-page #canvas main .e-concept-card h3 { font-family: Geist, Arial, sans-serif; font-size: 22px; font-weight: 400; line-height: 28px; }
+  /* Scenario copy */
+  body.eurotrek-page #canvas main .e-concept-card-copy > p { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20.3px; }
+  /* Scenario frame */
+  body.eurotrek-page #canvas main .e-concept-card-copy { padding-bottom: 26px; padding-left: 26px; padding-right: 26px; padding-top: 26px; }
+  /* Group heading */
+  body.eurotrek-page #canvas main .e-group-card-copy h3 { font-family: Geist, Arial, sans-serif; font-size: 22px; font-weight: 400; line-height: 28px; }
+  /* Group explanation */
+  body.eurotrek-page #canvas main .e-group-card-copy > p { font-family: Geist, Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.85px; }
+  /* Group labels */
+  body.eurotrek-page #canvas main .e-group-lines > div, body.eurotrek-page #canvas main .e-group-lines dt, body.eurotrek-page #canvas main .e-group-lines dd, body.eurotrek-page #canvas main .e-group-scenarios li { font-family: Geist, Arial, sans-serif; font-size: 11px; font-weight: 400; line-height: 14.85px; }
+  /* Small subtitle */
+  body.eurotrek-page #canvas main .e-track-info > h3, body.eurotrek-page #canvas main .e-geometries-copy h3 { font-family: Geist, Arial, sans-serif; font-size: 22px; font-weight: 400; line-height: 26.4px; }
+  /* Mount explanation */
+  body.eurotrek-page #canvas main .e-mount-card > p { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18.9px; }
+  /* Step heading */
+  body.eurotrek-page #canvas main .e-step h3 { font-family: Geist, Arial, sans-serif; font-size: 22px; font-weight: 400; line-height: 28px; }
+  /* Step copy */
+  body.eurotrek-page #canvas main .e-step > p { font-family: Geist, Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.85px; margin-top: 10px !important; }
+  /* Technical label and value */
+  body.eurotrek-page #canvas main .e-specs > div, body.eurotrek-page #canvas main .e-specs dt, body.eurotrek-page #canvas main .e-specs dd, body.eurotrek-page #canvas main .e-color-option, body.eurotrek-page #canvas main .e-track-selector legend { font-family: Geist, Arial, sans-serif; font-size: 11px; font-weight: 400; line-height: 14.85px; }
+  /* Geometry explanation */
+  body.eurotrek-page #canvas main .e-geometries-copy > p { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 21px; }
+  /* Technical note */
+  body.eurotrek-page #canvas main .e-note, body.eurotrek-page #canvas main .e-track-label, body.eurotrek-page #canvas main .e-shape, body.eurotrek-page #canvas main .e-assembly-stage > figcaption { font-family: Geist, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16.8px; }
+  /* Component legend */
+  body.eurotrek-page #canvas main .e-assembly-legend > li > span:not(.e-assembly-number) { font-family: Geist, Arial, sans-serif; font-size: 13px; font-weight: 500; line-height: 21px; }
+  /* Table header */
+  body.eurotrek-page #canvas main .e-table th { font-family: Geist, Arial, sans-serif; font-size: 10.5px; font-weight: 600; line-height: 14.175px; padding-bottom: 6px; padding-left: 4px; padding-right: 4px; padding-top: 6px; text-transform: uppercase; }
+  /* Table value */
+  body.eurotrek-page #canvas main .e-table td { font-family: Geist, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 16.2px; padding-bottom: 6px; padding-left: 4px; padding-right: 4px; padding-top: 6px; }
+  /* Product title */
+  body.eurotrek-page #canvas main .e-catalog-card h3 { font-family: Geist, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 20.8px; }
+  /* Product price */
+  body.eurotrek-page #canvas main .e-catalog-price { font-family: Geist, Arial, sans-serif; font-size: 20px; font-weight: 650; line-height: 25px; margin-top: 9px !important; }
+  /* Product grid gaps */
+  body.eurotrek-page #canvas main .e-catalog-grid { gap: 28px 20px; }
+  /* Product filter */
+  body.eurotrek-page #canvas main .e-catalog-filters > label { font-family: Geist, Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 16.9px; min-height: 36px; padding-bottom: 9px; padding-left: 13px; padding-right: 13px; padding-top: 9px; }
+  /* Document panel heading */
+  body.eurotrek-page #canvas main .e-documents h2 { font-family: Science, Arial, sans-serif; font-size: 24px; font-weight: 400; line-height: 28.8px; }
+  /* Document panel text */
+  body.eurotrek-page #canvas main .e-documents-copy > p:not(.e-documents-warranty) { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20.3px; margin-top: 16px !important; }
+  /* Document panel frame */
+  body.eurotrek-page #canvas main .e-documents-copy { padding-bottom: 23px; padding-left: 23px; padding-right: 23px; padding-top: 23px; }
+  /* Document list interval */
+  body.eurotrek-page #canvas main .e-document-list { gap: 0px; margin-bottom: 22px !important; margin-top: 22px !important; }
+  /* Document row */
+  body.eurotrek-page #canvas main .e-document { column-gap: 14px; padding-bottom: 12px; padding-top: 12px; }
+  /* Document label */
+  body.eurotrek-page #canvas main .e-document strong { font-family: Geist, Arial, sans-serif; font-size: 12px; font-weight: 600; line-height: 15.6px; }
+  /* Document description */
+  body.eurotrek-page #canvas main .e-document span { font-family: Geist, Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 17.4px; }
+  /* Document warranty */
+  body.eurotrek-page #canvas main .e-documents-warranty { font-family: Geist, Arial, sans-serif; font-size: 10px; font-weight: 400; line-height: 15px; margin-top: 16px !important; }
+  /* FAQ introduction */
+  body.eurotrek-page #canvas main .e-faq-heading > p:not(.e-kicker) { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 21px; margin-top: 0px !important; }
+  /* FAQ eyebrow */
+  body.eurotrek-page #canvas main .e-faq-heading > .e-kicker { font-family: Geist, Arial, sans-serif; font-size: 11px; font-weight: 600; line-height: 17.6px; margin-bottom: 14px !important; margin-top: 0px !important; }
+  /* FAQ row */
+  body.eurotrek-page #canvas main .e-faq-list > details { padding-bottom: 14px; padding-top: 14px; }
+  /* FAQ question */
+  body.eurotrek-page #canvas main .e-faq-list summary { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; gap: 25px; line-height: 21px; min-height: 0px; padding-bottom: 0px; padding-top: 0px; }
+  /* FAQ answer */
+  body.eurotrek-page #canvas main .e-faq-list details > p { font-family: Geist, Arial, sans-serif; font-size: 13px; font-weight: 400; line-height: 22.75px; margin-bottom: 0px !important; margin-left: 0px !important; margin-right: 0px !important; margin-top: 0px !important; }
+  /* Project heading */
+  body.eurotrek-page #canvas main #project h2 { font-family: Science, Arial, sans-serif; font-size: 32px; font-weight: 400; line-height: 37.76px; margin-bottom: 0px !important; }
+  /* Project explanation */
+  body.eurotrek-page #canvas main #project .home-project-copy > p { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 21px; margin-bottom: 0px !important; }
+  /* Project action */
+  body.eurotrek-page #canvas main #project .au-project-shared .home-project-copy .btn { font-family: Geist, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; min-height: 44px; padding-bottom: 11px; padding-left: 18px; padding-right: 18px; padding-top: 11px; }
+}
+
+@media (max-width: 1000px) {
+  /* Section spacing */
+  body.eurotrek-page #canvas main .e-section { padding-bottom: 40px; padding-top: 40px; }
+  /* First section spacing */
+  body.eurotrek-page #canvas main #concept { padding-bottom: 40px; padding-top: 40px; }
+  /* Project section spacing */
+  body.eurotrek-page #canvas main #project { padding-bottom: 40px; padding-top: 40px; }
+  /* Section introduction */
+  body.eurotrek-page #canvas main .e-heading > p { font-size: 15px; line-height: 22.5px; }
+  /* Hero copy frame */
+  body.eurotrek-page #canvas main .e-hero-copy { padding-bottom: 28px; padding-left: 22px; padding-right: 22px; padding-top: 28px; }
+  /* Hero copy */
+  body.eurotrek-page #canvas main .e-hero-copy > p { font-size: 14px; line-height: 21px; margin-top: 22px !important; }
+  /* Hero action interval */
+  body.eurotrek-page #canvas main .e-hero .e-actions { gap: 12px; margin-top: 24px !important; }
+  /* Scenario copy */
+  body.eurotrek-page #canvas main .e-concept-card-copy > p { font-size: 15px; line-height: 21.75px; }
+  /* Scenario frame */
+  body.eurotrek-page #canvas main .e-concept-card-copy { padding-bottom: 28px; padding-left: 28px; padding-right: 28px; padding-top: 28px; }
+  /* Group labels */
+  body.eurotrek-page #canvas main .e-group-lines > div, body.eurotrek-page #canvas main .e-group-lines dt, body.eurotrek-page #canvas main .e-group-lines dd, body.eurotrek-page #canvas main .e-group-scenarios li { font-size: 12px; line-height: 17.4px; }
+  /* Small subtitle */
+  body.eurotrek-page #canvas main .e-track-info > h3, body.eurotrek-page #canvas main .e-geometries-copy h3 { font-size: 20px; line-height: 24px; }
+  /* Step copy */
+  body.eurotrek-page #canvas main .e-step > p { margin-top: 8px !important; }
+  /* Technical label and value */
+  body.eurotrek-page #canvas main .e-specs > div, body.eurotrek-page #canvas main .e-specs dt, body.eurotrek-page #canvas main .e-specs dd, body.eurotrek-page #canvas main .e-color-option, body.eurotrek-page #canvas main .e-track-selector legend { font-size: 12px; line-height: 17.4px; }
+  /* Technical note */
+  body.eurotrek-page #canvas main .e-note, body.eurotrek-page #canvas main .e-track-label, body.eurotrek-page #canvas main .e-shape, body.eurotrek-page #canvas main .e-assembly-stage > figcaption { font-size: 13px; line-height: 19.5px; }
+  /* Document panel heading */
+  body.eurotrek-page #canvas main .e-documents h2 { font-size: 20px; line-height: 25px; }
+  /* Document panel text */
+  body.eurotrek-page #canvas main .e-documents-copy > p:not(.e-documents-warranty) { line-height: 21px; }
+  /* Document panel frame */
+  body.eurotrek-page #canvas main .e-documents-copy { padding-bottom: 24px; padding-left: 24px; padding-right: 24px; padding-top: 24px; }
+  /* Document row */
+  body.eurotrek-page #canvas main .e-document { padding-bottom: 14px; padding-top: 14px; }
+  /* Document label */
+  body.eurotrek-page #canvas main .e-document strong { font-size: 13px; line-height: 16.9px; }
+  /* Document description */
+  body.eurotrek-page #canvas main .e-document span { font-size: 13px; line-height: 18.85px; }
+  /* Project heading */
+  body.eurotrek-page #canvas main #project h2 { font-size: 28px; line-height: 33.04px; }
+}
+
+@media (max-width: 767px) {
+  /* H1 */
+  body.eurotrek-page #canvas main h1 { font-size: 28px; line-height: 34px; }
+  /* Section headings */
+  body.eurotrek-page #canvas main .e-heading h2, body.eurotrek-page #canvas main .e-upcoming h2, body.eurotrek-page #canvas main .e-faq h2 { font-size: 25px; line-height: 31px; }
+  /* Section spacing */
+  body.eurotrek-page #canvas main .e-section { padding-bottom: 28px; padding-top: 28px; }
+  /* First section spacing */
+  body.eurotrek-page #canvas main #concept { padding-bottom: 32px; padding-top: 32px; }
+  /* Project section spacing */
+  body.eurotrek-page #canvas main #project { padding-bottom: 32px; padding-top: 32px; }
+  /* Section introduction */
+  body.eurotrek-page #canvas main .e-heading > p { font-size: 14px; line-height: 21px; margin-top: 14px !important; }
+  /* Section heading interval */
+  body.eurotrek-page #canvas main .e-heading { margin-bottom: 24px !important; }
+  /* Hero copy frame */
+  body.eurotrek-page #canvas main .e-hero-copy { padding-left: 24px; padding-right: 24px; padding-top: 26px; }
+  /* Hero copy */
+  body.eurotrek-page #canvas main .e-hero-copy > p { margin-top: 17px !important; }
+  /* Hero action interval */
+  body.eurotrek-page #canvas main .e-hero .e-actions { gap: 10px; margin-top: 20px !important; }
+  /* Fact copy */
+  body.eurotrek-page #canvas main .e-fact span { margin-top: 8px !important; }
+  /* Fact frame */
+  body.eurotrek-page #canvas main .e-fact { padding-bottom: 18px; padding-top: 18px; }
+  /* Scenario heading */
+  body.eurotrek-page #canvas main .e-concept-card h3 { font-size: 20px; line-height: 26px; }
+  /* Scenario copy */
+  body.eurotrek-page #canvas main .e-concept-card-copy > p { font-size: 14px; line-height: 20.3px; }
+  /* Scenario frame */
+  body.eurotrek-page #canvas main .e-concept-card-copy { padding-bottom: 24px; padding-left: 22px; padding-right: 22px; padding-top: 24px; }
+  /* Group heading */
+  body.eurotrek-page #canvas main .e-group-card-copy h3 { font-size: 20px; line-height: 26px; }
+  /* Group labels */
+  body.eurotrek-page #canvas main .e-group-lines > div, body.eurotrek-page #canvas main .e-group-lines dt, body.eurotrek-page #canvas main .e-group-lines dd, body.eurotrek-page #canvas main .e-group-scenarios li { font-size: 13px; line-height: 18.85px; }
+  /* Step heading */
+  body.eurotrek-page #canvas main .e-step h3 { font-size: 20px; line-height: 26px; }
+  /* Technical label and value */
+  body.eurotrek-page #canvas main .e-specs > div, body.eurotrek-page #canvas main .e-specs dt, body.eurotrek-page #canvas main .e-specs dd, body.eurotrek-page #canvas main .e-color-option, body.eurotrek-page #canvas main .e-track-selector legend { font-size: 13px; line-height: 18.85px; }
+  /* Technical note */
+  body.eurotrek-page #canvas main .e-note, body.eurotrek-page #canvas main .e-track-label, body.eurotrek-page #canvas main .e-shape, body.eurotrek-page #canvas main .e-assembly-stage > figcaption { font-size: 12px; line-height: 18px; }
+  /* Component legend */
+  body.eurotrek-page #canvas main .e-assembly-legend > li > span:not(.e-assembly-number) { font-weight: 600; line-height: 19px; }
+  /* Product title */
+  body.eurotrek-page #canvas main .e-catalog-card h3 { font-size: 14px; line-height: 18.2px; }
+  /* Product price */
+  body.eurotrek-page #canvas main .e-catalog-price { font-size: 19px; line-height: 23.75px; margin-top: 7px !important; }
+  /* Product grid gaps */
+  body.eurotrek-page #canvas main .e-catalog-grid { gap: 26px 14px; }
+  /* Product filter */
+  body.eurotrek-page #canvas main .e-catalog-filters > label { font-size: 12px; line-height: 15.6px; min-height: 44px; padding-left: 7px; padding-right: 7px; }
+  /* FAQ introduction */
+  body.eurotrek-page #canvas main .e-faq-heading > p:not(.e-kicker) { margin-top: 16px !important; }
+  /* FAQ eyebrow */
+  body.eurotrek-page #canvas main .e-faq-heading > .e-kicker { line-height: 18.7px; }
+  /* FAQ row */
+  body.eurotrek-page #canvas main .e-faq-list > details { padding-bottom: 13px; padding-top: 13px; }
+  /* FAQ question */
+  body.eurotrek-page #canvas main .e-faq-list summary { font-size: 15px; gap: 15px; line-height: 24px; }
+  /* FAQ answer */
+  body.eurotrek-page #canvas main .e-faq-list details > p { font-size: 14px; line-height: 24.5px; }
+  /* Project heading */
+  body.eurotrek-page #canvas main #project h2 { font-size: 22px; line-height: 28px; margin-bottom: 20px !important; }
+  /* Project explanation */
+  body.eurotrek-page #canvas main #project .home-project-copy > p { margin-bottom: 24px !important; }
+  /* Project action */
+  body.eurotrek-page #canvas main #project .au-project-shared .home-project-copy .btn { font-size: 13px; padding-bottom: 12px; padding-left: 6px; padding-right: 6px; padding-top: 12px; }
+}
+
+/* Structural spacing for the Eurotrek-only card compositions. */
+/* Shared chrome and enquiry form: measured separately from the Pobeda page body. */
+@media (max-width: 1100px) {
+  body.eurotrek-page #canvas .site-footer { line-height: 1.55; }
+  body.eurotrek-page .e-dialog:not(.e-scheme-dialog) { padding: 30px; }
+  body.eurotrek-page .e-dialog:not(.e-scheme-dialog) h2 { font: 300 25px/35px Science,Arial,sans-serif; margin: 0 0 17px; padding-right: 28px; }
+  body.eurotrek-page .e-dialog:not(.e-scheme-dialog) > p { font: 400 14px/25.9px Geist,Arial,sans-serif; margin: 14px 0; }
+  body.eurotrek-page .e-form { font: 400 16px/24.8px Geist,Arial,sans-serif; gap: 17px; margin-top: 20px; }
+  body.eurotrek-page .e-form > label:not(.form-consent) { font: 400 12px/18.6px Geist,Arial,sans-serif; gap: 0; }
+  body.eurotrek-page .e-form :is(input:not([type=checkbox]),textarea) { font: 400 14px/21.7px Geist,Arial,sans-serif; padding: 10px 12px; margin-top: 7px; min-height: 0; }
+  body.eurotrek-page .e-form textarea { min-height: 100px; }
+  body.eurotrek-page .e-form .form-consent { font: 400 11px/18.7px Geist,Arial,sans-serif; gap: 10px; }
+  body.eurotrek-page .e-form > .e-note { font: 400 11px/20.35px Geist,Arial,sans-serif; margin: 0; }
+  body.eurotrek-page .e-field-hint { font-size: .833333em; line-height: 1.55; }
+  body.eurotrek-page .e-form .btn { font: 400 14px/20px Geist,Arial,sans-serif; min-height: 44px; padding: 11px 18px; }
+}
+@media (max-width: 767px) {
+  body.eurotrek-page .e-dialog:not(.e-scheme-dialog) { padding: 24px 20px; }
+  body.eurotrek-page .e-dialog:not(.e-scheme-dialog) h2 { font-size: 23px; line-height: 34.5px; padding-right: 24px; }
+  body.eurotrek-page .e-form > label:not(.form-consent) { font-size: 13px; line-height: 20.15px; }
+  body.eurotrek-page .e-form :is(input:not([type=checkbox]),textarea) { font-size: 16px; line-height: 24.8px; }
+  body.eurotrek-page .e-form .form-consent { font-size: 12px; line-height: 20.4px; }
+}
+@media (max-width: 1100px) {
+  body.eurotrek-page #canvas main .e-concept-card-copy > p { margin-top: 10px !important; padding-top: 0; }
+  body.eurotrek-page #canvas main .e-group-card-copy { padding-inline: 18px; padding-bottom: 18px; }
+  body.eurotrek-page #canvas main .e-group-card-copy > :last-child { padding-top: 8px; }
+  body.eurotrek-page #canvas main .e-document img { height: 39px; }
+  body.eurotrek-page #canvas main .e-mount-card > h3 { margin-top: 18px !important; }
+  body.eurotrek-page #canvas main .e-mount-card > p { margin-top: 12px !important; }
+  body.eurotrek-page #canvas main .e-catalog-card h3 { margin-top: 4px !important; }
+  body.eurotrek-page #canvas main .e-faq-list details > p { max-width: none; }
+}
+@media (max-width: 767px) {
+  body.eurotrek-page #canvas main .e-step { grid-template-columns: 62px minmax(0,1fr); }
+  body.eurotrek-page #canvas main .e-step::before { width: 62px; height: 62px; font-size: 25px; }
+  body.eurotrek-page #canvas main .e-fact strong { min-height: 0; }
+  body.eurotrek-page #canvas main .e-facts { padding-bottom: 0; }
+  body.eurotrek-page #canvas main .e-upcoming .btn { width: 100%; }
+  body.eurotrek-page #canvas main .e-document strong { margin-bottom: 6px; }
+  body.eurotrek-page #canvas main .e-document { row-gap: 0; }
+}
+
+@media (max-width: 767px) {
+  body.eurotrek-page #canvas main .btn { width: 100%; }
+  body.eurotrek-page #canvas main .e-catalog-card h3 { height: 2.6em; }
+  body.eurotrek-page #canvas main .e-catalog-card h3 > a { -webkit-line-clamp: 2; }
+  body.eurotrek-page #canvas main .e-assembly-legend > li > span { overflow-wrap: anywhere; }
+}
