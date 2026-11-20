@@ -37,8 +37,8 @@ body:has(.e-assembly-popover:popover-open) .e-assembly-tooltip { opacity: 0; vis
   .e-concept-card-image { height: 210px; }
   .e-concept-card-copy { padding: 18px; }
   .e-group-card { --group-visual-height: calc((100vw - 94px) * .189833); }
-  .e-group-card-number { top: calc(var(--group-visual-height) + 12px); transform: none; width: 56px; height: 56px; font-size: 24px; }
-  .e-group-card-copy { padding: 84px 16px 22px; }
+  .e-group-card-number { top: calc(var(--group-visual-height) - .5px); transform: translateY(-50%); width: 56px; height: 56px; font-size: 24px; }
+  .e-group-card-copy { padding: 46px 16px 22px; }
   .e-mount-card > img { height: 210px; }
   .e-catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .e-documents { grid-template-columns: .85fr 1.15fr; }
@@ -97,6 +97,10 @@ body:has(.e-assembly-popover:popover-open) .e-assembly-tooltip { opacity: 0; vis
   body.eurotrek-page #canvas #project .home-project-media > img { width: 100%; height: 100%; object-fit: cover; }
   .e-assembly-scroll { overflow: auto; }
   .e-assembly-scroll > .e-assembly-canvas { min-width: 760px; }
+  .e-assembly-stage .e-assembly-scroll { overflow: visible; }
+  .e-assembly-stage .e-assembly-canvas { min-width: 0; }
+  .e-assembly-stage .e-assembly-point { width: clamp(16px,3.2vw,28px); min-width: 0; }
+  .e-assembly-stage .e-assembly-point-button { font-size: 11px; }
   .e-assembly-tooltip { display: none; }
   .e-assembly-point:has(button[aria-describedby$="component-2"]) .e-assembly-tooltip,
   .e-assembly-point:has(button[aria-describedby$="component-8"]) .e-assembly-tooltip,
@@ -132,18 +136,19 @@ body:has(.e-assembly-popover:popover-open) .e-assembly-tooltip { opacity: 0; vis
   .e-hero .e-actions { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; margin-top: 22px; }
   .e-hero-marks { gap: 18px 12px; margin-top: 24px; }
   .e-hero-mark { min-width: 0; }
-  .e-facts { grid-template-columns: repeat(2,minmax(0,1fr)); padding-block: 20px 28px; gap: 10px; }
-  .e-fact, .e-fact:nth-last-child(-n+2) { grid-column: auto; padding: 12px; }
-  .e-fact:last-child { grid-column: 1/-1; }
-  .e-fact:last-child strong { min-height: 20px; }
-  .e-fact strong { font-size: 13px; line-height: 19px; }
+  .e-facts { grid-template-columns: minmax(0,1fr); padding-block: 24px 28px; gap: 12px; }
+  .e-fact, .e-fact:nth-last-child(-n+2), .e-fact:last-child { grid-column: auto; grid-template-columns: 36px minmax(0,1fr); gap: 12px; padding: 18px; min-height: 0; }
+  .e-fact > img { width: 36px; height: 40px; }
+  .e-fact strong, .e-fact:last-child strong { min-height: 0; font-size: 13px; line-height: 19px; }
+  .e-fact span { margin-top: 8px; padding-top: 0; }
+  .e-fact br { display: none; }
   .e-concept-cards, .e-group-cards, .e-mount-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
   .e-concept-card { grid-template-rows: auto 1fr; }
   .e-concept-card-image { height: auto; aspect-ratio: 4/3; }
   .e-concept-card-copy { padding: 20px; min-height: 120px; }
   .e-group-card { --group-visual-height: calc((100vw - 34px) * .5695); }
   .e-group-card-number { width: 62px; height: 62px; font-size: 25px; }
-  .e-group-card-copy { padding: 84px 20px 22px; }
+  .e-group-card-copy { padding: 46px 20px 22px; }
   .e-group-card-copy > :last-child { margin-top: 0 !important; }
   .e-group-benefits { grid-template-columns: minmax(0,1fr); gap: 18px; margin-top: 24px; }
   .e-mount-card > img { height: auto; aspect-ratio: 4/3; }
@@ -163,9 +168,15 @@ body:has(.e-assembly-popover:popover-open) .e-assembly-tooltip { opacity: 0; vis
   .e-catalog-card h3 > a { -webkit-line-clamp: 3; }
   .e-catalog-media > img { padding: 8px; }
   body.eurotrek-page #canvas main .e-catalog-price { font-size: 18px; }
-  .e-upcoming { padding: 24px 20px; }
-  .e-upcoming-models { gap: 12px; }
-  .e-upcoming-models img { height: 160px; }
+  .e-upcoming { padding: 24px 20px; gap: 18px; align-items: start; }
+  .e-upcoming-copy { display: contents; }
+  .e-upcoming-copy > .e-kicker { order: 0; }
+  .e-upcoming-copy > h2 { order: 1; }
+  .e-upcoming-models { order: 2; max-width: 240px; gap: 16px; }
+  .e-upcoming-models img { height: 110px; }
+  .e-upcoming-copy > p:not(.e-kicker) { order: 3; }
+  .e-upcoming-copy > .e-actions { order: 4; margin-top: 4px; }
+  body.eurotrek-page #canvas main .e-upcoming-copy > p { margin-top: 0 !important; margin-bottom: 0 !important; }
   .e-steps { grid-template-columns: minmax(0,1fr); gap: 24px; }
   .e-step { display: grid; grid-template-columns: 64px minmax(0,1fr); column-gap: 16px; text-align: left; }
   .e-step::before { grid-column: 1; grid-row: 1/3; width: 64px; height: 64px; margin: 0; font-size: 24px; }
