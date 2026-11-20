@@ -1,0 +1,206 @@
+/* Active Eurotrek page only. Desktop geometry remains in eurotrek.css. */
+.e-mobile-menu, .e-mobile-hint { display: none; }
+.e-table-scroll, .e-reference-table { max-width: 100%; overflow-x: auto; }
+.e-assembly-scroll { max-width: 100%; }
+.e-table-scroll:focus-visible, .e-assembly-scroll:focus-visible { outline: 2px solid #b65624; outline-offset: 3px; }
+.e-assembly-popover { position: fixed; inset: auto 16px 16px; margin: 0 auto; width: min(420px,calc(100% - 32px)); max-width: none; max-height: 70dvh; overflow: auto; padding: 20px; border: 1px solid #d7dadd; border-radius: 10px; background: white; color: #1d2731; box-shadow: 0 6px 30px #1d273133; font: 400 13px/20px Geist,Arial,sans-serif; }
+body.eurotrek-page #canvas main .e-assembly-popover h3, .e-assembly-popover h3 { padding-right: 24px; font: 600 16px/22px Geist,Arial,sans-serif; }
+.e-assembly-popover p { margin-top: 10px !important; }
+.e-assembly-popover > button { position: absolute; top: 4px; right: 4px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f3f4f5; color: inherit; font: 24px/1 Geist,Arial,sans-serif; cursor: pointer; }
+body:has(.e-assembly-popover:popover-open) .e-assembly-tooltip { opacity: 0; visibility: hidden; }
+
+@media (max-width: 1199px) {
+  body.eurotrek-page #canvas .container { width: calc(100% - 48px); max-width: 1100px; margin-inline: auto; }
+  body.eurotrek-page main { min-width: 0; }
+  .e-hero-copy { width: 55%; padding-inline: 28px; }
+  .e-hero-marks { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px 12px; }
+  .e-fact { padding: 12px; gap: 8px; }
+  body.eurotrek-page #canvas .footer-grid { grid-template-columns: 1.5fr repeat(3,minmax(0,1fr)) 1.8fr; gap: 20px; }
+  .e-documents-copy { padding: 24px; }
+  .e-document { grid-template-columns: 28px 110px minmax(0,1fr); gap: 10px; }
+  .e-document img { width: 28px; height: 34px; }
+  .e-track-layout { gap: 24px; padding: 24px; }
+  .e-track-selector { padding-inline: 16px; }
+  .e-steps { gap: 28px; }
+  .e-upcoming { gap: 32px; padding: 32px; }
+  .e-faq { gap: 36px; }
+  .e-assembly-legend { grid-template-columns: repeat(5,minmax(0,1fr)); column-gap: 10px; }
+  .e-assembly-legend > li { grid-template-columns: 16px 36px minmax(0,1fr); gap: 6px; }
+  .e-assembly-legend img { width: 36px; height: 36px; }
+}
+
+@media (max-width: 1100px) {
+  .e-facts { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .e-fact { grid-column: span 2; }
+  .e-fact:nth-last-child(-n+2) { grid-column: span 3; }
+  .e-concept-card { grid-template-rows: 210px 1fr; }
+  .e-concept-card-image { height: 210px; }
+  .e-concept-card-copy { padding: 18px; }
+  .e-group-card { --group-visual-height: calc((100vw - 94px) * .189833); }
+  .e-group-card-number { top: calc(var(--group-visual-height) + 12px); transform: none; width: 56px; height: 56px; font-size: 24px; }
+  .e-group-card-copy { padding: 84px 16px 22px; }
+  .e-mount-card > img { height: 210px; }
+  .e-catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .e-documents { grid-template-columns: .85fr 1.15fr; }
+  body.eurotrek-page #canvas .footer-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+  body.eurotrek-page #canvas .footer-brand, body.eurotrek-page #canvas .footer-contacts { grid-column: 1/-1; }
+  body.eurotrek-page #canvas .footer-legal { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 20px; }
+  body.eurotrek-page #canvas .footer-legal a { display: block; max-width: 100%; font: 400 12px/18px Geist,Arial,sans-serif; }
+}
+
+@media (max-width: 900px) {
+  body.eurotrek-page #canvas header { position: relative; z-index: 40; }
+  body.eurotrek-page #canvas .header-main .search > img { display: none; }
+  body.eurotrek-page #canvas .header-main .search button { display: grid; place-items: center; width: 28px; height: 40px; padding: 0; border: 0; background: none; color: #1d2731; }
+  body.eurotrek-page #canvas .header-main .search button svg { width: 22px; height: 22px; }
+  body.eurotrek-page #canvas .header-main .search input { min-width: 0; font-size: 16px; }
+  .e-mobile-menu { display: block; grid-column: 6; grid-row: 1; }
+  .e-mobile-menu > summary { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; width: 32px; height: 44px; cursor: pointer; list-style: none; }
+  .e-mobile-menu > summary::-webkit-details-marker { display: none; }
+  .e-mobile-menu > summary > span { width: 21px; height: 1.5px; background: #1d2731; }
+  .e-mobile-menu[open] > summary { background: #ffeddf; border-radius: 4px; }
+  .e-mobile-links { position: absolute; z-index: 50; inset: 100% 0 auto; display: flex; flex-direction: column; gap: 0; padding: 12px 24px 20px; max-height: calc(100dvh - 114px); overflow-y: auto; background: #f2f4f7; border-top: 1px solid #d7dadd; box-shadow: 0 10px 20px #1d27311c; font: 400 15px/22px Geist,Arial,sans-serif; }
+  .e-mobile-links > a, .e-mobile-links .header-audience summary, .e-mobile-links .header-audience-links a { display: flex; align-items: center; gap: 10px; padding: 12px 0; min-height: 44px; text-decoration: none; color: #1d2731; }
+  .e-mobile-links > a, .e-mobile-links .header-audience > summary { border-bottom: 1px solid #d7dadd; }
+  .e-mobile-links img { width: 22px; height: 22px; }
+  .e-mobile-links .header-audience { position: static; height: auto; }
+  .e-mobile-links .header-audience summary svg { width: 16px; height: 16px; }
+  .e-mobile-links .header-audience-links { position: static; width: auto; padding: 0 16px; background: transparent; border: 0; box-shadow: none; }
+  .e-mobile-links .phone { margin: 12px 0; }
+  .e-mobile-contact { min-height: 44px; margin-top: 12px; border: 1px solid #1d2731; border-radius: 4px; background: white; color: #1d2731; font: 400 14px/20px Geist,Arial,sans-serif; cursor: pointer; }
+  .e-hero { height: auto; min-height: 560px; }
+  .e-hero-copy { width: 62%; padding: 32px 24px; }
+  body.eurotrek-page #canvas main h1 { font-size: 30px; line-height: 36px; }
+  body.eurotrek-page #canvas main h2 { font-size: 28px; line-height: 34px; }
+  .e-heading > p { max-width: 620px; }
+  .e-hero .e-actions { align-items: stretch; }
+  .e-hero .btn { flex: 1 1 180px; }
+  .e-track-layout { grid-template-columns: minmax(0,1fr); }
+  .e-group-cards { grid-template-columns: minmax(0,1fr); }
+  .e-group-card { --group-visual-height: calc((100vw - 50px) * .5695); }
+  .e-track-selector { min-height: 0; }
+  .e-track-info { min-width: 0; }
+  .e-track-media { height: 300px; }
+  .e-geometries { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .e-shapes { gap: 8px; }
+  .e-shapes > div { min-width: 0; }
+  .e-upcoming { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .e-upcoming-models { max-width: 480px; width: 100%; margin-inline: auto; }
+  .e-documents { grid-template-columns: minmax(0,1fr); min-height: 0; }
+  .e-documents-media { min-height: 0; height: 320px; }
+  .e-documents-media > img { object-position: 60% center; }
+  .e-documents-copy { padding: 28px; }
+  .e-document { grid-template-columns: 32px 150px minmax(0,1fr); gap: 12px; }
+  .e-document img { width: 32px; height: 36px; }
+  body.eurotrek-page #canvas #project .au-project-shared { grid-template-columns: minmax(0,1fr); }
+  body.eurotrek-page #canvas #project .home-project-media { height: 320px; min-height: 0; }
+  body.eurotrek-page #canvas #project .home-project-media > img { width: 100%; height: 100%; object-fit: cover; }
+  .e-assembly-scroll { overflow: auto; }
+  .e-assembly-scroll > .e-assembly-canvas { min-width: 760px; }
+  .e-assembly-tooltip { display: none; }
+  .e-assembly-point:has(button[aria-describedby$="component-2"]) .e-assembly-tooltip,
+  .e-assembly-point:has(button[aria-describedby$="component-8"]) .e-assembly-tooltip,
+  .e-assembly-point:has(button[aria-describedby$="component-10"]) .e-assembly-tooltip { bottom: auto; top: calc(100% + 8px); }
+  .e-assembly-legend { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: none; grid-auto-flow: row; gap: 12px; }
+  .e-assembly-legend > li { grid-template-columns: 18px 40px minmax(0,1fr); }
+  .e-assembly-legend img { width: 40px; height: 40px; }
+  .e-assembly-stage > figcaption { flex-direction: column; gap: 12px; }
+  .e-mobile-hint { display: block; margin: 12px 0 !important; color: var(--e-muted); font: 400 12px/18px Geist,Arial,sans-serif; }
+  .e-table-scroll .e-table { min-width: 320px; }
+  .e-reference-table .e-table { min-width: 620px; }
+  .e-table :is(td,th):not(:first-child) { white-space: nowrap; }
+  body.eurotrek-page .e-dialog { width: min(670px,calc(100% - 24px)); max-width: none; max-height: calc(100dvh - 24px); }
+  .e-scheme-dialog { width: calc(100% - 24px); padding: 24px; }
+  .project-form-layout { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .project-form-image { max-width: 280px; justify-self: center; }
+}
+
+@media (max-width: 767px) {
+  body.eurotrek-page #canvas .container { width: calc(100% - 32px); }
+  .e-section { padding-block: 32px; scroll-margin-top: 16px; }
+  .e-heading { margin-bottom: 24px; }
+  .e-heading > p { margin-top: 14px !important; font-size: 16px; line-height: 24px; }
+  body.eurotrek-page #canvas main h1 { font-size: 28px; line-height: 34px; }
+  body.eurotrek-page #canvas main h2 { font-size: 25px; line-height: 31px; }
+  body.eurotrek-page #canvas main .btn { min-height: 44px; }
+  .e-hero { display: flex; flex-direction: column; min-height: 0; overflow: visible; background: #1d2731; }
+  .e-hero-image { position: relative; inset: auto; z-index: auto; height: 240px; object-position: 45% 43%; }
+  body.eurotrek-page #canvas .e-hero .container { width: 100%; }
+  .e-hero-copy { width: 100%; padding: 28px 20px; background: #1d2731; }
+  .e-hero-copy > p { margin-top: 16px !important; font-size: 15px; line-height: 23px; }
+  .e-hero-copy > p br { display: none; }
+  .e-hero .e-actions { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; margin-top: 22px; }
+  .e-hero-marks { gap: 18px 12px; margin-top: 24px; }
+  .e-hero-mark { min-width: 0; }
+  .e-facts { grid-template-columns: repeat(2,minmax(0,1fr)); padding-block: 20px 28px; gap: 10px; }
+  .e-fact, .e-fact:nth-last-child(-n+2) { grid-column: auto; padding: 12px; }
+  .e-fact:last-child { grid-column: 1/-1; }
+  .e-fact:last-child strong { min-height: 20px; }
+  .e-fact strong { font-size: 13px; line-height: 19px; }
+  .e-concept-cards, .e-group-cards, .e-mount-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  .e-concept-card { grid-template-rows: auto 1fr; }
+  .e-concept-card-image { height: auto; aspect-ratio: 4/3; }
+  .e-concept-card-copy { padding: 20px; min-height: 120px; }
+  .e-group-card { --group-visual-height: calc((100vw - 34px) * .5695); }
+  .e-group-card-number { width: 62px; height: 62px; font-size: 25px; }
+  .e-group-card-copy { padding: 84px 20px 22px; }
+  .e-group-card-copy > :last-child { margin-top: 0 !important; }
+  .e-group-benefits { grid-template-columns: minmax(0,1fr); gap: 18px; margin-top: 24px; }
+  .e-mount-card > img { height: auto; aspect-ratio: 4/3; }
+  .e-mount-card > p { max-width: none; }
+  .e-track-layout { padding: 16px; gap: 24px; }
+  .e-track-selector { padding: 16px 12px; }
+  .e-track-media { height: 240px; }
+  .e-track-label { display: grid; gap: 4px; }
+  .e-specs > div { grid-template-columns: 1fr 1.25fr; gap: 12px; font-size: 13px; }
+  .e-track-info .e-actions .btn { width: 100%; padding-inline: 10px; }
+  .e-assembly-stage { padding: 12px; }
+  .e-catalog-label { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .e-catalog-filters { justify-content: flex-start; gap: 6px; }
+  .e-catalog-filters > label { padding: 9px 10px; min-height: 40px; font-size: 12px; }
+  .e-catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 12px; }
+  body.eurotrek-page #canvas main .e-catalog-card h3 { font-size: 14px; line-height: 20px; height: 60px; }
+  .e-catalog-card h3 > a { -webkit-line-clamp: 3; }
+  .e-catalog-media > img { padding: 8px; }
+  body.eurotrek-page #canvas main .e-catalog-price { font-size: 18px; }
+  .e-upcoming { padding: 24px 20px; }
+  .e-upcoming-models { gap: 12px; }
+  .e-upcoming-models img { height: 160px; }
+  .e-steps { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .e-step { display: grid; grid-template-columns: 64px minmax(0,1fr); column-gap: 16px; text-align: left; }
+  .e-step::before { grid-column: 1; grid-row: 1/3; width: 64px; height: 64px; margin: 0; font-size: 24px; }
+  body.eurotrek-page #canvas main .e-step h3 { grid-column: 2; font-size: 16px; line-height: 22px; }
+  .e-step > p { grid-column: 2; max-width: none; margin: 8px 0 0 !important; }
+  .e-documents-media { height: 240px; }
+  .e-documents-copy { padding: 24px 20px; }
+  body.eurotrek-page #canvas main .e-documents h2 { font-size: 23px; line-height: 29px; }
+  .e-document { grid-template-columns: 32px minmax(0,1fr); column-gap: 12px; row-gap: 4px; padding-block: 14px; }
+  .e-document img { grid-row: 1/3; }
+  .e-document span { grid-column: 2; }
+  .e-documents-copy .btn { width: 100%; }
+  .e-reference > summary { min-height: 52px; padding-block: 16px; }
+  body.eurotrek-page #canvas #project .home-project-media { height: 240px; }
+  body.eurotrek-page #canvas #project .home-project-copy { padding: 24px 20px; }
+  body.eurotrek-page #canvas #project h2 { font-size: 23px; line-height: 29px; }
+  body.eurotrek-page #canvas #project .home-project-logo-frame { max-width: 100%; }
+  .e-faq { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .e-faq-heading > p { margin-top: 14px !important; font-size: 15px; line-height: 23px; }
+  .e-faq-list > details { padding-block: 0; }
+  .e-faq-list summary { min-height: 52px; padding-block: 12px; }
+  .e-faq-list details > p { margin-bottom: 16px !important; }
+  .e-last-section { padding-bottom: 48px; }
+  body.eurotrek-page #canvas .footer-grid { grid-template-columns: minmax(0,1fr); gap: 0; }
+  body.eurotrek-page #canvas .footer-legal { flex-direction: column; gap: 12px; }
+  .e-dialog { padding: 22px 18px; }
+  .e-dialog h2 { font-size: 23px; line-height: 29px; }
+  .e-close, .project-form-close { position: sticky; float: right; top: 0; z-index: 5; width: 40px; height: 40px; margin: -10px -6px 6px 8px; }
+  .e-form > label { font-size: 14px; }
+  .e-form :is(input:not([type=checkbox]),textarea), .project-form > input, .project-form > textarea { min-height: 46px; font-size: 16px; }
+  .e-form .form-consent { font-size: 13px; line-height: 20px; }
+  .e-form input[type=checkbox] { width: 20px; height: 20px; }
+  .e-dialog .btn { min-height: 44px; width: 100%; }
+  .project-form-dialog { max-height: calc(100dvh - 24px); }
+  .project-form-layout { display: block; }
+  .project-form-image { margin: 24px auto 0; }
+  .project-form-actions { grid-template-columns: minmax(0,1fr); }
+}
