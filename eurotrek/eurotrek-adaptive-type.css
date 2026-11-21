@@ -3,6 +3,9 @@
    Latest user rule takes precedence: Geist for small headings; mount names stay 18/24.
    Image proportions, number seams and the 1440px composition remain unchanged. */
 
+/* User-identified prototypes: Pro on the left; the standard model is smaller. */
+body.eurotrek-page #canvas main .e-upcoming-model-standard > img { transform: scale(.8); transform-origin: center bottom; }
+
 @media (max-width: 1100px) {
   /* H1 */
   body.eurotrek-page #canvas main h1 { font-family: Science, Arial, sans-serif; font-size: 30px; font-weight: 400; line-height: 36px; }
